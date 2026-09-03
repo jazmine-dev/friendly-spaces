@@ -1,0 +1,11 @@
+# Repo housekeeping that should not be uploaded as site files.
+.git
+.gitignore
+.gitattributes
+.assetsignore
+wrangler.jsonc
+src
+build.ps1
+build.cmd
+preview.cmd
+README.md
