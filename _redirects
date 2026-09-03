@@ -1,0 +1,4 @@
+# Cloudflare Pages redirects.
+# Cloudflare applies a matching rule even when a real file exists at the
+# source path (every rule behaves like Netlify's force=true), so keep rules
+# explicit and never add blanket wildcards over real pages.

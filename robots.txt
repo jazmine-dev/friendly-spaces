@@ -1,0 +1,4 @@
+# Preview build - keep out of search engines until launch.
+# Switch to "Allow: /" plus a Sitemap line when the site goes live on friendlyspaces.ch.
+User-agent: *
+Disallow: /

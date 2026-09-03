@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sponsoring &mdash; Friendly Spaces</title>
+<meta name="description" content="Back Switzerland&#39;s family-friendly movement. Sponsoring and partnership opportunities with Friendly Spaces.">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">
+<style>
+  @font-face {
+    font-family: 'Kaio';
+    src: url(assets/fonts/Kaio-Black.woff2) format('woff2');
+    font-weight: 900;
+    font-display: swap;
+  }
+  :root {
+    --cream: #F8F5EF; --ink: #2C3589; --blue: #1E52BA; --pink: #F4DDFF; --lilac: #D2D1E9;
+    --marigold: #F2B33D; --tangerine: #E8622C; --paper: #FFFFFF; --muted: #6a6d99;
+    --kaio: 'Kaio', 'Arial Black', Arial, sans-serif;
+    --body: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--cream); color: var(--ink); font-family: var(--body); margin: 0; font-size: 16.5px; line-height: 1.6; overflow-x: hidden; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 28px; }
+  h1, h2, h3 { font-family: var(--kaio); line-height: 1.02; margin: 0; text-wrap: balance; }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+  .btn { display: inline-block; font-weight: 700; font-size: 15px; border-radius: 999px; padding: 13px 26px; text-decoration: none; transition: transform .18s ease; cursor: pointer; border: none; font-family: var(--body); }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-tang { background: var(--tangerine); color: #fff; }
+  .btn-ink { background: var(--ink); color: var(--cream); }
+  .btn-cream { background: var(--cream); color: var(--ink); }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(248,245,239,.88); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(44,53,137,.12); }
+  .nav-inner { max-width: 1240px; margin: 0 auto; padding: 14px 28px; display: flex; align-items: center; gap: 28px; }
+  .nav-inner img.logo { height: 26px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 22px; margin-left: auto; }
+  .nav-links a { color: var(--ink); text-decoration: none; font-size: 14.5px; font-weight: 600; }
+  .nav-links a:hover { color: var(--blue); }
+  .lang { font-size: 12.5px; font-weight: 700; letter-spacing: .06em; color: var(--muted); }
+  .lang b { color: var(--ink); }
+  @media (max-width: 900px) { .nav-links, .lang { display: none; } }
+
+  .hero { padding: 150px 0 70px; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(44px, 6.5vw, 84px); }
+  .hero h1 .u { position: relative; white-space: nowrap; color: var(--blue); }
+  .hero h1 .u svg { position: absolute; left: 0; bottom: -12px; width: 100%; height: 15px; }
+  .hero .sub { font-size: 18px; max-width: 46ch; margin: 26px 0 0; }
+  .hero .ctas { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .flower-photo { width: 100%; max-width: 400px; aspect-ratio: 1; object-fit: cover; clip-path: url(#flowerClip); display: block; margin: 0 auto; }
+  .rv { opacity: 0; transform: translateY(28px); }
+  @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; } }
+  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } .hero { padding-top: 120px; } }
+
+  /* facts band */
+  .facts { background: var(--lilac); padding: 70px 0; }
+  .facts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .fact { text-align: center; }
+  .fact b { display: block; font-family: var(--kaio); font-size: clamp(28px, 3.6vw, 44px); line-height: 1.05; }
+  .fact span { font-size: 14px; }
+  @media (max-width: 700px) { .facts-grid { grid-template-columns: 1fr; } }
+
+  /* why now */
+  .why { padding: 100px 0 20px; }
+  .why-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 52px; align-items: start; }
+  .why h2 { font-size: clamp(34px, 4.6vw, 54px); }
+  .why p { max-width: 56ch; }
+  @media (max-width: 860px) { .why-grid { grid-template-columns: 1fr; } }
+
+  /* ways to show up */
+  .ways { padding: 90px 0; }
+  .ways h2 { font-size: clamp(34px, 4.6vw, 54px); }
+  .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
+  .way { background: var(--paper); border: 2px solid var(--ink); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 10px; }
+  .way.pink { background: var(--pink); }
+  .way.gold { background: var(--marigold); }
+  .way h3 { font-size: 21px; display: flex; align-items: center; gap: 10px; }
+  .way h3 svg { flex: 0 0 auto; }
+  .way p { margin: 0; font-size: 14.5px; }
+  .way .ex { font-size: 12.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); margin-top: auto; padding-top: 10px; }
+  @media (max-width: 860px) { .ways-grid { grid-template-columns: 1fr; } }
+
+  /* fit */
+  .fit { background: var(--pink); padding: 90px 0; }
+  .fit-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+  .fit h2 { font-size: clamp(30px, 4vw, 46px); }
+  .fit p { margin: 18px auto 0; max-width: 56ch; }
+
+  /* partners strip */
+  .proof { padding: 90px 0 60px; text-align: center; }
+  .proof .eyebrow { color: var(--blue); }
+  .logo-row { display: flex; justify-content: center; align-items: center; gap: 52px; flex-wrap: wrap; margin-top: 34px; }
+  .logo-row img { height: 40px; width: auto; opacity: .8; }
+
+  /* cta */
+  .cta-band { background: var(--tangerine); color: #fff; padding: 96px 0; text-align: center; }
+  .cta-band h2 { color: #fff; font-size: clamp(32px, 4.5vw, 56px); max-width: 18ch; margin: 0 auto; }
+  .cta-band p { max-width: 52ch; margin: 18px auto 28px; }
+  .cta-band .mail { display: block; margin-top: 18px; color: #fff; font-size: 14px; }
+  .cta-band .mail a { color: #fff; font-weight: 700; }
+
+  footer { background: var(--ink); color: var(--cream); padding: 46px 0 34px; }
+  .foot-bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--lilac); }
+  .foot-bottom a { color: var(--cream); text-decoration: none; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs>
+    <clipPath id="flowerClip" clipPathUnits="objectBoundingBox">
+      <circle cx="0.5" cy="0.20" r="0.24"/><circle cx="0.76" cy="0.35" r="0.24"/><circle cx="0.24" cy="0.35" r="0.24"/>
+      <circle cx="0.24" cy="0.65" r="0.24"/><circle cx="0.76" cy="0.65" r="0.24"/><circle cx="0.5" cy="0.80" r="0.24"/>
+      <circle cx="0.5" cy="0.5" r="0.34"/>
+    </clipPath>
+  </defs>
+</svg>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html"><img class="logo" src="assets/logos/friendly-spaces.svg" alt="Friendly Spaces"></a>
+    <div class="nav-links"><a href="index.html#app">Map &amp; App</a><a href="index.html#label">The Label</a><a href="index.html#playbox">PlayBox</a><a href="index.html#partners">Partners</a><a href="index.html#news">News</a></div>
+    <span class="lang"><b>EN</b> · DE · FR · IT</span>
+    <a class="btn btn-ink" style="font-size:13.5px; padding:9px 18px;" href="#talk">Sponsoring</a>
+  </div>
+</nav>
+
+<main>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--tangerine)">Sponsoring &amp; partnerships</span>
+        <h1 style="margin-top:14px">Back the <span class="u">Friendly<svg viewBox="0 0 200 14" preserveAspectRatio="none" class="sq-draw" aria-hidden="true"><path d="M3 10 Q 28 4, 55 9 T 108 8 T 158 9 T 197 6" fill="none" stroke="#E8622C" stroke-width="5" stroke-linecap="round"/></svg></span> movement</h1>
+        <p class="sub">We're making Swiss cities genuinely welcoming for families &mdash; caf&eacute; by caf&eacute;, space by space. Sponsors make the movement grow faster, and get seen by the people living it.</p>
+        <div class="ctas">
+          <a class="btn btn-tang" href="#talk">Start the conversation</a>
+          <a class="btn btn-ink" href="#ways">What you get</a>
+        </div>
+      </div>
+      <div class="rv">
+        <img class="flower-photo" src="assets/img/orangerie-elfenau.jpg" alt="Inside Orangerie Elfenau, a Friendly Spaces partner venue in Bern">
+      </div>
+    </div>
+  </header>
+
+  <section class="facts">
+    <div class="wrap facts-grid">
+      <div class="fact rv"><b>Bern &amp; Basel</b><span>partner venues in two cities &mdash; and counting</span></div>
+      <div class="fact rv"><b>iOS &amp; Android</b><span>a free app parents check before they go out</span></div>
+      <div class="fact rv"><b>4 languages</b><span>reaching families across Switzerland's regions</span></div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap why-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--blue)">Why now</span>
+        <h2 style="margin-top:12px">Early means something here</h2>
+      </div>
+      <div>
+        <p>Friendly Spaces is young and growing on purpose: every venue is visited, certified and re-checked by us personally. Sponsors who join now aren't a logo in a crowd &mdash; they're a founding supporter of Switzerland's family-friendly label, woven into the story as it's being written.</p>
+        <p>You reach parents at the exact moment they're deciding where to spend their day &mdash; and you reach them through a brand they trust to have their kids' backs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ways" id="ways">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--tangerine)">Ways to show up</span>
+      <h2 style="margin-top:12px">Three places your brand can live</h2>
+      <div class="ways-grid">
+        <div class="way pink rv">
+          <h3><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 1.4 C 12.9 8, 15.5 10.6, 22.4 12 C 15.5 13.5, 12.8 16, 12 22.6 C 11 16, 8.4 13.4, 1.6 12 C 8.5 10.5, 11.2 8, 12 1.4 Z" fill="#E8622C"/></svg>In the app &amp; on the site</h3>
+          <p>Your brand alongside the map parents open when they're planning their day &mdash; plus presence on friendlyspaces.ch and in our newsletter.</p>
+          <span class="ex">Digital reach</span>
+        </div>
+        <div class="way rv">
+          <h3><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 1.4 C 12.9 8, 15.5 10.6, 22.4 12 C 15.5 13.5, 12.8 16, 12 22.6 C 11 16, 8.4 13.4, 1.6 12 C 8.5 10.5, 11.2 8, 12 1.4 Z" fill="#F2B33D"/></svg>Inside the venues</h3>
+          <p>PlayBoxes, window stickers, flyers and family corners across our partner network &mdash; physical presence exactly where families spend time.</p>
+          <span class="ex">On-site presence</span>
+        </div>
+        <div class="way gold rv">
+          <h3><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 1.4 C 12.9 8, 15.5 10.6, 22.4 12 C 15.5 13.5, 12.8 16, 12 22.6 C 11 16, 8.4 13.4, 1.6 12 C 8.5 10.5, 11.2 8, 12 1.4 Z" fill="#2C3589"/></svg>In the stories</h3>
+          <p>Co-created content on our channels, giveaways with partner venues, and a seat at the events we bring families to.</p>
+          <span class="ex">Social &amp; events</span>
+        </div>
+      </div>
+      <p style="font-size:13.5px; color:var(--muted); margin-top:22px; max-width:62ch;">Every sponsorship is put together individually &mdash; from a single campaign to a season-long partnership. We'll shape it around what fits your brand.</p>
+    </div>
+  </section>
+
+  <section class="fit">
+    <div class="wrap fit-inner">
+      <h2>We say yes carefully</h2>
+      <p>The label only works because families trust it &mdash; so we partner with brands that genuinely fit family life. If that's you, you won't just get visibility. You'll get advocates.</p>
+    </div>
+  </section>
+
+  <section class="proof">
+    <div class="wrap">
+      <span class="eyebrow">You'd be in good company</span>
+      <div class="logo-row">
+        <img src="assets/logos/partners/orangerie-elfenau.svg" alt="Orangerie Elfenau">
+        <img src="assets/logos/partners/markthalle.svg" alt="Markthalle Basel">
+        <img src="assets/logos/partners/magical-cafe.svg" alt="Magical Café">
+        <img src="assets/logos/partners/sempre-berna.svg" alt="Sempre Berna">
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="talk">
+    <div class="wrap">
+      <h2>Let's build something families notice</h2>
+      <p>Tell us who you are and what you have in mind &mdash; we'll come back with ideas, numbers and a proposal that fits.</p>
+      <a class="btn btn-cream" href="#">Start the conversation</a>
+      <span class="mail">or write us directly: <a href="mailto:hello@friendlyspaces.ch">hello@friendlyspaces.ch</a></span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-bottom">
+    <span>&copy; 2026 FriendlySpaces &middot; <a href="#">Privacy policy</a></span>
+    <span>EN &middot; DE &middot; FR &middot; IT</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+(function () {
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced || !window.gsap) return;
+  gsap.registerPlugin(ScrollTrigger);
+  if (window.Lenis) {
+    var lenis = new Lenis({ lerp: 0.11 });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+  document.querySelectorAll('.sq-draw path').forEach(function (p) {
+    var len = p.getTotalLength();
+    p.style.strokeDasharray = len;
+    p.style.strokeDashoffset = len;
+    gsap.to(p, { strokeDashoffset: 0, duration: 1.1, ease: 'power2.out', delay: 0.4 });
+  });
+  gsap.utils.toArray('.rv').forEach(function (el) {
+    gsap.to(el, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 86%' } });
+  });
+})();
+</script>
+</body>
+</html>

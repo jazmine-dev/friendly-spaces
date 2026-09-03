@@ -1,0 +1,5 @@
+# Keep line endings consistent (LF) across Windows and Cloudflare's build machines.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.woff2 binary
