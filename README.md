@@ -21,7 +21,7 @@ Push when a change is finished, not after every save: Pages has a monthly build 
 
 ## Deployment
 
-Cloudflare Pages, connected to this GitHub repo. Framework preset: none. Build command: empty. Output directory: `/`.
+Cloudflare Pages project `friendly-spaces` (https://friendly-spaces.pages.dev), connected to this GitHub repo: every push to `main` deploys. Framework preset: none. Build command: empty. Output directory: `/`.
 
 ## The live map
 
