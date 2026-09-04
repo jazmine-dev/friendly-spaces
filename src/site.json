@@ -1,0 +1,26 @@
+{
+  "baseUrl": "https://friendlyspaces.ch",
+  "languages": ["en", "de", "fr", "it"],
+  "strings": {
+    "en": {
+      "nav": { "app": "Map & App", "label": "The Label", "playbox": "PlayBox", "partners": "Partners", "about": "About", "news": "News", "cta": "For businesses", "menu": "Menu" },
+      "footer": { "tagline": "Strengthening families and rethinking public spaces — one café at a time.", "explore": "Explore", "contact": "Contact", "follow": "Follow", "sponsoring": "Sponsoring", "nominate": "Nominate a space", "privacy": "Privacy policy", "imprint": "Imprint" },
+      "ui": { "langName": "English" }
+    },
+    "de": {
+      "nav": { "app": "Karte & App", "label": "Das Label", "playbox": "PlayBox", "partners": "Partner", "about": "Über uns", "news": "News", "cta": "Für Betriebe", "menu": "Menü" },
+      "footer": { "tagline": "Familien stärken, öffentliche Räume neu denken — ein Café nach dem anderen.", "explore": "Entdecken", "contact": "Kontakt", "follow": "Folgen", "sponsoring": "Sponsoring", "nominate": "Einen Ort vorschlagen", "privacy": "Datenschutz", "imprint": "Impressum" },
+      "ui": { "langName": "Deutsch" }
+    },
+    "fr": {
+      "nav": { "app": "Carte & App", "label": "Le label", "playbox": "PlayBox", "partners": "Partenaires", "about": "À propos", "news": "News", "cta": "Pour les commerces", "menu": "Menu" },
+      "footer": { "tagline": "Renforcer les familles et repenser l'espace public — un café à la fois.", "explore": "Explorer", "contact": "Contact", "follow": "Suivre", "sponsoring": "Sponsoring", "nominate": "Proposer un lieu", "privacy": "Protection des données", "imprint": "Mentions légales" },
+      "ui": { "langName": "Français" }
+    },
+    "it": {
+      "nav": { "app": "Mappa & App", "label": "Il label", "playbox": "PlayBox", "partners": "Partner", "about": "Chi siamo", "news": "News", "cta": "Per le attività", "menu": "Menu" },
+      "footer": { "tagline": "Rafforzare le famiglie e ripensare gli spazi pubblici — un caffè alla volta.", "explore": "Esplora", "contact": "Contatto", "follow": "Seguici", "sponsoring": "Sponsoring", "nominate": "Segnala un luogo", "privacy": "Privacy", "imprint": "Impressum" },
+      "ui": { "langName": "Italiano" }
+    }
+  }
+}

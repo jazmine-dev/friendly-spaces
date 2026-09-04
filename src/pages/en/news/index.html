@@ -1,0 +1,54 @@
+---
+title: News — Friendly Spaces
+description: News from Friendly Spaces: new partners, new cities, PlayBox stories and what's changing behind the label.
+nav: news
+---
+<style>
+  .news-hero { padding: 140px 0 30px; }
+  .news-hero h1 { font-size: clamp(44px, 6.5vw, 84px); }
+  .news-hero .lede { font-size: 18px; max-width: 50ch; margin: 22px 0 0; }
+  .posts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 30px; }
+  .post { background: var(--paper); border: 2px solid var(--ink); border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: var(--ink); transition: transform .18s ease; }
+  .post:hover { transform: translateY(-3px); }
+  .post img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+  .post .body { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 8px; }
+  .post time { font-size: 12.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .post h2 { font-size: 24px; }
+  .post p { margin: 0; font-size: 15px; }
+  @media (max-width: 760px) { .posts { grid-template-columns: 1fr; } }
+  .lang-note { margin-top: 26px; }
+</style>
+
+<main id="main">
+  <header class="news-hero">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--tangerine)">News</span>
+      <h1 style="margin-top:14px">What's new</h1>
+      <p class="lede">New partners, new cities, PlayBox stories and the occasional look behind the label. Short posts, in English, a few times a year.</p>
+    </div>
+  </header>
+
+  <section class="band" style="padding-top:20px">
+    <div class="wrap">
+      <div class="posts">
+        <a class="post rv" href="{{root}}news/early-bird-2026.html">
+          <img src="/assets/img/orangerie-elfenau.jpg" alt="" width="900" height="551">
+          <div class="body">
+            <time datetime="2026-09-01">September 2026</time>
+            <h2>The pilot is over. Say hello to early bird.</h2>
+            <p>What we learned from the first partners, what changes now, and why 2026 is the year to join.</p>
+          </div>
+        </a>
+      </div>
+      <p class="fine lang-note">News posts are written in English. A translated version of this page appears when your browser is set to German, French or Italian &mdash; the original is always one click away.</p>
+    </div>
+  </section>
+
+  <section class="band band-pink cta-band">
+    <div class="wrap">
+      <h2>Friendly news, a few times a year</h2>
+      <p>Get new posts, partners and cities in your inbox. No spam, unsubscribe anytime.</p>
+      <a class="btn btn-ink" href="{{root}}#news">Sign up on the homepage</a>
+    </div>
+  </section>
+</main>

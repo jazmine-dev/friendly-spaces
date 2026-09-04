@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://friendlyspaces.ch/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/about.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/app.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/app.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/contact.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/label.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/label.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/news/early-bird-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/early-bird-2026.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/news/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/index.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/partners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/partners.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/playbox.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/playbox.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/sponsoring.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/sponsoring.html"/>
+  </url>
+</urlset>

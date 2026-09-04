@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The PlayBox — a curated toy box, delivered and maintained — Friendly Spaces</title>
+<meta name="description" content="The Friendly Spaces PlayBox: a curated toy box for ages 0–5 that we deliver, check every four months and keep complete. Single box, custom play area, or chains.">
+<link rel="canonical" href="https://friendlyspaces.ch/playbox.html">
+<link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/playbox.html">
+<link rel="alternate" hreflang="x-default" href="https://friendlyspaces.ch/playbox.html">
+<meta property="og:title" content="The PlayBox — a curated toy box, delivered and maintained — Friendly Spaces">
+<meta property="og:description" content="The Friendly Spaces PlayBox: a curated toy box for ages 0–5 that we deliver, check every four months and keep complete. Single box, custom play area, or chains.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://friendlyspaces.ch/playbox.html">
+<meta property="og:image" content="https://friendlyspaces.ch/assets/img/og-image.jpg">
+<meta name="theme-color" content="#2C3589">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="preload" href="/assets/fonts/Kaio-Black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+</head>
+<body data-lang="en" data-alternates="en:https://friendlyspaces.ch/playbox.html">
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs>
+    <clipPath id="flowerClip" clipPathUnits="objectBoundingBox">
+      <circle cx="0.5" cy="0.20" r="0.24"/><circle cx="0.76" cy="0.35" r="0.24"/><circle cx="0.24" cy="0.35" r="0.24"/>
+      <circle cx="0.24" cy="0.65" r="0.24"/><circle cx="0.76" cy="0.65" r="0.24"/><circle cx="0.5" cy="0.80" r="0.24"/>
+      <circle cx="0.5" cy="0.5" r="0.34"/>
+    </clipPath>
+  </defs>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="logo-link" href="/"><img class="logo" src="/assets/logos/friendly-spaces.svg" alt="Friendly Spaces"></a>
+    <button class="nav-burger" id="nav-burger" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-menu" id="nav-menu">
+      <div class="nav-links">
+        <a href="/app.html" data-nav="app">Map & App</a>
+        <a href="/label.html" data-nav="label">The Label</a>
+        <a href="/playbox.html" data-nav="playbox" aria-current="page">PlayBox</a>
+        <a href="/partners.html" data-nav="partners">Partners</a>
+        <a href="/about.html" data-nav="about">About</a>
+        <a href="/news/" data-nav="news">News</a>
+      </div>
+      <div class="lang" id="lang-switch" aria-label="Language">
+        <a href="#" data-lang="en">EN</a><span>·</span><a href="#" data-lang="de">DE</a><span>·</span><a href="#" data-lang="fr">FR</a><span>·</span><a href="#" data-lang="it">IT</a>
+      </div>
+      <a class="btn btn-ink nav-cta" href="/label.html">For businesses</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .pb-hero { background: var(--marigold); padding: 140px 0 80px; }
+  .pb-hero .grid-2 { align-items: center; }
+  .pb-hero h1 { font-size: clamp(44px, 6.5vw, 84px); }
+  .pb-hero .lede { font-size: 18px; max-width: 46ch; margin: 24px 0 0; }
+  .pb-hero img { width: 100%; max-width: 420px; display: block; margin: 0 auto; }
+  .pb-hero .ctas { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .how { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+  .how .card .n { font-family: var(--kaio); font-size: 26px; color: var(--tangerine); display: block; margin-bottom: 8px; }
+  @media (max-width: 860px) { .how { grid-template-columns: 1fr; } }
+  .packs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+  .packcard { background: var(--paper); border: 2px solid var(--ink); border-radius: 22px; padding: 30px; display: flex; flex-direction: column; gap: 10px; }
+  .packcard.hl { background: var(--pink); }
+  .packcard h3 { font-size: 24px; }
+  .packcard .sparkle-list { margin-top: 6px; }
+  .packcard .sparkle-list li { font-size: 14.5px; }
+  .packcard .price { margin-top: auto; padding-top: 16px; font-size: 12.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); }
+  @media (max-width: 860px) { .packs { grid-template-columns: 1fr; } }
+  .inside { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .inside ul { margin-top: 18px; }
+  @media (max-width: 860px) { .inside { grid-template-columns: 1fr; } }
+</style>
+
+<main id="main">
+  <header class="pb-hero">
+    <div class="wrap grid-2">
+      <div>
+        <span class="eyebrow">The PlayBox</span>
+        <h1 style="margin-top:14px">Toys, sorted.<br>Forever.</h1>
+        <p class="lede">Not sure where to start with a play corner? That's exactly what the PlayBox is for: a curated box of toys for ages 0&ndash;5, delivered by us &mdash; and kept complete by us, so it never becomes one more thing your team has to think about.</p>
+        <div class="ctas">
+          <a class="btn btn-ink" href="/contact.html?reason=playbox">Ask about a PlayBox</a>
+          <a class="btn btn-line" href="#packages">See the packages</a>
+        </div>
+      </div>
+      <div class="rv"><img src="/assets/img/spielkiste.png" alt="The Friendly Spaces PlayBox, filled with wooden toys" width="640" height="640"></div>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--tangerine)">How it works</span>
+      <h2 class="section-title" style="margin-top:12px">We bring it. We keep it good.</h2>
+      <div class="how">
+        <div class="card rv"><span class="n">01</span><h3>We deliver</h3><p>A box curated for your space and your youngest guests &mdash; sturdy, washable, no small parts for the under-threes.</p></div>
+        <div class="card rv"><span class="n">02</span><h3>We check in every four months</h3><p>We come by, look at every piece, and replace anything broken, missing or simply loved to death.</p></div>
+        <div class="card rv"><span class="n">03</span><h3>You just offer it</h3><p>Families get a play corner that's always in shape; your team gets zero extra work. That's the whole point.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-pink" id="packages">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--blue)">Packages</span>
+      <h2 class="section-title" style="margin-top:12px">Three ways to play</h2>
+      <div class="packs">
+        <div class="packcard rv">
+          <h3>Single Box</h3>
+          <p>One PlayBox on subscription. The easy start for a caf&eacute; or a small shop.</p>
+          <ul class="sparkle-list"><li>Curated for ages 0&ndash;5</li><li>Quality check every four months</li><li>Broken or missing pieces replaced</li></ul>
+          <span class="price">Contact for pricing</span>
+        </div>
+        <div class="packcard hl rv">
+          <h3>Custom Play Area</h3>
+          <p>A full play corner designed for your space &mdash; furniture, toys, layout &mdash; and kept alive by us.</p>
+          <ul class="sparkle-list"><li>Planned on site, with you</li><li>Sized to your room and your crowd</li><li>Same four-month care cycle</li></ul>
+          <span class="price">Contact for pricing</span>
+        </div>
+        <div class="packcard rv">
+          <h3>Chains &amp; Locations</h3>
+          <p>Several venues, one standard. The same PlayBox in every location, managed from one place.</p>
+          <ul class="sparkle-list"><li>Consistent across locations</li><li>One contact, one schedule</li><li>Volume pricing</li></ul>
+          <span class="price">Contact for pricing</span>
+        </div>
+      </div>
+      <p class="fine" style="margin-top:22px;">Every PlayBox is put together for the space it lives in, so we price them individually. Write to us with your room size and your typical guests, and we'll come back with a clear offer.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap inside">
+      <div class="rv"><img class="flower-photo" src="/assets/img/magical-cafe.jpg" alt="The play corner at Magical Café Basel" width="900" height="1200"></div>
+      <div>
+        <span class="eyebrow" style="color:var(--tangerine)">What's inside</span>
+        <h2 class="section-title" style="margin-top:12px">Chosen, not just filled</h2>
+        <p style="margin-top:14px; max-width:52ch;">Wooden and washable, more open-ended than noisy, and picked so that a two-year-old and a four-year-old can share the same corner without a fight.</p>
+        <ul class="sparkle-list">
+          <li>Stacking and sorting toys for the smallest hands</li>
+          <li>Building sets and vehicles for the bigger ones</li>
+          <li>Books and quiet play for waiting parents' nerves</li>
+          <li>Nothing that needs batteries, nothing that shatters</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-tang cta-band">
+    <div class="wrap">
+      <h2>Let's get you a play corner</h2>
+      <p>Tell us about your space and we'll suggest the right PlayBox &mdash; on its own, or together with the label.</p>
+      <a class="btn btn-cream" href="/contact.html?reason=playbox">Ask about a PlayBox</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Friendly Spaces</div>
+        <p class="foot-tag">Strengthening families and rethinking public spaces — one café at a time.</p>
+      </div>
+      <div><h4>Explore</h4><a href="/app.html">Map & App</a><a href="/label.html">The Label</a><a href="/playbox.html">PlayBox</a><a href="/partners.html">Partners</a><a href="/about.html">About</a><a href="/news/">News</a></div>
+      <div><h4>Contact</h4><a href="mailto:hello@friendlyspaces.ch">hello@friendlyspaces.ch</a><a href="/contact.html">Contact</a><a href="/sponsoring.html">Sponsoring</a><a href="/contact.html#nominate">Nominate a space</a></div>
+      <div><h4>Follow</h4><a href="https://www.instagram.com/friendly.spaces/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@friendlyspaces" target="_blank" rel="noopener">TikTok</a><a href="https://www.linkedin.com/company/friendly-spaces/" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Friendly Spaces &middot; <a href="/privacy.html">Privacy policy</a></span>
+      <span class="foot-langs"><a href="/" data-lang="en">EN</a> · <a href="/de/" data-lang="de">DE</a> · <a href="/fr/" data-lang="fr">FR</a> · <a href="/it/" data-lang="it">IT</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
+
+</body>
+</html>

@@ -1,59 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Friendly Spaces — Switzerland's family-friendly label & app</title>
-<meta name="description" content="Friendly Spaces certifies cafés, shops and cultural spaces where families are truly welcome — and puts every one of them on the map.">
-<link rel="canonical" href="https://friendlyspaces.ch/">
-<link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/">
-<link rel="alternate" hreflang="x-default" href="https://friendlyspaces.ch/">
-<meta property="og:title" content="Friendly Spaces — Switzerland's family-friendly label & app">
-<meta property="og:description" content="Friendly Spaces certifies cafés, shops and cultural spaces where families are truly welcome — and puts every one of them on the map.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://friendlyspaces.ch/">
-<meta property="og:image" content="https://friendlyspaces.ch/assets/img/og-image.jpg">
-<meta name="theme-color" content="#2C3589">
-<link rel="icon" href="/assets/favicon.png" type="image/png">
-<link rel="preload" href="/assets/fonts/Kaio-Black.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css">
-
-</head>
-<body data-lang="en" data-alternates="en:https://friendlyspaces.ch/">
-<svg width="0" height="0" aria-hidden="true" style="position:absolute">
-  <defs>
-    <clipPath id="flowerClip" clipPathUnits="objectBoundingBox">
-      <circle cx="0.5" cy="0.20" r="0.24"/><circle cx="0.76" cy="0.35" r="0.24"/><circle cx="0.24" cy="0.35" r="0.24"/>
-      <circle cx="0.24" cy="0.65" r="0.24"/><circle cx="0.76" cy="0.65" r="0.24"/><circle cx="0.5" cy="0.80" r="0.24"/>
-      <circle cx="0.5" cy="0.5" r="0.34"/>
-    </clipPath>
-  </defs>
-</svg>
-<a class="skip" href="#main">Skip to content</a>
-<nav id="nav">
-  <div class="nav-inner">
-    <a class="logo-link" href="/"><img class="logo" src="/assets/logos/friendly-spaces.svg" alt="Friendly Spaces"></a>
-    <button class="nav-burger" id="nav-burger" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-menu" id="nav-menu">
-      <div class="nav-links">
-        <a href="/app.html" data-nav="app">Map & App</a>
-        <a href="/label.html" data-nav="label">The Label</a>
-        <a href="/playbox.html" data-nav="playbox">PlayBox</a>
-        <a href="/partners.html" data-nav="partners">Partners</a>
-        <a href="/about.html" data-nav="about">About</a>
-        <a href="/news/" data-nav="news">News</a>
-      </div>
-      <div class="lang" id="lang-switch" aria-label="Language">
-        <a href="#" data-lang="en">EN</a><span>·</span><a href="#" data-lang="de">DE</a><span>·</span><a href="#" data-lang="fr">FR</a><span>·</span><a href="#" data-lang="it">IT</a>
-      </div>
-      <a class="btn btn-ink nav-cta" href="/label.html">For businesses</a>
-    </div>
-  </div>
-</nav>
-
+---
+title: Friendly Spaces — Switzerland's family-friendly label & app
+description: Friendly Spaces certifies cafés, shops and cultural spaces where families are truly welcome — and puts every one of them on the map.
+nav: home
+---
 <style>
   .hero { padding: 130px 0 40px; }
   .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
@@ -169,8 +118,8 @@
         </h1>
         <p class="sub">We certify caf&eacute;s, shops and cultural spaces where families are truly welcome &mdash; and put every one of them on the map.</p>
         <div class="ctas">
-          <a class="btn btn-tang" href="/app.html">Get the app</a>
-          <a class="btn btn-line" href="/label.html">For businesses</a>
+          <a class="btn btn-tang" href="{{root}}app.html">Get the app</a>
+          <a class="btn btn-line" href="{{root}}label.html">For businesses</a>
         </div>
         <div class="scroll-cue" id="cue" aria-hidden="true">
           <span class="ring"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2 L8 12 M3.5 8.5 L8 13 L12.5 8.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -201,7 +150,7 @@
             <li>Filter by age, high chairs, play corners, changing tables</li>
             <li>Go &mdash; and actually enjoy your coffee</li>
           </ul>
-          <a class="btn btn-ink" href="/app.html">Get the app</a>
+          <a class="btn btn-ink" href="{{root}}app.html">Get the app</a>
         </div>
         <div class="aud-card rv">
           <h3>For businesses</h3>
@@ -210,7 +159,7 @@
             <li>Practical audit, honest tips, marketing material included</li>
             <li>Your pin on the map families actually check</li>
           </ul>
-          <a class="btn btn-tang" href="/label.html">Join as early bird</a>
+          <a class="btn btn-tang" href="{{root}}label.html">Join as early bird</a>
         </div>
       </div>
     </div>
@@ -223,8 +172,8 @@
         <h2 style="margin-top:12px">Every pin is a promise.</h2>
         <p class="sub">Every location in the app carries the label and passed our on-site check. No sponsored listings, no guesswork &mdash; if it's on the map, your kids are welcome there. Free, in four languages, everywhere in Switzerland.</p>
         <div class="stores">
-          <a class="store" href="/app.html">Download on the<br><b>App Store</b></a>
-          <a class="store" href="/app.html">Get it on<br><b>Google Play</b></a>
+          <a class="store" href="{{root}}app.html">Download on the<br><b>App Store</b></a>
+          <a class="store" href="{{root}}app.html">Get it on<br><b>Google Play</b></a>
         </div>
         <p class="map-note">The map below is live &mdash; the same one inside the app. Scroll it, tap a pin, meet a space.</p>
       </div>
@@ -237,7 +186,7 @@
         <div class="map-fallback">
           <p>The live map can&rsquo;t load in this preview &mdash;<br>open it directly at <a href="/map/" target="_blank" rel="noopener">friendlyspaces.ch/map</a></p>
         </div>
-        <iframe src="/map/?lang=en" title="Friendly Spaces live map" loading="lazy" allow="geolocation"></iframe>
+        <iframe src="/map/?lang={{lang}}" title="Friendly Spaces live map" loading="lazy" allow="geolocation"></iframe>
         <span class="map-chip">Live</span>
       </div>
     </div>
@@ -250,7 +199,7 @@
         <h2 style="margin-top:12px">The label, in four steps</h2>
         <p class="sub">One visit at a time, we make your space genuinely family-friendly &mdash; and make sure families know it.</p>
         <span class="chip">Early bird pricing through 2026</span><br>
-        <a class="btn btn-ink" href="/label.html">Everything about the label</a>
+        <a class="btn btn-ink" href="{{root}}label.html">Everything about the label</a>
       </div>
       <div class="steps-col">
         <div class="step-card rv"><span class="n">01</span><h3>Say hello &mdash; or we already did</h3><p>Reach out, or pick up the thread from our visit. We'll tell you exactly what joining looks like.</p></div>
@@ -292,7 +241,7 @@
           <div class="pack rv"><b>Custom Play Area</b><span>A full play corner, designed for your space and kept alive by us.</span><span class="price">Contact for pricing</span></div>
           <div class="pack rv"><b>Chains &amp; Locations</b><span>Multiple venues, one setup &mdash; consistent across every location.</span><span class="price">Contact for pricing</span></div>
         </div>
-        <p style="margin-top:22px"><a class="btn btn-ink" href="/playbox.html">More about the PlayBox</a></p>
+        <p style="margin-top:22px"><a class="btn btn-ink" href="{{root}}playbox.html">More about the PlayBox</a></p>
       </div>
     </div>
   </section>
@@ -310,7 +259,7 @@
     </div>
     <div class="wrap">
       <div class="t-slot">Partner voices land here &mdash; we're collecting them during our September visits. 🧡</div>
-      <p style="margin-top:28px"><a class="btn btn-line" href="/partners.html">Meet every partner</a></p>
+      <p style="margin-top:28px"><a class="btn btn-line" href="{{root}}partners.html">Meet every partner</a></p>
     </div>
   </section>
 
@@ -318,7 +267,7 @@
     <div class="wrap">
       <h2>Know a place that does it right?</h2>
       <p>Tell us about it. Every tip gets a visit, and your favourite caf&eacute; might become the next Friendly Space.</p>
-      <a class="btn btn-cream" href="/contact.html#nominate">Nominate a space</a>
+      <a class="btn btn-cream" href="{{root}}contact.html#nominate">Nominate a space</a>
     </div>
   </section>
 
@@ -328,7 +277,7 @@
       <p>New partners, new cities, PlayBox stories. In English, no spam, unsubscribe anytime.</p>
       <form action="https://app.friendlyspaces.ch/" method="POST" data-netlify-form="website-newsletter" data-success="You're on the list. 🧡" data-sending="Signing you up…" data-error="That didn't work — email hello@friendlyspaces.ch and we'll add you.">
         <input type="email" name="email" placeholder="you@example.ch" aria-label="Email address" required>
-        <input type="hidden" name="language" value="en">
+        <input type="hidden" name="language" value="{{lang}}">
         <p class="hp" style="position:absolute;left:-9999px"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <button class="btn btn-ink" type="submit">Sign up</button>
         <p class="form-status" role="status" aria-live="polite" style="flex-basis:100%"></p>
@@ -336,29 +285,3 @@
     </div>
   </section>
 </main>
-
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <div class="foot-logo">Friendly Spaces</div>
-        <p class="foot-tag">Strengthening families and rethinking public spaces — one café at a time.</p>
-      </div>
-      <div><h4>Explore</h4><a href="/app.html">Map & App</a><a href="/label.html">The Label</a><a href="/playbox.html">PlayBox</a><a href="/partners.html">Partners</a><a href="/about.html">About</a><a href="/news/">News</a></div>
-      <div><h4>Contact</h4><a href="mailto:hello@friendlyspaces.ch">hello@friendlyspaces.ch</a><a href="/contact.html">Contact</a><a href="/sponsoring.html">Sponsoring</a><a href="/contact.html#nominate">Nominate a space</a></div>
-      <div><h4>Follow</h4><a href="https://www.instagram.com/friendly.spaces/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@friendlyspaces" target="_blank" rel="noopener">TikTok</a><a href="https://www.linkedin.com/company/friendly-spaces/" target="_blank" rel="noopener">LinkedIn</a></div>
-    </div>
-    <div class="foot-bottom">
-      <span>&copy; 2026 Friendly Spaces &middot; <a href="/privacy.html">Privacy policy</a></span>
-      <span class="foot-langs"><a href="/" data-lang="en">EN</a> · <a href="/de/" data-lang="de">DE</a> · <a href="/fr/" data-lang="fr">FR</a> · <a href="/it/" data-lang="it">IT</a></span>
-    </div>
-  </div>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
-<script src="/assets/js/site.js" defer></script>
-
-</body>
-</html>

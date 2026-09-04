@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Map & App — find certified family-friendly spaces — Friendly Spaces</title>
+<meta name="description" content="The Friendly Spaces app and live map: every certified family-friendly café, shop and cultural space in Switzerland, with filters for age, high chairs, play corners and changing tables. Free on iOS and Android.">
+<link rel="canonical" href="https://friendlyspaces.ch/app.html">
+<link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/app.html">
+<link rel="alternate" hreflang="x-default" href="https://friendlyspaces.ch/app.html">
+<meta property="og:title" content="Map & App — find certified family-friendly spaces — Friendly Spaces">
+<meta property="og:description" content="The Friendly Spaces app and live map: every certified family-friendly café, shop and cultural space in Switzerland, with filters for age, high chairs, play corners and changing tables. Free on iOS and Android.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://friendlyspaces.ch/app.html">
+<meta property="og:image" content="https://friendlyspaces.ch/assets/img/og-image.jpg">
+<meta name="theme-color" content="#2C3589">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="preload" href="/assets/fonts/Kaio-Black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+</head>
+<body data-lang="en" data-alternates="en:https://friendlyspaces.ch/app.html">
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs>
+    <clipPath id="flowerClip" clipPathUnits="objectBoundingBox">
+      <circle cx="0.5" cy="0.20" r="0.24"/><circle cx="0.76" cy="0.35" r="0.24"/><circle cx="0.24" cy="0.35" r="0.24"/>
+      <circle cx="0.24" cy="0.65" r="0.24"/><circle cx="0.76" cy="0.65" r="0.24"/><circle cx="0.5" cy="0.80" r="0.24"/>
+      <circle cx="0.5" cy="0.5" r="0.34"/>
+    </clipPath>
+  </defs>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="logo-link" href="/"><img class="logo" src="/assets/logos/friendly-spaces.svg" alt="Friendly Spaces"></a>
+    <button class="nav-burger" id="nav-burger" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-menu" id="nav-menu">
+      <div class="nav-links">
+        <a href="/app.html" data-nav="app" aria-current="page">Map & App</a>
+        <a href="/label.html" data-nav="label">The Label</a>
+        <a href="/playbox.html" data-nav="playbox">PlayBox</a>
+        <a href="/partners.html" data-nav="partners">Partners</a>
+        <a href="/about.html" data-nav="about">About</a>
+        <a href="/news/" data-nav="news">News</a>
+      </div>
+      <div class="lang" id="lang-switch" aria-label="Language">
+        <a href="#" data-lang="en">EN</a><span>·</span><a href="#" data-lang="de">DE</a><span>·</span><a href="#" data-lang="fr">FR</a><span>·</span><a href="#" data-lang="it">IT</a>
+      </div>
+      <a class="btn btn-ink nav-cta" href="/label.html">For businesses</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .app-hero { background: var(--ink); color: var(--cream); padding: 140px 0 80px; overflow: hidden; }
+  .app-hero .grid-2 { grid-template-columns: 1.1fr .9fr; align-items: center; }
+  .app-hero h1 { font-size: clamp(44px, 6.5vw, 84px); color: var(--cream); }
+  .app-hero .lede { font-size: 18px; max-width: 46ch; margin: 24px 0 0; color: var(--lilac); }
+  .stores { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .store { border: 1.5px solid var(--lilac); border-radius: 12px; padding: 9px 18px; color: var(--cream); text-decoration: none; font-size: 13px; line-height: 1.25; }
+  .store b { display: block; font-size: 15px; }
+  .store:hover { background: rgba(210,209,233,.12); }
+  .phone { width: min(300px, 70vw); margin: 0 auto; border-radius: 38px; border: 3px solid var(--lilac); background: #0e133f; padding: 10px; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
+  .phone img { width: 100%; border-radius: 28px; display: block; }
+  @media (max-width: 860px) { .app-hero .grid-2 { grid-template-columns: 1fr; } }
+  .map-full { position: relative; height: min(84vh, 820px); border: 2px solid var(--ink); border-radius: 22px; overflow: hidden; background: #eef2fb; margin-top: 36px; }
+  .map-full iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .map-chip { position: absolute; top: 16px; right: 16px; z-index: 2; background: var(--marigold); color: var(--ink); border: 2px solid var(--ink); border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 7px 14px; pointer-events: none; }
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+  @media (max-width: 860px) { .features { grid-template-columns: 1fr; } }
+</style>
+
+<main id="main">
+  <header class="app-hero">
+    <div class="wrap grid-2">
+      <div>
+        <span class="eyebrow" style="color:var(--marigold)">The Friendly Spaces app</span>
+        <h1 style="margin-top:14px">Every pin is a promise.</h1>
+        <p class="lede">Every place in the app carries the label and passed our on-site check. No sponsored listings, no guesswork &mdash; if it's on the map, your kids are welcome there. Free, in four languages, all over Switzerland.</p>
+        <div class="stores">
+          <a class="store" href="https://apps.apple.com/ch/app/friendly-spaces/id6760175904" target="_blank" rel="noopener">Download on the<br><b>App Store</b></a>
+          <a class="store" href="https://play.google.com/store/apps/details?id=ch.friendlyspaces.app" target="_blank" rel="noopener">Get it on<br><b>Google Play</b></a>
+        </div>
+      </div>
+      <div class="phone rv" id="phone">
+        <img src="/assets/img/app-map.jpg" alt="Friendly Spaces app map view with partner pins across Switzerland" width="460" height="996">
+      </div>
+    </div>
+  </header>
+
+  <section class="band" style="padding-top:70px">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--blue)">The live map</span>
+      <h2 class="section-title" style="margin-top:12px">Same map, right here</h2>
+      <p style="max-width:56ch; margin-top:12px;">Search by name or city, filter by what your family needs, and tap a pin for the full profile &mdash; photos, hours, and a button to navigate.</p>
+      <div class="map-full rv">
+        <iframe src="/map/?lang=en" title="Friendly Spaces live map" loading="lazy" allow="geolocation"></iframe>
+        <span class="map-chip">Live</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-pink">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--blue)">What the app does</span>
+      <h2 class="section-title" style="margin-top:12px">Made for the day out</h2>
+      <div class="features">
+        <div class="card rv"><h3>Filter for what matters</h3><p>Age groups, high chairs, play area, changing table, outdoor seating, strollers welcome &mdash; pick yours, see only the places that fit.</p></div>
+        <div class="card rv"><h3>Real photos, real hours</h3><p>Each profile shows the space as it is: photos from our visit, opening hours, specialties and a direct line to call or navigate.</p></div>
+        <div class="card rv"><h3>Suggest a place</h3><p>Know a caf&eacute; that does it right? Send it from the app. Every suggestion gets a visit &mdash; and might become the next pin.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-tang cta-band">
+    <div class="wrap">
+      <h2>Take it with you</h2>
+      <p>Free on iOS and Android. Four languages, all of Switzerland, no account needed.</p>
+      <div class="stores" style="justify-content:center">
+        <a class="store" style="border-color:#fff; color:#fff" href="https://apps.apple.com/ch/app/friendly-spaces/id6760175904" target="_blank" rel="noopener">Download on the<br><b>App Store</b></a>
+        <a class="store" style="border-color:#fff; color:#fff" href="https://play.google.com/store/apps/details?id=ch.friendlyspaces.app" target="_blank" rel="noopener">Get it on<br><b>Google Play</b></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Friendly Spaces</div>
+        <p class="foot-tag">Strengthening families and rethinking public spaces — one café at a time.</p>
+      </div>
+      <div><h4>Explore</h4><a href="/app.html">Map & App</a><a href="/label.html">The Label</a><a href="/playbox.html">PlayBox</a><a href="/partners.html">Partners</a><a href="/about.html">About</a><a href="/news/">News</a></div>
+      <div><h4>Contact</h4><a href="mailto:hello@friendlyspaces.ch">hello@friendlyspaces.ch</a><a href="/contact.html">Contact</a><a href="/sponsoring.html">Sponsoring</a><a href="/contact.html#nominate">Nominate a space</a></div>
+      <div><h4>Follow</h4><a href="https://www.instagram.com/friendly.spaces/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@friendlyspaces" target="_blank" rel="noopener">TikTok</a><a href="https://www.linkedin.com/company/friendly-spaces/" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Friendly Spaces &middot; <a href="/privacy.html">Privacy policy</a></span>
+      <span class="foot-langs"><a href="/" data-lang="en">EN</a> · <a href="/de/" data-lang="de">DE</a> · <a href="/fr/" data-lang="fr">FR</a> · <a href="/it/" data-lang="it">IT</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
+
+</body>
+</html>

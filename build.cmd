@@ -1,5 +1,5 @@
 @echo off
-REM Rebuilds index.html and sponsoring.html from src\templates. Double-click after editing a template.
+REM Rebuilds every page from src\ into the site root. Double-click after editing.
 cd /d "%~dp0"
-powershell -NoProfile -ExecutionPolicy Bypass -File build.ps1
+python build.py
 pause
