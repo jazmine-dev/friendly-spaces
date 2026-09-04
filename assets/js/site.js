@@ -158,9 +158,9 @@
       gsap.to('#phone', { y: -36, ease: 'none', scrollTrigger: { trigger: '#phone', start: 'top bottom', end: 'bottom top', scrub: true } });
     }
 
-    /* hero photo zooms slowly while it scrolls away */
-    if (document.querySelector('.hero-visual .frame img')) {
-      gsap.to('.hero-visual .frame img', { scale: 1.16, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+    /* hero phone screen zooms slowly while it scrolls away */
+    if (document.querySelector('.hero-visual .screen-zoom img')) {
+      gsap.to('.hero-visual .screen-zoom img', { scale: 1.18, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     }
 
     /* phone: the map zooms in as the phone passes, and the pins drop onto it */
