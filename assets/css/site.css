@@ -42,9 +42,10 @@ a { color: var(--blue); }
 
 /* nav */
 nav#nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(248,245,239,.88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(44,53,137,.12); }
-.nav-inner { max-width: 1240px; margin: 0 auto; padding: 14px 28px; display: flex; align-items: center; gap: 28px; }
-.logo-link { display: block; line-height: 0; padding: 9px 0; margin: -9px 0; }
-.nav-inner img.logo { height: 26px; width: auto; display: block; }
+.nav-inner { max-width: 1240px; margin: 0 auto; padding: 8px 28px; display: flex; align-items: center; gap: 28px; }
+.logo-link { display: block; line-height: 0; }
+.nav-inner img.logo { height: 60px; width: auto; display: block; }
+@media (max-width: 900px) { .nav-inner img.logo { height: 50px; } .nav-inner { padding: 6px 20px; } }
 .nav-menu { display: flex; align-items: center; gap: 28px; margin-left: auto; }
 .nav-links { display: flex; gap: 22px; }
 .nav-links a { color: var(--ink); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 10px 0; border-bottom: 2px solid transparent; }
