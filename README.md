@@ -25,4 +25,4 @@ Cloudflare Pages project `friendly-spaces` (https://friendly-spaces.pages.dev), 
 
 ## The live map
 
-The map on the homepage is an iframe of the map web app at https://app.friendlyspaces.ch (its own repo, currently on Netlify — to be migrated to Cloudflare Pages).
+The homepage embeds `/map/` (an iframe of `map/index.html`), a copy of the embeddable webmap from the `friendlyspaceswebmap` repo. It loads venue data and photos from https://app.friendlyspaces.ch (the native app's data host, repo `friendlyspaces-pwa`) — that is the single source of truth for venues. Basemap: swisstopo (no API key).
