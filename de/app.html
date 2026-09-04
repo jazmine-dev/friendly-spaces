@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karte & App — zertifizierte familienfreundliche Orte finden — Friendly Spaces</title>
+<meta name="description" content="Die Friendly Spaces App und Live-Karte: alle zertifizierten familienfreundlichen Cafés, Läden und Kulturorte der Schweiz, mit Filtern für Alter, Hochstuhl, Spielecke und Wickeltisch. Kostenlos für iOS und Android.">
+<link rel="canonical" href="https://friendlyspaces.ch/de/app.html">
+<link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/app.html">
+<link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/app.html">
+<link rel="alternate" hreflang="x-default" href="https://friendlyspaces.ch/app.html">
+<meta property="og:title" content="Karte & App — zertifizierte familienfreundliche Orte finden — Friendly Spaces">
+<meta property="og:description" content="Die Friendly Spaces App und Live-Karte: alle zertifizierten familienfreundlichen Cafés, Läden und Kulturorte der Schweiz, mit Filtern für Alter, Hochstuhl, Spielecke und Wickeltisch. Kostenlos für iOS und Android.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://friendlyspaces.ch/de/app.html">
+<meta property="og:image" content="https://friendlyspaces.ch/assets/img/og-image.jpg">
+<meta name="theme-color" content="#2C3589">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="preload" href="/assets/fonts/Kaio-Black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+
+</head>
+<body data-lang="de" data-alternates="en:https://friendlyspaces.ch/app.html de:https://friendlyspaces.ch/de/app.html">
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs>
+    <clipPath id="flowerClip" clipPathUnits="objectBoundingBox">
+      <circle cx="0.5" cy="0.20" r="0.24"/><circle cx="0.76" cy="0.35" r="0.24"/><circle cx="0.24" cy="0.35" r="0.24"/>
+      <circle cx="0.24" cy="0.65" r="0.24"/><circle cx="0.76" cy="0.65" r="0.24"/><circle cx="0.5" cy="0.80" r="0.24"/>
+      <circle cx="0.5" cy="0.5" r="0.34"/>
+    </clipPath>
+  </defs>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="logo-link" href="/de/"><img class="logo" src="/assets/logos/friendly-spaces.svg" alt="Friendly Spaces"></a>
+    <button class="nav-burger" id="nav-burger" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-menu" id="nav-menu">
+      <div class="nav-links">
+        <a href="/de/app.html" data-nav="app" aria-current="page">Karte & App</a>
+        <a href="/de/label.html" data-nav="label">Das Label</a>
+        <a href="/de/playbox.html" data-nav="playbox">PlayBox</a>
+        <a href="/de/partners.html" data-nav="partners">Partner</a>
+        <a href="/de/about.html" data-nav="about">Über uns</a>
+        <a href="/de/news/" data-nav="news">News</a>
+      </div>
+      <div class="lang" id="lang-switch" aria-label="Language">
+        <a href="#" data-lang="en">EN</a><span>·</span><a href="#" data-lang="de">DE</a><span>·</span><a href="#" data-lang="fr">FR</a><span>·</span><a href="#" data-lang="it">IT</a>
+      </div>
+      <a class="btn btn-ink nav-cta" href="/de/label.html">Für Betriebe</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .app-hero { background: var(--ink); color: var(--cream); padding: 140px 0 80px; overflow: hidden; }
+  .app-hero .grid-2 { grid-template-columns: 1.1fr .9fr; align-items: center; }
+  .app-hero h1 { font-size: clamp(44px, 6.5vw, 84px); color: var(--cream); }
+  .app-hero .lede { font-size: 18px; max-width: 46ch; margin: 24px 0 0; color: var(--lilac); }
+  .stores { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .store { border: 1.5px solid var(--lilac); border-radius: 12px; padding: 9px 18px; color: var(--cream); text-decoration: none; font-size: 13px; line-height: 1.25; }
+  .store b { display: block; font-size: 15px; }
+  .store:hover { background: rgba(210,209,233,.12); }
+  .phone { width: min(300px, 70vw); margin: 0 auto; border-radius: 38px; border: 3px solid var(--lilac); background: #0e133f; padding: 10px; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
+  .phone img { width: 100%; border-radius: 28px; display: block; }
+  @media (max-width: 860px) { .app-hero .grid-2 { grid-template-columns: 1fr; } }
+  .map-full { position: relative; height: min(84vh, 820px); border: 2px solid var(--ink); border-radius: 22px; overflow: hidden; background: #eef2fb; margin-top: 36px; }
+  .map-full iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .map-chip { position: absolute; top: 16px; right: 16px; z-index: 2; background: var(--marigold); color: var(--ink); border: 2px solid var(--ink); border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 7px 14px; pointer-events: none; }
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+  @media (max-width: 860px) { .features { grid-template-columns: 1fr; } }
+</style>
+
+<main id="main">
+  <header class="app-hero">
+    <div class="wrap grid-2">
+      <div>
+        <span class="eyebrow" style="color:var(--marigold)">Die Friendly Spaces App</span>
+        <h1 style="margin-top:14px">Jeder Pin ist ein Versprechen.</h1>
+        <p class="lede">Jeder Ort in der App tr&auml;gt das Label und hat unseren Check vor Ort bestanden. Keine bezahlten Eintr&auml;ge, kein Raten &mdash; steht er auf der Karte, sind Ihre Kinder dort willkommen. Kostenlos, in vier Sprachen, in der ganzen Schweiz.</p>
+        <div class="stores">
+          <a class="store" href="https://apps.apple.com/ch/app/friendly-spaces/id6760175904" target="_blank" rel="noopener">Laden im<br><b>App Store</b></a>
+          <a class="store" href="https://play.google.com/store/apps/details?id=ch.friendlyspaces.app" target="_blank" rel="noopener">Jetzt bei<br><b>Google Play</b></a>
+        </div>
+      </div>
+      <div class="phone rv" id="phone">
+        <img src="/assets/img/app-map.jpg" alt="Kartenansicht der Friendly Spaces App mit Partner-Pins in der Schweiz" width="460" height="996">
+      </div>
+    </div>
+  </header>
+
+  <section class="band" style="padding-top:70px">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--blue)">Die Live-Karte</span>
+      <h2 class="section-title" style="margin-top:12px">Dieselbe Karte, direkt hier</h2>
+      <p style="max-width:56ch; margin-top:12px;">Nach Name oder Stadt suchen, nach dem filtern, was Ihre Familie braucht, und einen Pin antippen f&uuml;r das ganze Profil &mdash; Fotos, &Ouml;ffnungszeiten und ein Knopf zum Navigieren.</p>
+      <div class="map-full rv">
+        <iframe src="/map/?lang=de" title="Friendly Spaces Live-Karte" loading="lazy" allow="geolocation"></iframe>
+        <span class="map-chip">Live</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-pink">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--blue)">Was die App kann</span>
+      <h2 class="section-title" style="margin-top:12px">Gemacht f&uuml;r den Ausflug</h2>
+      <div class="features">
+        <div class="card rv"><h3>Filtern, was z&auml;hlt</h3><p>Altersgruppen, Hochstuhl, Spielbereich, Wickeltisch, Aussensitzpl&auml;tze, Kinderwagen willkommen &mdash; ausw&auml;hlen und nur die passenden Orte sehen.</p></div>
+        <div class="card rv"><h3>Echte Fotos, echte Zeiten</h3><p>Jedes Profil zeigt den Ort, wie er ist: Fotos von unserem Besuch, &Ouml;ffnungszeiten, Besonderheiten und ein direkter Draht zum Anrufen oder Navigieren.</p></div>
+        <div class="card rv"><h3>Einen Ort vorschlagen</h3><p>Sie kennen ein Caf&eacute;, das es richtig macht? Schicken Sie es aus der App. Jeder Vorschlag bekommt einen Besuch &mdash; und wird vielleicht der n&auml;chste Pin.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-tang cta-band">
+    <div class="wrap">
+      <h2>Nehmen Sie sie mit</h2>
+      <p>Kostenlos f&uuml;r iOS und Android. Vier Sprachen, die ganze Schweiz, kein Konto n&ouml;tig.</p>
+      <div class="stores" style="justify-content:center">
+        <a class="store" style="border-color:#fff; color:#fff" href="https://apps.apple.com/ch/app/friendly-spaces/id6760175904" target="_blank" rel="noopener">Laden im<br><b>App Store</b></a>
+        <a class="store" style="border-color:#fff; color:#fff" href="https://play.google.com/store/apps/details?id=ch.friendlyspaces.app" target="_blank" rel="noopener">Jetzt bei<br><b>Google Play</b></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Friendly Spaces</div>
+        <p class="foot-tag">Familien stärken, öffentliche Räume neu denken — ein Café nach dem anderen.</p>
+      </div>
+      <div><h4>Entdecken</h4><a href="/de/app.html">Karte & App</a><a href="/de/label.html">Das Label</a><a href="/de/playbox.html">PlayBox</a><a href="/de/partners.html">Partner</a><a href="/de/about.html">Über uns</a><a href="/de/news/">News</a></div>
+      <div><h4>Kontakt</h4><a href="mailto:hello@friendlyspaces.ch">hello@friendlyspaces.ch</a><a href="/de/contact.html">Kontakt</a><a href="/de/sponsoring.html">Sponsoring</a><a href="/de/contact.html#nominate">Einen Ort vorschlagen</a></div>
+      <div><h4>Folgen</h4><a href="https://www.instagram.com/friendly.spaces/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@friendlyspaces" target="_blank" rel="noopener">TikTok</a><a href="https://www.linkedin.com/company/friendly-spaces/" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Friendly Spaces &middot; <a href="/de/privacy.html">Datenschutz</a></span>
+      <span class="foot-langs"><a href="/" data-lang="en">EN</a> · <a href="/de/" data-lang="de">DE</a> · <a href="/fr/" data-lang="fr">FR</a> · <a href="/it/" data-lang="it">IT</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
+
+</body>
+</html>

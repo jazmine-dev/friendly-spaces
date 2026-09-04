@@ -1,0 +1,54 @@
+---
+title: News — Friendly Spaces
+description: Neuigkeiten von Friendly Spaces: neue Partner, neue Städte, PlayBox-Geschichten und was sich hinter dem Label bewegt.
+nav: news
+---
+<style>
+  .news-hero { padding: 140px 0 30px; }
+  .news-hero h1 { font-size: clamp(44px, 6.5vw, 84px); }
+  .news-hero .lede { font-size: 18px; max-width: 50ch; margin: 22px 0 0; }
+  .posts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 30px; }
+  .post { background: var(--paper); border: 2px solid var(--ink); border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: var(--ink); transition: transform .18s ease; }
+  .post:hover { transform: translateY(-3px); }
+  .post img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+  .post .body { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 8px; }
+  .post time { font-size: 12.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .post h2 { font-size: 24px; }
+  .post p { margin: 0; font-size: 15px; }
+  @media (max-width: 760px) { .posts { grid-template-columns: 1fr; } }
+  .lang-note { margin-top: 26px; }
+</style>
+
+<main id="main">
+  <header class="news-hero">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--tangerine)">News</span>
+      <h1 style="margin-top:14px">Was es Neues gibt</h1>
+      <p class="lede">Neue Partner, neue St&auml;dte, PlayBox-Geschichten und ab und zu ein Blick hinter das Label. Kurze Beitr&auml;ge, auf Englisch, ein paar Mal im Jahr.</p>
+    </div>
+  </header>
+
+  <section class="band" style="padding-top:20px">
+    <div class="wrap">
+      <div class="posts">
+        <a class="post rv" href="{{root}}news/early-bird-2026.html">
+          <img src="/assets/img/orangerie-elfenau.jpg" alt="" width="900" height="551">
+          <div class="body">
+            <time datetime="2026-09-01">September 2026</time>
+            <h2>Die Pilotphase ist vorbei. Hallo Early Bird.</h2>
+            <p>Was wir von den ersten Partnern gelernt haben, was sich jetzt &auml;ndert und warum 2026 das Jahr zum Einsteigen ist.</p>
+          </div>
+        </a>
+      </div>
+      <p class="fine lang-note">Unsere News-Beitr&auml;ge schreiben wir auf Englisch. Diese Zusammenfassung wurde automatisch &uuml;bersetzt &mdash; das Original ist immer einen Klick entfernt.</p>
+    </div>
+  </section>
+
+  <section class="band band-pink cta-band">
+    <div class="wrap">
+      <h2>Friendly News, ein paar Mal im Jahr</h2>
+      <p>Neue Beitr&auml;ge, Partner und St&auml;dte direkt in Ihr Postfach. Kein Spam, jederzeit abbestellbar.</p>
+      <a class="btn btn-ink" href="{{root}}#news">Auf der Startseite anmelden</a>
+    </div>
+  </section>
+</main>

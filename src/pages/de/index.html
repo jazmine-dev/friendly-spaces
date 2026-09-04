@@ -1,0 +1,279 @@
+---
+title: Friendly Spaces — das familienfreundliche Label & die App für die Schweiz
+description: Friendly Spaces zertifiziert Cafés, Läden und Kulturorte, in denen Familien wirklich willkommen sind — und bringt jeden davon auf die Karte.
+nav: home
+---
+<style>
+  .hero { padding: 130px 0 40px; }
+  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .hero h1 { font-size: clamp(56px, 8.5vw, 110px); color: var(--ink); }
+  .hero h1 .blue { color: var(--blue); position: relative; display: inline-block; }
+  .hero h1 .blue svg { position: absolute; left: 2%; bottom: -14px; width: 96%; height: 16px; }
+  .hero .sub { font-size: 18px; max-width: 42ch; margin: 26px 0 0; }
+  .hero .ctas { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+  .hero-visual { position: relative; }
+  .hero-visual img { width: 100%; border-radius: 22px; border: 2px solid var(--ink); display: block; }
+  .hero-visual .sticker { position: absolute; left: -14px; top: -16px; transform: rotate(-7deg); }
+  .hero-line { overflow: hidden; padding-bottom: 20px; margin-bottom: -20px; }
+  .hero-line > span { display: inline-block; }
+  .scroll-cue { display: inline-flex; align-items: center; gap: 10px; margin-top: 44px; color: var(--blue); font-size: 12.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+  .scroll-cue .ring { width: 44px; height: 44px; border: 2px solid var(--blue); border-radius: 50%; display: grid; place-items: center; }
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-cue .ring svg { animation: cue-bob 1.6s ease-in-out infinite; }
+    @keyframes cue-bob { 0%, 100% { transform: translateY(-2px); } 50% { transform: translateY(3px); } }
+  }
+  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } .hero { padding-top: 110px; } }
+  .statement { background: var(--lilac); margin-top: 70px; padding: 110px 0; }
+  .statement p { font-family: var(--kaio); font-size: clamp(30px, 4.6vw, 54px); line-height: 1.14; margin: 0; max-width: 22ch; }
+  .statement .w { opacity: .18; display: inline-block; }
+  .statement .u { position: relative; white-space: nowrap; }
+  .statement .u svg { position: absolute; left: 0; bottom: -8px; width: 100%; height: 13px; }
+  .aud { padding: 96px 0 30px; }
+  .aud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 34px; }
+  .aud-card { border: 2px solid var(--ink); border-radius: 22px; padding: 34px; background: var(--paper); }
+  .aud-card.families { background: var(--pink); }
+  .aud-card h3 { font-size: 27px; margin-bottom: 14px; }
+  .aud-card ul { margin-bottom: 22px; }
+  .aud-card li { font-size: 15px; }
+  @media (max-width: 860px) { .aud-grid { grid-template-columns: 1fr; } }
+  .mapband { background: var(--ink); color: var(--cream); margin-top: 90px; padding: 100px 0; overflow: hidden; }
+  .map-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+  .mapband h2 { font-size: clamp(36px, 5vw, 60px); color: var(--cream); }
+  .mapband .sub { color: var(--lilac); max-width: 46ch; margin: 20px 0 0; }
+  .stores { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .store { border: 1.5px solid var(--lilac); border-radius: 12px; padding: 9px 18px; color: var(--cream); text-decoration: none; font-size: 13px; line-height: 1.25; }
+  .store b { display: block; font-size: 15px; }
+  .store:hover { background: rgba(210,209,233,.12); }
+  .phone { width: min(300px, 70vw); margin: 0 auto; border-radius: 38px; border: 3px solid var(--lilac); background: #0e133f; padding: 10px; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
+  .phone img { width: 100%; border-radius: 28px; display: block; }
+  .map-note { font-size: 13px; color: var(--lilac); margin-top: 22px; }
+  .map-embed { position: relative; margin-top: 64px; height: 720px; border: 2px solid var(--lilac); border-radius: 22px; overflow: hidden; background: #232a63; }
+  .map-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .map-fallback { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; color: var(--lilac); padding: 24px; }
+  .map-fallback a { color: var(--cream); font-weight: 700; }
+  .map-chip { position: absolute; top: 16px; right: 16px; z-index: 2; background: var(--marigold); color: var(--ink); border: 2px solid var(--ink); border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 7px 14px; pointer-events: none; }
+  @media (max-width: 860px) { .map-grid { grid-template-columns: 1fr; } .map-embed { height: 640px; } }
+  .label-sec { background: var(--pink); padding: 100px 0; }
+  .label-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
+  .label-sticky { position: sticky; top: 110px; }
+  .label-sticky h2 { font-size: clamp(36px, 5vw, 58px); }
+  .label-sticky .sub { margin: 18px 0 0; max-width: 38ch; }
+  .label-sticky .chip { margin-top: 22px; }
+  .label-sticky .btn { margin-top: 22px; }
+  .steps-col { display: flex; flex-direction: column; gap: 18px; }
+  .step-card { background: var(--paper); border: 2px solid var(--ink); border-radius: 20px; padding: 26px 28px; }
+  .step-card .n { font-family: var(--kaio); font-size: 30px; color: var(--blue); }
+  .step-card h3 { font-size: 21px; margin: 8px 0 6px; }
+  .step-card p { margin: 0; font-size: 15px; }
+  @media (max-width: 860px) { .label-grid { grid-template-columns: 1fr; } .label-sticky { position: static; } }
+  .criteria { padding: 110px 0; }
+  .crit-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 52px; align-items: center; }
+  .criteria h2 { font-size: clamp(36px, 5vw, 58px); }
+  .criteria .sparkle-list { margin: 26px 0; }
+  @media (max-width: 860px) { .crit-grid { grid-template-columns: 1fr; } }
+  .playbox { background: var(--marigold); padding: 100px 0; }
+  .pb-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 48px; align-items: center; }
+  .pb-grid > div:first-child img { width: 100%; max-width: 380px; display: block; margin: 0 auto; }
+  .playbox h2 { font-size: clamp(36px, 5vw, 58px); }
+  .playbox .sub { margin: 18px 0 0; max-width: 52ch; }
+  .packages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 30px; }
+  .pack { background: var(--cream); border: 2px solid var(--ink); border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+  .pack b { font-family: var(--kaio); font-size: 17px; line-height: 1.15; }
+  .pack span { font-size: 13px; }
+  .pack .price { margin-top: auto; padding-top: 12px; font-size: 12.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); }
+  @media (max-width: 860px) { .pb-grid { grid-template-columns: 1fr; } .packages { grid-template-columns: 1fr; } }
+  .partners { padding: 110px 0 90px; text-align: center; }
+  .partners h2 { font-size: clamp(32px, 4.5vw, 52px); }
+  .marquee { overflow: hidden; margin-top: 44px; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .marquee-track { display: flex; gap: 64px; align-items: center; width: max-content; animation: scroll 30s linear infinite; }
+  @keyframes scroll { to { transform: translateX(-50%); } }
+  .marquee img { height: 46px; width: auto; opacity: .8; }
+  .t-slot { margin: 60px auto 0; max-width: 560px; border: 2px dashed rgba(44,53,137,.4); border-radius: 20px; padding: 26px 30px; font-size: 14.5px; color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+  .news-cta { padding: 100px 0; }
+  .news-inner { max-width: 620px; margin: 0 auto; text-align: center; }
+  .news-inner h2 { font-size: clamp(30px, 4vw, 46px); }
+  .news-inner p { margin: 16px 0 26px; }
+  .news-inner form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .news-inner input[type=email] { flex: 1 1 260px; border: 2px solid var(--ink); border-radius: 999px; padding: 13px 22px; font-size: 15px; font-family: var(--body); background: var(--paper); color: var(--ink); }
+  .news-inner input:focus { outline: 3px solid var(--lilac); outline-offset: 1px; }
+</style>
+
+<main id="main">
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="hero-line"><span class="eyebrow" style="color:var(--blue)">Das familienfreundliche Label &amp; die App der Schweiz</span></div>
+        <h1>
+          <div class="hero-line"><span>wir sind</span></div>
+          <div class="hero-line"><span class="blue">Friendly<svg viewBox="0 0 200 14" preserveAspectRatio="none" class="sq-draw" aria-hidden="true"><path d="M3 10 Q 28 4, 55 9 T 108 8 T 158 9 T 197 6" fill="none" stroke="#E8622C" stroke-width="5" stroke-linecap="round"/></svg></span></div>
+        </h1>
+        <p class="sub">Wir zertifizieren Caf&eacute;s, L&auml;den und Kulturorte, in denen Familien wirklich willkommen sind &mdash; und bringen jeden davon auf die Karte.</p>
+        <div class="ctas">
+          <a class="btn btn-tang" href="{{root}}app.html">App holen</a>
+          <a class="btn btn-line" href="{{root}}label.html">F&uuml;r Betriebe</a>
+        </div>
+        <div class="scroll-cue" id="cue" aria-hidden="true">
+          <span class="ring"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2 L8 12 M3.5 8.5 L8 13 L12.5 8.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span>scrollen</span>
+        </div>
+      </div>
+      <div class="hero-visual rv">
+        <img src="/assets/img/hero-map-phone.jpg" alt="Die Friendly Spaces App zeigt die Markthalle Basel auf der Karte" width="1070" height="1082">
+        <span class="sticker">Early Bird '26</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="statement">
+    <div class="wrap">
+      <p id="scrub">Caf&eacute;s, L&auml;den und Kulturorte, an denen Kinder <span class="u">wirklich willkommen<svg viewBox="0 0 200 12" preserveAspectRatio="none" class="sq-draw" aria-hidden="true"><path d="M3 8 Q 25 3, 50 7 T 100 6 T 150 7 T 197 5" fill="none" stroke="#E8622C" stroke-width="4" stroke-linecap="round"/></svg></span> sind &mdash; nicht nur geduldet.</p>
+    </div>
+  </section>
+
+  <section class="aud">
+    <div class="wrap">
+      <h2 class="rv section-title">Ein Label, zwei Seiten</h2>
+      <div class="aud-grid">
+        <div class="aud-card families rv">
+          <h3>F&uuml;r Familien</h3>
+          <ul class="sparkle-list tang">
+            <li>App &ouml;ffnen und alle zertifizierten Orte in der N&auml;he sehen</li>
+            <li>Nach Alter, Hochstuhl, Spielecke oder Wickeltisch filtern</li>
+            <li>Hingehen &mdash; und den Kaffee endlich in Ruhe geniessen</li>
+          </ul>
+          <a class="btn btn-ink" href="{{root}}app.html">App holen</a>
+        </div>
+        <div class="aud-card rv">
+          <h3>F&uuml;r Betriebe</h3>
+          <ul class="sparkle-list">
+            <li>Familien zeigen, dass sie willkommen sind &mdash; mit einem Label, das etwas bedeutet</li>
+            <li>Praxisnaher Check vor Ort, ehrliche Tipps, Marketingmaterial inklusive</li>
+            <li>Ihr Pin auf der Karte, die Familien tats&auml;chlich anschauen</li>
+          </ul>
+          <a class="btn btn-tang" href="{{root}}label.html">Als Early Bird dabei sein</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mapband" id="app">
+    <div class="wrap map-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--marigold)">Die Friendly Spaces App</span>
+        <h2 style="margin-top:12px">Jeder Pin ist ein Versprechen.</h2>
+        <p class="sub">Jeder Ort in der App tr&auml;gt das Label und hat unseren Check vor Ort bestanden. Keine bezahlten Eintr&auml;ge, kein Raten &mdash; steht er auf der Karte, sind Ihre Kinder dort willkommen. Kostenlos, in vier Sprachen, in der ganzen Schweiz.</p>
+        <div class="stores">
+          <a class="store" href="{{root}}app.html">Laden im<br><b>App Store</b></a>
+          <a class="store" href="{{root}}app.html">Jetzt bei<br><b>Google Play</b></a>
+        </div>
+        <p class="map-note">Die Karte unten ist live &mdash; dieselbe wie in der App. Scrollen, Pin antippen, Ort kennenlernen.</p>
+      </div>
+      <div class="phone rv" id="phone">
+        <img src="/assets/img/app-map.jpg" alt="Kartenansicht der Friendly Spaces App mit Partner-Pins in der Schweiz" width="460" height="996">
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="map-embed rv">
+        <div class="map-fallback">
+          <p>Die Live-Karte kann in dieser Vorschau nicht laden &mdash;<br>direkt &ouml;ffnen unter <a href="/map/?lang=de" target="_blank" rel="noopener">friendlyspaces.ch/map</a></p>
+        </div>
+        <iframe src="/map/?lang={{lang}}" title="Friendly Spaces Live-Karte" loading="lazy" allow="geolocation"></iframe>
+        <span class="map-chip">Live</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="label-sec" id="label">
+    <div class="wrap label-grid">
+      <div class="label-sticky">
+        <span class="eyebrow" style="color:var(--blue)">F&uuml;r Betriebe</span>
+        <h2 style="margin-top:12px">Das Label in vier Schritten</h2>
+        <p class="sub">Ein Besuch nach dem anderen machen wir Ihren Ort wirklich familienfreundlich &mdash; und sorgen daf&uuml;r, dass Familien davon erfahren.</p>
+        <span class="chip">Early-Bird-Preis bis Ende 2026</span><br>
+        <a class="btn btn-ink" href="{{root}}label.html">Alles zum Label</a>
+      </div>
+      <div class="steps-col">
+        <div class="step-card rv"><span class="n">01</span><h3>Hallo sagen &mdash; oder wir waren schon da</h3><p>Melden Sie sich, oder kn&uuml;pfen Sie an unseren Besuch an. Wir erkl&auml;ren genau, was das Mitmachen bedeutet.</p></div>
+        <div class="step-card rv"><span class="n">02</span><h3>Erstes Gespr&auml;ch</h3><p>Die Kriterien, die Kosten, Ihre Fragen &mdash; ehrliche Antworten, bevor Sie sich zu etwas verpflichten.</p></div>
+        <div class="step-card rv"><span class="n">03</span><h3>Besuch vor Ort</h3><p>Wir schauen Ihren Ort mit Elternaugen an und hinterlassen praktische, bezahlbare Vorschl&auml;ge.</p></div>
+        <div class="step-card rv"><span class="n">04</span><h3>Label drauf</h3><p>Der Kleber am Fenster, Ihr Pin auf unserer Karte, Marketingmaterial in Ihren H&auml;nden.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="criteria">
+    <div class="wrap crit-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--tangerine)">Was das Label verlangt</span>
+        <h2 style="margin-top:12px">48 Punkte.<br>Keine Geheimnisse.</h2>
+        <ul class="sparkle-list">
+          <li><span><b>Spiel &amp; Platz</b> &mdash; etwas zu tun, und Raum, um mit Kinderwagen zu existieren</span></li>
+          <li><span><b>Sicherheit &amp; Zugang</b> &mdash; von der T&uuml;rbreite bis zu dem, was kleine Arme erreichen</span></li>
+          <li><span><b>Essen &amp; Versorgung</b> &mdash; Kinderangebote, Hochst&uuml;hle, ein Wickeltisch, den es wirklich gibt</span></li>
+          <li><span><b>Team &amp; Willkommen</b> &mdash; der Teil, den keine Checkliste vort&auml;uschen kann</span></li>
+        </ul>
+        <p class="fine">Orte werden nach unserem 48-Punkte-System bewertet und m&uuml;ssen die Schwelle erreichen, um das Label zu tragen. Wir schauen regelm&auml;ssig wieder vorbei &mdash; das Label wird verdient und dann gehalten.</p>
+      </div>
+      <div class="rv">
+        <img class="flower-photo" src="/assets/img/magical-cafe.jpg" alt="Im Magical Café Basel — Hochstühle bereit an der Wand" width="900" height="1200">
+      </div>
+    </div>
+  </section>
+
+  <section class="playbox" id="playbox">
+    <div class="wrap pb-grid">
+      <div class="rv"><img src="/assets/img/spielkiste.png" alt="Die Friendly Spaces Spielkiste voller Holzspielzeug" width="640" height="640"></div>
+      <div>
+        <span class="eyebrow">Die PlayBox</span>
+        <h2 style="margin-top:12px">Spielzeug, gel&ouml;st.<br>F&uuml;r immer.</h2>
+        <p class="sub">Eine kuratierte Spielkiste f&uuml;r 0&ndash;5 Jahre, geliefert und gepflegt von uns. Alle vier Monate kommen wir vorbei, pr&uuml;fen die Qualit&auml;t und ersetzen, was kaputt oder verschwunden ist &mdash; damit Ihre Spielecke immer in Schuss ist, ohne Aufwand f&uuml;r Ihr Team.</p>
+        <div class="packages">
+          <div class="pack rv"><b>Einzelne Box</b><span>Eine PlayBox im Abo, regelm&auml;ssig aufgefrischt. Der einfache Einstieg.</span><span class="price">Preis auf Anfrage</span></div>
+          <div class="pack rv"><b>Individuelle Spielecke</b><span>Eine ganze Spielecke, f&uuml;r Ihren Raum geplant und von uns am Leben gehalten.</span><span class="price">Preis auf Anfrage</span></div>
+          <div class="pack rv"><b>Ketten &amp; Standorte</b><span>Mehrere Betriebe, ein Setup &mdash; einheitlich an jedem Standort.</span><span class="price">Preis auf Anfrage</span></div>
+        </div>
+        <p style="margin-top:22px"><a class="btn btn-ink" href="{{root}}playbox.html">Mehr zur PlayBox</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners" id="partners">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--blue)">Unsere Partner</span>
+      <h2 style="margin-top:12px">Schon Friendly</h2>
+    </div>
+    <div class="marquee" aria-label="Partnerlogos">
+      <div class="marquee-track">
+        <img src="/assets/logos/partners/orangerie-elfenau.svg" alt="Orangerie Elfenau"><img src="/assets/logos/partners/markthalle.svg" alt="Markthalle Basel"><img src="/assets/logos/partners/klara.svg" alt="Klara"><img src="/assets/logos/partners/magical-cafe.svg" alt="Magical Café"><img src="/assets/logos/partners/sempre-berna.svg" alt="Sempre Berna"><img src="/assets/logos/partners/lis-atelier.svg" alt="LIS Atelier"><img src="/assets/logos/partners/crafty-crew.svg" alt="Crafty Crew">
+        <img src="/assets/logos/partners/orangerie-elfenau.svg" alt=""><img src="/assets/logos/partners/markthalle.svg" alt=""><img src="/assets/logos/partners/klara.svg" alt=""><img src="/assets/logos/partners/magical-cafe.svg" alt=""><img src="/assets/logos/partners/sempre-berna.svg" alt=""><img src="/assets/logos/partners/lis-atelier.svg" alt=""><img src="/assets/logos/partners/crafty-crew.svg" alt="">
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="t-slot">Hier kommen die Stimmen unserer Partner hin &mdash; wir sammeln sie bei unseren Besuchen im September. 🧡</div>
+      <p style="margin-top:28px"><a class="btn btn-line" href="{{root}}partners.html">Alle Partner kennenlernen</a></p>
+    </div>
+  </section>
+
+  <section class="band band-tang cta-band">
+    <div class="wrap">
+      <h2>Kennen Sie einen Ort, der es richtig macht?</h2>
+      <p>Erz&auml;hlen Sie uns davon. Jeder Tipp bekommt einen Besuch &mdash; und Ihr Lieblingscaf&eacute; wird vielleicht der n&auml;chste Friendly Space.</p>
+      <a class="btn btn-cream" href="{{root}}contact.html#nominate">Ort vorschlagen</a>
+    </div>
+  </section>
+
+  <section class="news-cta" id="news">
+    <div class="wrap news-inner">
+      <h2>Friendly News, ein paar Mal im Jahr</h2>
+      <p>Neue Partner, neue St&auml;dte, PlayBox-Geschichten. Auf Englisch, kein Spam, jederzeit abbestellbar.</p>
+      <form action="https://app.friendlyspaces.ch/" method="POST" data-netlify-form="website-newsletter" data-success="Sie sind auf der Liste. 🧡" data-sending="Wird eingetragen…" data-error="Das hat nicht geklappt — schreiben Sie an hello@friendlyspaces.ch, wir tragen Sie ein.">
+        <input type="email" name="email" placeholder="sie@beispiel.ch" aria-label="E-Mail-Adresse" required>
+        <input type="hidden" name="language" value="{{lang}}">
+        <p class="hp" style="position:absolute;left:-9999px"><label>Leer lassen <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <button class="btn btn-ink" type="submit">Anmelden</button>
+        <p class="form-status" role="status" aria-live="polite" style="flex-basis:100%"></p>
+      </form>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,109 @@
+---
+title: Die PlayBox — eine kuratierte Spielkiste, geliefert und gepflegt — Friendly Spaces
+description: Die Friendly Spaces PlayBox: eine kuratierte Spielkiste für 0–5 Jahre, die wir liefern, alle vier Monate prüfen und vollständig halten. Einzelne Box, individuelle Spielecke oder Ketten.
+nav: playbox
+---
+<style>
+  .pb-hero { background: var(--marigold); padding: 140px 0 80px; }
+  .pb-hero .grid-2 { align-items: center; }
+  .pb-hero h1 { font-size: clamp(44px, 6.5vw, 84px); }
+  .pb-hero .lede { font-size: 18px; max-width: 46ch; margin: 24px 0 0; }
+  .pb-hero img { width: 100%; max-width: 420px; display: block; margin: 0 auto; }
+  .pb-hero .ctas { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .how { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+  .how .card .n { font-family: var(--kaio); font-size: 26px; color: var(--tangerine); display: block; margin-bottom: 8px; }
+  @media (max-width: 860px) { .how { grid-template-columns: 1fr; } }
+  .packs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+  .packcard { background: var(--paper); border: 2px solid var(--ink); border-radius: 22px; padding: 30px; display: flex; flex-direction: column; gap: 10px; }
+  .packcard.hl { background: var(--pink); }
+  .packcard h3 { font-size: 24px; }
+  .packcard .sparkle-list { margin-top: 6px; }
+  .packcard .sparkle-list li { font-size: 14.5px; }
+  .packcard .price { margin-top: auto; padding-top: 16px; font-size: 12.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); }
+  @media (max-width: 860px) { .packs { grid-template-columns: 1fr; } }
+  .inside { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .inside ul { margin-top: 18px; }
+  @media (max-width: 860px) { .inside { grid-template-columns: 1fr; } }
+</style>
+
+<main id="main">
+  <header class="pb-hero">
+    <div class="wrap grid-2">
+      <div>
+        <span class="eyebrow">Die PlayBox</span>
+        <h1 style="margin-top:14px">Spielzeug, gel&ouml;st.<br>F&uuml;r immer.</h1>
+        <p class="lede">Sie wissen nicht, wo Sie mit einer Spielecke anfangen sollen? Genau daf&uuml;r gibt es die PlayBox: eine kuratierte Kiste voller Spielzeug f&uuml;r 0&ndash;5 Jahre, von uns geliefert &mdash; und von uns vollst&auml;ndig gehalten, damit sie nie zu einer weiteren Sache wird, an die Ihr Team denken muss.</p>
+        <div class="ctas">
+          <a class="btn btn-ink" href="{{root}}contact.html?reason=playbox">PlayBox anfragen</a>
+          <a class="btn btn-line" href="#packages">Die Pakete</a>
+        </div>
+      </div>
+      <div class="rv"><img src="/assets/img/spielkiste.png" alt="Die Friendly Spaces PlayBox, gefüllt mit Holzspielzeug" width="640" height="640"></div>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--tangerine)">So funktioniert's</span>
+      <h2 class="section-title" style="margin-top:12px">Wir bringen sie. Wir halten sie gut.</h2>
+      <div class="how">
+        <div class="card rv"><span class="n">01</span><h3>Wir liefern</h3><p>Eine Kiste, kuratiert f&uuml;r Ihren Ort und Ihre j&uuml;ngsten G&auml;ste &mdash; robust, abwaschbar, ohne Kleinteile f&uuml;r die unter Dreij&auml;hrigen.</p></div>
+        <div class="card rv"><span class="n">02</span><h3>Wir schauen alle vier Monate vorbei</h3><p>Wir kommen, pr&uuml;fen jedes Teil und ersetzen, was kaputt, verschwunden oder schlicht zu Tode geliebt ist.</p></div>
+        <div class="card rv"><span class="n">03</span><h3>Sie bieten sie einfach an</h3><p>Familien bekommen eine Spielecke, die immer in Schuss ist; Ihr Team bekommt null Zusatzarbeit. Das ist der ganze Punkt.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-pink" id="packages">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--blue)">Pakete</span>
+      <h2 class="section-title" style="margin-top:12px">Drei Wege zum Spielen</h2>
+      <div class="packs">
+        <div class="packcard rv">
+          <h3>Einzelne Box</h3>
+          <p>Eine PlayBox im Abo. Der einfache Einstieg f&uuml;r ein Caf&eacute; oder einen kleinen Laden.</p>
+          <ul class="sparkle-list"><li>Kuratiert f&uuml;r 0&ndash;5 Jahre</li><li>Qualit&auml;tscheck alle vier Monate</li><li>Kaputte oder fehlende Teile werden ersetzt</li></ul>
+          <span class="price">Preis auf Anfrage</span>
+        </div>
+        <div class="packcard hl rv">
+          <h3>Individuelle Spielecke</h3>
+          <p>Eine ganze Spielecke, f&uuml;r Ihren Raum geplant &mdash; M&ouml;bel, Spielzeug, Anordnung &mdash; und von uns am Leben gehalten.</p>
+          <ul class="sparkle-list"><li>Vor Ort geplant, mit Ihnen</li><li>Passend zu Raum und Publikum</li><li>Derselbe Vier-Monats-Rhythmus</li></ul>
+          <span class="price">Preis auf Anfrage</span>
+        </div>
+        <div class="packcard rv">
+          <h3>Ketten &amp; Standorte</h3>
+          <p>Mehrere Betriebe, ein Standard. Dieselbe PlayBox an jedem Standort, verwaltet aus einer Hand.</p>
+          <ul class="sparkle-list"><li>Einheitlich an allen Standorten</li><li>Ein Kontakt, ein Zeitplan</li><li>Mengenpreise</li></ul>
+          <span class="price">Preis auf Anfrage</span>
+        </div>
+      </div>
+      <p class="fine" style="margin-top:22px;">Jede PlayBox wird f&uuml;r den Ort zusammengestellt, an dem sie lebt &mdash; darum berechnen wir sie individuell. Schreiben Sie uns Raumgr&ouml;sse und typische G&auml;ste, und wir kommen mit einem klaren Angebot zur&uuml;ck.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap inside">
+      <div class="rv"><img class="flower-photo" src="/assets/img/magical-cafe.jpg" alt="Die Spielecke im Magical Café Basel" width="900" height="1200"></div>
+      <div>
+        <span class="eyebrow" style="color:var(--tangerine)">Was drin ist</span>
+        <h2 class="section-title" style="margin-top:12px">Ausgew&auml;hlt, nicht nur gef&uuml;llt</h2>
+        <p style="margin-top:14px; max-width:52ch;">Aus Holz und abwaschbar, eher offen als laut, und so ausgesucht, dass sich ein Zweij&auml;hriges und ein Vierj&auml;hriges dieselbe Ecke ohne Streit teilen k&ouml;nnen.</p>
+        <ul class="sparkle-list">
+          <li>Stapel- und Sortierspielzeug f&uuml;r die kleinsten H&auml;nde</li>
+          <li>Bausets und Fahrzeuge f&uuml;r die Gr&ouml;sseren</li>
+          <li>B&uuml;cher und ruhiges Spiel f&uuml;r die Nerven wartender Eltern</li>
+          <li>Nichts, das Batterien braucht, nichts, das splittert</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-tang cta-band">
+    <div class="wrap">
+      <h2>Holen wir Ihnen eine Spielecke</h2>
+      <p>Erz&auml;hlen Sie uns von Ihrem Ort, und wir schlagen die passende PlayBox vor &mdash; allein oder zusammen mit dem Label.</p>
+      <a class="btn btn-cream" href="{{root}}contact.html?reason=playbox">PlayBox anfragen</a>
+    </div>
+  </section>
+</main>
