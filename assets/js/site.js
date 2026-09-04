@@ -34,20 +34,16 @@
     if (target === lang) a.setAttribute('aria-current', 'true');
     a.addEventListener('click', function () { safeSet(target); });
   });
-  var remembered = safeGet();
-  if (!remembered) {
+  // First visit only (nothing chosen yet): if the browser prefers DE/FR/IT and this
+  // English page exists in that language, go there. An explicit click on the language
+  // switcher is remembered and stops the auto-detect for good; direct links to any
+  // language are always respected.
+  if (!safeGet() && lang === 'en') {
     var pref = (navigator.language || '').slice(0, 2).toLowerCase();
-    if (['de', 'fr', 'it'].indexOf(pref) >= 0 && pref !== lang && alternates[pref] && lang === 'en') {
-      safeSet(pref);
+    if (['de', 'fr', 'it'].indexOf(pref) >= 0 && alternates[pref]) {
       location.replace(pathFor(pref));
       return;
     }
-    safeSet(lang);
-  } else if (remembered !== lang && alternates[remembered] && !sessionStorage.getItem('fs_lang_seen')) {
-    // remembered a different language and this page exists in it — go there once per session
-    try { sessionStorage.setItem('fs_lang_seen', '1'); } catch (e) {}
-    location.replace(pathFor(remembered));
-    return;
   }
 
   /* ---- forms (Netlify Forms on the app host; blind cross-origin send like the native app) ---- */

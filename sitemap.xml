@@ -3,81 +3,151 @@
   <url><loc>https://friendlyspaces.ch/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/"/>
   </url>
   <url><loc>https://friendlyspaces.ch/about.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/about.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/app.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/app.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/app.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/contact.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/contact.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/de/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/"/>
   </url>
   <url><loc>https://friendlyspaces.ch/de/about.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/about.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/de/app.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/app.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/app.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/de/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/contact.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/contact.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/de/label.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/label.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/label.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/label.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/de/news/early-bird-2026.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/early-bird-2026.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/early-bird-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/early-bird-2026.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/de/news/index.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/index.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/de/partners.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/partners.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/partners.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/de/playbox.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/playbox.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/playbox.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/playbox.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/de/sponsoring.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/sponsoring.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/sponsoring.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/sponsoring.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/fr/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/about.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/fr/app.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/app.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/fr/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/contact.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/fr/label.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/label.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/label.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/label.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/fr/news/early-bird-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/early-bird-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/early-bird-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/early-bird-2026.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/fr/news/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/index.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/fr/partners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/partners.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/fr/playbox.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/playbox.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/playbox.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/playbox.html"/>
+  </url>
+  <url><loc>https://friendlyspaces.ch/fr/sponsoring.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/sponsoring.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/sponsoring.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/sponsoring.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/label.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/label.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/label.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/label.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/news/early-bird-2026.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/early-bird-2026.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/early-bird-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/early-bird-2026.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/news/index.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/index.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/partners.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/partners.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/partners.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/playbox.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/playbox.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/playbox.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/playbox.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/sponsoring.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/sponsoring.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/sponsoring.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/sponsoring.html"/>
   </url>
 </urlset>
