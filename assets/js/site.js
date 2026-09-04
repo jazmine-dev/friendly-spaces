@@ -12,9 +12,16 @@
   var burger = document.getElementById('nav-burger');
   var menu = document.getElementById('nav-menu');
   if (burger && menu) {
-    burger.addEventListener('click', function () {
-      var open = menu.classList.toggle('open');
+    function setMenu(open) {
+      menu.classList.toggle('open', open);
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    burger.addEventListener('click', function () { setMenu(!menu.classList.contains('open')); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menu.classList.contains('open')) { setMenu(false); burger.focus(); }
+    });
+    document.addEventListener('click', function (e) {
+      if (menu.classList.contains('open') && !e.target.closest('#nav')) setMenu(false);
     });
   }
 
@@ -71,6 +78,23 @@
     });
   });
 
+  /* ---- map embeds: opt-in interaction so the map never traps page scrolling ---- */
+  document.querySelectorAll('iframe[data-guard]').forEach(function (frame) {
+    var box = frame.parentElement;
+    var guard = document.createElement('button');
+    guard.type = 'button'; guard.className = 'map-guard';
+    var label = document.createElement('span');
+    label.textContent = frame.getAttribute('data-guard');
+    guard.appendChild(label);
+    box.appendChild(guard);
+    guard.addEventListener('click', function () { guard.hidden = true; });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting) guard.hidden = false; // re-arm once the map has scrolled away
+      }, { threshold: 0 }).observe(box);
+    }
+  });
+
   /* ---- scroll animations ---- */
   function animate() {
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -81,6 +105,7 @@
     gsap.registerPlugin(ScrollTrigger);
     if (window.Lenis) {
       var lenis = new Lenis({ lerp: 0.11 });
+      document.documentElement.classList.add('lenis', 'lenis-smooth');
       lenis.on('scroll', ScrollTrigger.update);
       gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
       gsap.ticker.lagSmoothing(0);

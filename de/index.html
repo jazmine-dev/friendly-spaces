@@ -49,7 +49,7 @@
         <a href="/de/about.html" data-nav="about">Über uns</a>
         <a href="/de/news/" data-nav="news">News</a>
       </div>
-      <div class="lang" id="lang-switch" aria-label="Language">
+      <div class="lang" id="lang-switch" role="group" aria-label="Language">
         <a href="#" data-lang="en">EN</a><span>·</span><a href="#" data-lang="de">DE</a><span>·</span><a href="#" data-lang="fr">FR</a><span>·</span><a href="#" data-lang="it">IT</a>
       </div>
       <a class="btn btn-ink nav-cta" href="/de/label.html">Für Betriebe</a>
@@ -232,7 +232,7 @@
         <div class="map-fallback">
           <p>Die Live-Karte kann in dieser Vorschau nicht laden &mdash;<br>direkt &ouml;ffnen unter <a href="/map/?lang=de" target="_blank" rel="noopener">friendlyspaces.ch/map</a></p>
         </div>
-        <iframe src="/map/?lang=de" title="Friendly Spaces Live-Karte" loading="lazy" allow="geolocation"></iframe>
+        <iframe src="/map/?lang=de" data-guard="Tippen, um die Karte zu erkunden" title="Friendly Spaces Live-Karte" loading="lazy" allow="geolocation"></iframe>
         <span class="map-chip">Live</span>
       </div>
     </div>
@@ -259,7 +259,7 @@
   <section class="criteria">
     <div class="wrap crit-grid">
       <div>
-        <span class="eyebrow" style="color:var(--tangerine)">Was das Label verlangt</span>
+        <span class="eyebrow" style="color:var(--tang-deep)">Was das Label verlangt</span>
         <h2 style="margin-top:12px">48 Punkte.<br>Keine Geheimnisse.</h2>
         <ul class="sparkle-list">
           <li><span><b>Spiel &amp; Platz</b> &mdash; etwas zu tun, und Raum, um mit Kinderwagen zu existieren</span></li>

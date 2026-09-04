@@ -49,7 +49,7 @@
         <a href="/about.html" data-nav="about">About</a>
         <a href="/news/" data-nav="news">News</a>
       </div>
-      <div class="lang" id="lang-switch" aria-label="Language">
+      <div class="lang" id="lang-switch" role="group" aria-label="Language">
         <a href="#" data-lang="en">EN</a><span>·</span><a href="#" data-lang="de">DE</a><span>·</span><a href="#" data-lang="fr">FR</a><span>·</span><a href="#" data-lang="it">IT</a>
       </div>
       <a class="btn btn-ink nav-cta" href="/label.html">For businesses</a>
@@ -100,7 +100,7 @@
       <h2 class="section-title" style="margin-top:12px">Same map, right here</h2>
       <p style="max-width:56ch; margin-top:12px;">Search by name or city, filter by what your family needs, and tap a pin for the full profile &mdash; photos, hours, and a button to navigate.</p>
       <div class="map-full rv">
-        <iframe src="/map/?lang=en" title="Friendly Spaces live map" loading="lazy" allow="geolocation"></iframe>
+        <iframe src="/map/?lang=en" data-guard="Tap to explore the map" title="Friendly Spaces live map" loading="lazy" allow="geolocation"></iframe>
         <span class="map-chip">Live</span>
       </div>
     </div>

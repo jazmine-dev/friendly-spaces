@@ -49,7 +49,7 @@
         <a href="/about.html" data-nav="about">About</a>
         <a href="/news/" data-nav="news">News</a>
       </div>
-      <div class="lang" id="lang-switch" aria-label="Language">
+      <div class="lang" id="lang-switch" role="group" aria-label="Language">
         <a href="#" data-lang="en">EN</a><span>·</span><a href="#" data-lang="de">DE</a><span>·</span><a href="#" data-lang="fr">FR</a><span>·</span><a href="#" data-lang="it">IT</a>
       </div>
       <a class="btn btn-ink nav-cta" href="/label.html">For businesses</a>
@@ -240,7 +240,7 @@
         <div class="map-fallback">
           <p>The live map can&rsquo;t load in this preview &mdash;<br>open it directly at <a href="/map/" target="_blank" rel="noopener">friendlyspaces.ch/map</a></p>
         </div>
-        <iframe src="/map/?lang=en" title="Friendly Spaces live map" loading="lazy" allow="geolocation"></iframe>
+        <iframe src="/map/?lang=en" data-guard="Tap to explore the map" title="Friendly Spaces live map" loading="lazy" allow="geolocation"></iframe>
         <span class="map-chip">Live</span>
       </div>
     </div>
@@ -267,7 +267,7 @@
   <section class="criteria">
     <div class="wrap crit-grid">
       <div>
-        <span class="eyebrow" style="color:var(--tangerine)">What the label requires</span>
+        <span class="eyebrow" style="color:var(--tang-deep)">What the label requires</span>
         <h2 style="margin-top:12px">48 points.<br>No secrets.</h2>
         <ul class="sparkle-list">
           <li><span><b>Play &amp; space</b> &mdash; something to do, and room to exist with a stroller</span></li>
