@@ -13,7 +13,9 @@ nav: app
   .store b { display: block; font-size: 15px; }
   .store:hover { background: rgba(210,209,233,.12); }
   .phone { width: min(300px, 70vw); margin: 0 auto; border-radius: 38px; border: 3px solid var(--lilac); background: #0e133f; padding: 10px; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
-  .phone img { width: 100%; border-radius: 28px; display: block; }
+  .phone .screen { position: relative; overflow: hidden; border-radius: 28px; }
+  .phone img { width: 100%; display: block; transform-origin: 50% 55%; }
+  .pin { position: absolute; width: 9.4%; aspect-ratio: 1; background: var(--blue); color: #fff; border: 2px solid #fff; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: clamp(10px, 1.6vw, 14px); box-shadow: 0 6px 14px rgba(0,0,0,.28); transform: translate(-50%, -50%); }
   @media (max-width: 860px) { .app-hero .grid-2 { grid-template-columns: 1fr; } }
   .map-full { position: relative; height: min(84vh, 820px); border: 2px solid var(--ink); border-radius: 22px; overflow: hidden; background: #eef2fb; margin-top: 36px; }
   .map-full iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
@@ -35,7 +37,7 @@ nav: app
         </div>
       </div>
       <div class="phone rv" id="phone">
-        <img src="/assets/img/app-map.jpg" alt="Vue carte de l'app Friendly Spaces avec les épingles des partenaires en Suisse" width="460" height="996">
+        <div class="screen"><img src="/assets/img/app-map-base.jpg" alt="Vue carte de l'app Friendly Spaces avec les épingles des partenaires en Suisse" width="460" height="996"><span class="pin" style="left:52.9%;top:47.4%">4</span><span class="pin" style="left:46.6%;top:65.7%">3</span><span class="pin" style="left:92%;top:54.5%">1</span></div>
       </div>
     </div>
   </header>

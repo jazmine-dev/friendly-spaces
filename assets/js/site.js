@@ -157,6 +157,39 @@
     if (document.getElementById('phone')) {
       gsap.to('#phone', { y: -36, ease: 'none', scrollTrigger: { trigger: '#phone', start: 'top bottom', end: 'bottom top', scrub: true } });
     }
+
+    /* hero photo zooms slowly while it scrolls away */
+    if (document.querySelector('.hero-visual .frame img')) {
+      gsap.to('.hero-visual .frame img', { scale: 1.16, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+    }
+
+    /* phone: the map zooms in as the phone passes, and the pins drop onto it */
+    if (document.querySelector('#phone .screen')) {
+      gsap.to('#phone .screen img', { scale: 1.2, ease: 'none', scrollTrigger: { trigger: '#phone', start: 'top bottom', end: 'bottom top', scrub: true } });
+      gsap.set('#phone .pin', { xPercent: -50, yPercent: -50, transform: 'none' });
+      gsap.from('#phone .pin', { y: -80, scale: 0, opacity: 0, duration: 0.8, ease: 'bounce.out', stagger: 0.16,
+        scrollTrigger: { trigger: '#phone', start: 'top 72%' } });
+    }
+
+    /* flower photos bloom open instead of just fading in */
+    gsap.utils.toArray('.flower-photo').forEach(function (el) {
+      gsap.from(el, { scale: 0.25, rotate: -14, transformOrigin: '50% 50%', duration: 1.1, ease: 'back.out(1.4)',
+        scrollTrigger: { trigger: el, start: 'top 85%' } });
+    });
+
+    /* melting backgrounds (sections marked data-bg): the page colour tweens instead of hard band edges */
+    var bands = gsap.utils.toArray('[data-bg]');
+    if (bands.length) {
+      var tints = { lilac: '#D2D1E9', pink: '#F4DDFF', marigold: '#F2B33D', cream: '#F8F5EF' };
+      document.documentElement.classList.add('melt');
+      var melt = function (name) { gsap.to(document.body, { backgroundColor: tints[name] || tints.cream, duration: 0.8, ease: 'power2.out', overwrite: true }); };
+      bands.forEach(function (sec) {
+        var name = sec.getAttribute('data-bg');
+        ScrollTrigger.create({ trigger: sec, start: 'top 60%', end: 'bottom 40%',
+          onEnter: function () { melt(name); }, onEnterBack: function () { melt(name); },
+          onLeave: function () { melt('cream'); }, onLeaveBack: function () { melt('cream'); } });
+      });
+    }
   }
   if (document.readyState === 'complete') animate(); else window.addEventListener('load', animate);
 })();

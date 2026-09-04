@@ -12,7 +12,8 @@ nav: home
   .hero .sub { font-size: 18px; max-width: 42ch; margin: 26px 0 0; }
   .hero .ctas { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
   .hero-visual { position: relative; }
-  .hero-visual img { width: 100%; border-radius: 22px; border: 2px solid var(--ink); display: block; }
+  .hero-visual .frame { border-radius: 22px; border: 2px solid var(--ink); overflow: hidden; }
+  .hero-visual img { width: 100%; display: block; transform-origin: 62% 42%; }
   .hero-visual .sticker { position: absolute; left: -14px; top: -16px; transform: rotate(-7deg); }
   .hero-line { overflow: hidden; padding-bottom: 20px; margin-bottom: -20px; }
   .hero-line > span { display: inline-block; }
@@ -48,7 +49,9 @@ nav: home
   .store b { display: block; font-size: 15px; }
   .store:hover { background: rgba(210,209,233,.12); }
   .phone { width: min(300px, 70vw); margin: 0 auto; border-radius: 38px; border: 3px solid var(--lilac); background: #0e133f; padding: 10px; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
-  .phone img { width: 100%; border-radius: 28px; display: block; }
+  .phone .screen { position: relative; overflow: hidden; border-radius: 28px; }
+  .phone img { width: 100%; display: block; transform-origin: 50% 55%; }
+  .pin { position: absolute; width: 9.4%; aspect-ratio: 1; background: var(--blue); color: #fff; border: 2px solid #fff; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: clamp(10px, 1.6vw, 14px); box-shadow: 0 6px 14px rgba(0,0,0,.28); transform: translate(-50%, -50%); }
   .map-note { font-size: 13px; color: var(--lilac); margin-top: 22px; }
   .map-embed { position: relative; margin-top: 64px; height: 720px; border: 2px solid var(--lilac); border-radius: 22px; overflow: hidden; background: #232a63; }
   .map-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
@@ -127,13 +130,13 @@ nav: home
         </div>
       </div>
       <div class="hero-visual rv">
-        <img src="/assets/img/hero-map-phone.jpg" alt="The Friendly Spaces app showing Markthalle Basel on the map" width="1070" height="1082">
+        <div class="frame"><img src="/assets/img/hero-map-phone.jpg" alt="The Friendly Spaces app showing Markthalle Basel on the map" width="1070" height="1082"></div>
         <span class="sticker">Early bird '26</span>
       </div>
     </div>
   </header>
 
-  <section class="statement">
+  <section class="statement" data-bg="lilac">
     <div class="wrap">
       <p id="scrub">Caf&eacute;s, shops and cultural spaces where kids are <span class="u">truly welcome<svg viewBox="0 0 200 12" preserveAspectRatio="none" class="sq-draw" aria-hidden="true"><path d="M3 8 Q 25 3, 50 7 T 100 6 T 150 7 T 197 5" fill="none" stroke="#E8622C" stroke-width="4" stroke-linecap="round"/></svg></span>. We check each one in person, then put it on the map.</p>
     </div>
@@ -178,7 +181,7 @@ nav: home
         <p class="map-note">The map below is live and the same one you'll find in the app. Tap a pin to open a venue profile.</p>
       </div>
       <div class="phone rv" id="phone">
-        <img src="/assets/img/app-map.jpg" alt="Friendly Spaces app map view with partner pins across Switzerland" width="460" height="996">
+        <div class="screen"><img src="/assets/img/app-map-base.jpg" alt="Friendly Spaces app map view with partner pins across Switzerland" width="460" height="996"><span class="pin" style="left:52.9%;top:47.4%">4</span><span class="pin" style="left:46.6%;top:65.7%">3</span><span class="pin" style="left:92%;top:54.5%">1</span></div>
       </div>
     </div>
     <div class="wrap">
@@ -192,7 +195,7 @@ nav: home
     </div>
   </section>
 
-  <section class="label-sec" id="label">
+  <section class="label-sec" id="label" data-bg="pink">
     <div class="wrap label-grid">
       <div class="label-sticky">
         <span class="eyebrow" style="color:var(--blue)">For businesses</span>
@@ -229,7 +232,7 @@ nav: home
     </div>
   </section>
 
-  <section class="playbox" id="playbox">
+  <section class="playbox" id="playbox" data-bg="marigold">
     <div class="wrap pb-grid">
       <div class="rv"><img class="flower-photo" src="/assets/img/playbox-orangerie.jpg" alt="The Friendly Spaces PlayBox with its toys, at Orangerie Elfenau in Bern" width="1200" height="1200"></div>
       <div>
