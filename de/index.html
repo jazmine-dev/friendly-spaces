@@ -69,15 +69,22 @@
   .hero .ctas { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
   .hero-visual { position: relative; }
   .hero-visual .frame { position: relative; aspect-ratio: 1 / 1; border-radius: 22px; border: 2px solid var(--ink); overflow: hidden; background: #f2f2f2; }
-  .hero-map-layer { position: absolute; inset: 0; transform-origin: 46% 40%; }
+  .hero-map-layer { position: absolute; inset: 0; transform-origin: 50% 50%; }
   .hero-map { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-  .hero-phone .screen { position: relative; }
-  .hero-screen-map { transform-origin: 52% 50%; }
-  .hero-screen-profile { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: translateY(6%); }
-  .hero-phone .pin { font-size: 9px; border-width: 1.5px; }
-  .hero-pin { position: absolute; z-index: 1; width: 14px; height: 14px; background: var(--blue); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 6px 14px rgba(0,0,0,.24); transform: translate(-50%, -50%); }
-  .hero-visual .hero-phone { position: absolute; z-index: 2; left: 70%; top: 66%; transform: translate(-50%, -50%) rotate(-4deg); width: min(32%, 180px); margin: 0; }
-  .hero-phone .screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-visual .hero-phone { position: absolute; z-index: 2; left: 50%; top: 52%; transform: translate(-50%, -50%) rotate(-2deg); width: min(46%, 250px); margin: 0; }
+  .hero-phone .screen { position: relative; overflow: hidden; border-radius: 28px; aspect-ratio: 460 / 996; background: #ededed; }
+  .hero-phone .screen > img, .hero-phone .hs-city { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .hero-phone .screen img { object-fit: cover; display: block; }
+  .hs-country { transform-origin: 52.9% 47.4%; }
+  .hs-city { opacity: 0; transform-origin: 50% 55%; }
+  .hs-cluster { font-size: 9px; border-width: 1.5px; z-index: 2; }
+  .hs-venue { position: absolute; width: 8.5%; aspect-ratio: 1; border-radius: 50%; background: var(--blue); border: 2px solid #fff; box-shadow: 0 5px 12px rgba(0,0,0,.25); opacity: 0; transform: translate(-50%, -50%); }
+  .hs-selected::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--blue); opacity: 0; }
+  .hs-profile { opacity: 0; transform: translateY(100%); z-index: 3; }
+  @media (prefers-reduced-motion: no-preference) {
+    .hs-selected::after { animation: hs-pulse 1.6s ease-out infinite; }
+    @keyframes hs-pulse { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.9); opacity: 0; } }
+  }
   .hero-visual .sticker { position: absolute; z-index: 3; left: -14px; top: -16px; transform: rotate(-7deg); }
   .hero-line { overflow: hidden; padding-bottom: 20px; margin-bottom: -20px; }
   .hero-line > span { display: inline-block; }
@@ -87,7 +94,7 @@
     .scroll-cue .ring svg { animation: cue-bob 1.6s ease-in-out infinite; }
     @keyframes cue-bob { 0%, 100% { transform: translateY(-2px); } 50% { transform: translateY(3px); } }
   }
-  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } .hero { padding-top: 110px; } .hero-visual .hero-phone { width: 36%; } }
+  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } .hero { padding-top: 110px; } .hero-visual .hero-phone { width: 54%; } }
   .statement { background: var(--lilac); margin-top: 70px; padding: 110px 0; }
   .statement p { font-family: var(--kaio); font-size: clamp(30px, 4.6vw, 54px); line-height: 1.14; margin: 0; max-width: 22ch; }
   .statement .w { opacity: .18; display: inline-block; }
@@ -186,8 +193,13 @@
       </div>
       <div class="hero-visual rv">
         <div class="frame">
-          <div class="hero-map-layer"><img class="hero-map" src="/assets/img/hero-basemap.jpg" alt="" width="1200" height="1200" aria-hidden="true"><span class="hero-pin" style="left:43%;top:42%" aria-hidden="true"></span><span class="hero-pin" style="left:44%;top:25%" aria-hidden="true"></span><span class="hero-pin" style="left:59%;top:27%" aria-hidden="true"></span></div><div class="phone hero-phone">
-            <div class="screen"><img class="hero-screen-map" src="/assets/img/app-map-base.jpg" alt="Die Karte der Friendly Spaces App mit Partner-Pins" width="460" height="996"><span class="pin" style="left:52.9%;top:47.4%">4</span><span class="pin" style="left:46.6%;top:65.7%">3</span><span class="pin" style="left:92%;top:54.5%">1</span><img class="hero-screen-profile" src="/assets/img/hero-screen.jpg" alt="The Friendly Spaces app showing Markthalle Basel" width="438" height="928"></div>
+          <div class="hero-map-layer"><img class="hero-map" src="/assets/img/hero-basemap.jpg" alt="" width="1200" height="1200" aria-hidden="true"></div><div class="phone hero-phone">
+            <div class="screen">
+              <img class="hs-country" src="/assets/img/app-map-base.jpg" alt="" width="460" height="996" aria-hidden="true">
+              <span class="hs-cluster pin" style="left:52.9%;top:47.4%" aria-hidden="true">4</span>
+              <div class="hs-city" aria-hidden="true"><img src="/assets/img/app-map-basel.jpg" alt="" width="460" height="996"><span class="hs-venue" style="left:60.4%;top:40.5%"></span><span class="hs-venue" style="left:71.9%;top:33.6%"></span><span class="hs-venue" style="left:20.5%;top:54.2%"></span><span class="hs-venue hs-selected" style="left:47.2%;top:71.7%"></span></div>
+              <img class="hs-profile" src="/assets/img/hero-screen.jpg" alt="Die Friendly Spaces App zeigt die Markthalle Basel" width="438" height="928">
+            </div>
           </div>
         </div>
         <span class="sticker">Early Bird '26</span>

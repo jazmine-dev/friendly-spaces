@@ -100,6 +100,8 @@
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduced || !window.gsap) {
       document.querySelectorAll('.rv').forEach(function (el) { el.style.opacity = 1; el.style.transform = 'none'; });
+      document.querySelectorAll('.hs-country, .hs-cluster').forEach(function (el) { el.style.display = 'none'; });
+      document.querySelectorAll('.hs-city, .hs-venue').forEach(function (el) { el.style.opacity = 1; el.style.transform = el.classList.contains('hs-venue') ? 'translate(-50%, -50%)' : 'none'; });
       return;
     }
     gsap.registerPlugin(ScrollTrigger);
@@ -119,19 +121,22 @@
       gsap.to('.hero-visual', { y: 70, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
       gsap.to('.hero-grid > div:first-child', { y: -30, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     }
-    if (document.querySelector('.hero-map-layer')) {
-      // background map starts slightly zoomed and keeps zooming; the pins ride on the same layer
-      gsap.fromTo('.hero-map-layer', { scale: 1.2 }, { scale: 1.5, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
-    }
-    if (document.querySelector('.hero-screen-map')) {
-      // inside the phone: the app map zooms in on its pins, then the venue profile slides up over it
-      var heroScreen = gsap.timeline({ scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
-      heroScreen.to('.hero-screen-map', { scale: 1.9, ease: 'none', duration: 0.6 }, 0)
-        .to('.hero-phone .pin', { scale: 1.25, ease: 'none', duration: 0.6 }, 0)
-        .to('.hero-screen-profile', { opacity: 1, y: 0, ease: 'power1.inOut', duration: 0.4 }, 0.5);
-    }
-    if (document.querySelector('.hero-pin')) {
-      gsap.from('.hero-pin', { scale: 0, duration: 0.55, ease: 'back.out(2)', stagger: 0.12, delay: 0.9 });
+    /* hero phone: one cluster pin -> zoom into Basel -> venue pins -> profile sheet (scrubbed) */
+    if (document.querySelector('.hero-phone .hs-city')) {
+      gsap.set('.hs-cluster', { xPercent: -50, yPercent: -50, transform: 'none' });
+      gsap.set('.hs-venue', { xPercent: -50, yPercent: -50, transform: 'none', opacity: 0, scale: 0 });
+      gsap.set('.hs-city', { opacity: 0, scale: 0.72 });
+      gsap.set('.hs-profile', { opacity: 0, yPercent: 100, transform: 'none' });
+      var heroTl = gsap.timeline({ scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+      heroTl.to('.hs-country', { scale: 3.4, ease: 'none', duration: 0.55 }, 0)
+        .to('.hs-cluster', { scale: 1.25, ease: 'none', duration: 0.4 }, 0)
+        .to('.hs-cluster', { opacity: 0, scale: 0.6, ease: 'none', duration: 0.15 }, 0.4)
+        .to('.hs-city', { opacity: 1, scale: 1, ease: 'none', duration: 0.25 }, 0.35)
+        .to('.hs-venue', { opacity: 1, scale: 1, ease: 'back.out(2)', duration: 0.12, stagger: 0.05 }, 0.48)
+        .to('.hs-profile', { opacity: 1, yPercent: 0, ease: 'power2.inOut', duration: 0.28 }, 0.72)
+        .to('.hero-map-layer', { scale: 1.12, ease: 'none', duration: 1 }, 0);
+      gsap.set('.hero-map-layer', { scale: 1.04 });
+      window.__heroTl = heroTl;
     }
     if (document.querySelector('.hero .sticker')) {
       gsap.from('.hero .sticker', { scale: 0, rotate: 30, duration: 0.6, ease: 'back.out(2.5)', delay: 1.1 });
