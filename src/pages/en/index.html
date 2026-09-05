@@ -12,11 +12,12 @@ nav: home
   .hero .sub { font-size: 18px; max-width: 42ch; margin: 26px 0 0; }
   .hero .ctas { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
   .hero-visual { position: relative; }
-  .hero-visual .frame { position: relative; border-radius: 22px; border: 2px solid var(--ink); overflow: hidden; }
-  .hero-visual img { width: 100%; display: block; }
-  .hero-visual .screen-zoom { position: absolute; overflow: hidden; border-radius: 4% / 3%; }
-  .hero-visual .screen-zoom img { width: 100%; height: 100%; display: block; transform-origin: 50% 40%; }
-  .hero-visual .sticker { position: absolute; left: -14px; top: -16px; transform: rotate(-7deg); }
+  .hero-visual .frame { position: relative; aspect-ratio: 1 / 1; border-radius: 22px; border: 2px solid var(--ink); overflow: hidden; background: #f2f2f2; }
+  .hero-map { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 46% 40%; display: block; }
+  .hero-pin { position: absolute; z-index: 1; width: 14px; height: 14px; background: var(--blue); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 6px 14px rgba(0,0,0,.24); transform: translate(-50%, -50%); }
+  .hero-visual .hero-phone { position: absolute; z-index: 2; left: 70%; top: 66%; transform: translate(-50%, -50%) rotate(-4deg); width: min(32%, 180px); margin: 0; }
+  .hero-phone .screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-visual .sticker { position: absolute; z-index: 3; left: -14px; top: -16px; transform: rotate(-7deg); }
   .hero-line { overflow: hidden; padding-bottom: 20px; margin-bottom: -20px; }
   .hero-line > span { display: inline-block; }
   .scroll-cue { display: inline-flex; align-items: center; gap: 10px; margin-top: 44px; color: var(--blue); font-size: 12.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
@@ -25,7 +26,7 @@ nav: home
     .scroll-cue .ring svg { animation: cue-bob 1.6s ease-in-out infinite; }
     @keyframes cue-bob { 0%, 100% { transform: translateY(-2px); } 50% { transform: translateY(3px); } }
   }
-  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } .hero { padding-top: 110px; } }
+  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } .hero { padding-top: 110px; } .hero-visual .hero-phone { width: 36%; } }
 
   .statement { background: var(--lilac); margin-top: 70px; padding: 110px 0; }
   .statement p { font-family: var(--kaio); font-size: clamp(30px, 4.6vw, 54px); line-height: 1.14; margin: 0; max-width: 22ch; }
@@ -132,7 +133,15 @@ nav: home
         </div>
       </div>
       <div class="hero-visual rv">
-        <div class="frame"><img src="/assets/img/hero-map-phone.jpg" alt="The Friendly Spaces app showing Markthalle Basel on the map" width="1070" height="1082"><div class="screen-zoom" style="left:33.7615%;top:6.4695%;width:40.1835%;height:85.7671%" aria-hidden="true"><img src="/assets/img/hero-screen.jpg" alt="" width="438" height="928"></div></div>
+        <div class="frame">
+          <img class="hero-map" src="/assets/img/hero-basemap.jpg" alt="" width="1200" height="1200" aria-hidden="true">
+          <span class="hero-pin" style="left:43%;top:42%" aria-hidden="true"></span>
+          <span class="hero-pin" style="left:44%;top:25%" aria-hidden="true"></span>
+          <span class="hero-pin" style="left:59%;top:27%" aria-hidden="true"></span>
+          <div class="phone hero-phone">
+            <div class="screen"><img src="/assets/img/hero-screen.jpg" alt="The Friendly Spaces app showing Markthalle Basel" width="438" height="928"></div>
+          </div>
+        </div>
         <span class="sticker">Early bird '26</span>
       </div>
     </div>

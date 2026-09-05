@@ -119,6 +119,16 @@
       gsap.to('.hero-visual', { y: 70, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
       gsap.to('.hero-grid > div:first-child', { y: -30, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     }
+    if (document.querySelector('.hero-map')) {
+      gsap.to('.hero-map', { scale: 1.35, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+    }
+    if (document.querySelector('.hero-phone .screen img')) {
+      // the phone keeps its CSS centring/tilt; the zoom happens inside the screen
+      gsap.to('.hero-phone .screen img', { scale: 1.14, transformOrigin: '50% 35%', ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+    }
+    if (document.querySelector('.hero-pin')) {
+      gsap.from('.hero-pin', { scale: 0, duration: 0.55, ease: 'back.out(2)', stagger: 0.12, delay: 0.9 });
+    }
     if (document.querySelector('.hero .sticker')) {
       gsap.from('.hero .sticker', { scale: 0, rotate: 30, duration: 0.6, ease: 'back.out(2.5)', delay: 1.1 });
       gsap.to('.hero .sticker', { rotate: 4, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
@@ -156,11 +166,6 @@
 
     if (document.getElementById('phone')) {
       gsap.to('#phone', { y: -36, ease: 'none', scrollTrigger: { trigger: '#phone', start: 'top bottom', end: 'bottom top', scrub: true } });
-    }
-
-    /* hero phone screen zooms slowly while it scrolls away */
-    if (document.querySelector('.hero-visual .screen-zoom img')) {
-      gsap.to('.hero-visual .screen-zoom img', { scale: 1.18, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     }
 
     /* phone: the map zooms in as the phone passes, and the pins drop onto it */
