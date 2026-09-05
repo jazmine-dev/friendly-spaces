@@ -17,6 +17,9 @@ nav: news
   .post p { margin: 0; font-size: 15px; }
   @media (max-width: 760px) { .posts { grid-template-columns: 1fr; } }
   .lang-note { margin-top: 26px; }
+  .news-signup form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; max-width: 620px; margin: 0 auto; }
+  .news-signup input[type=email] { flex: 1 1 260px; border: 2px solid var(--ink); border-radius: 999px; padding: 13px 22px; font-size: 15px; font-family: var(--body); background: var(--paper); color: var(--ink); }
+  .news-signup input:focus { outline: 3px solid var(--lilac); outline-offset: 1px; }
 </style>
 
 <main id="main">
@@ -44,11 +47,17 @@ nav: news
     </div>
   </section>
 
-  <section class="band band-pink cta-band">
+  <section class="band band-pink cta-band news-signup">
     <div class="wrap">
       <h2>Friendly News, ein paar Mal im Jahr</h2>
-      <p>Neue Beitr&auml;ge, Partner und St&auml;dte direkt in Ihr Postfach. Kein Spam, jederzeit abbestellbar.</p>
-      <a class="btn btn-ink" href="{{root}}#news">Auf der Startseite anmelden</a>
+      <p>Neue Beitr&auml;ge, Starts in neuen St&auml;dten und neue Partnerorte, zuerst und direkt in Ihrem Posteingang. Kein Spam, jederzeit abbestellbar.</p>
+      <form action="https://app.friendlyspaces.ch/" method="POST" data-netlify-form="website-newsletter" data-success="Sie sind auf der Liste. 🧡" data-sending="Wird eingetragen…" data-error="Das hat nicht geklappt. Schreiben Sie an hello@friendlyspaces.ch, wir tragen Sie ein.">
+        <input type="email" name="email" placeholder="sie@beispiel.ch" aria-label="E-Mail-Adresse" required>
+        <input type="hidden" name="language" value="{{lang}}">
+        <p class="hp" style="position:absolute;left:-9999px"><label>Leer lassen <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <button class="btn btn-ink" type="submit">Anmelden</button>
+        <p class="form-status" role="status" aria-live="polite" style="flex-basis:100%"></p>
+      </form>
     </div>
   </section>
 </main>

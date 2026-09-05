@@ -17,6 +17,9 @@ nav: news
   .post p { margin: 0; font-size: 15px; }
   @media (max-width: 760px) { .posts { grid-template-columns: 1fr; } }
   .lang-note { margin-top: 26px; }
+  .news-signup form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; max-width: 620px; margin: 0 auto; }
+  .news-signup input[type=email] { flex: 1 1 260px; border: 2px solid var(--ink); border-radius: 999px; padding: 13px 22px; font-size: 15px; font-family: var(--body); background: var(--paper); color: var(--ink); }
+  .news-signup input:focus { outline: 3px solid var(--lilac); outline-offset: 1px; }
 </style>
 
 <main id="main">
@@ -44,11 +47,17 @@ nav: news
     </div>
   </section>
 
-  <section class="band band-pink cta-band">
+  <section class="band band-pink cta-band news-signup">
     <div class="wrap">
       <h2>Friendly news, a few times a year</h2>
-      <p>Get new posts, partners and cities in your inbox. No spam, unsubscribe anytime.</p>
-      <a class="btn btn-ink" href="{{root}}#news">Sign up on the homepage</a>
+      <p>Receive new posts, and hear about launches in new cities and new partner locations first, directly in your inbox. No spam, unsubscribe anytime.</p>
+      <form action="https://app.friendlyspaces.ch/" method="POST" data-netlify-form="website-newsletter" data-success="You're on the list. 🧡" data-sending="Signing you up…" data-error="That didn't work. Email hello@friendlyspaces.ch and we'll add you.">
+        <input type="email" name="email" placeholder="you@example.ch" aria-label="Email address" required>
+        <input type="hidden" name="language" value="{{lang}}">
+        <p class="hp" style="position:absolute;left:-9999px"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <button class="btn btn-ink" type="submit">Sign up</button>
+        <p class="form-status" role="status" aria-live="polite" style="flex-basis:100%"></p>
+      </form>
     </div>
   </section>
 </main>

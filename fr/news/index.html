@@ -73,6 +73,9 @@
   .post p { margin: 0; font-size: 15px; }
   @media (max-width: 760px) { .posts { grid-template-columns: 1fr; } }
   .lang-note { margin-top: 26px; }
+  .news-signup form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; max-width: 620px; margin: 0 auto; }
+  .news-signup input[type=email] { flex: 1 1 260px; border: 2px solid var(--ink); border-radius: 999px; padding: 13px 22px; font-size: 15px; font-family: var(--body); background: var(--paper); color: var(--ink); }
+  .news-signup input:focus { outline: 3px solid var(--lilac); outline-offset: 1px; }
 </style>
 
 <main id="main">
@@ -100,11 +103,17 @@
     </div>
   </section>
 
-  <section class="band band-pink cta-band">
+  <section class="band band-pink cta-band news-signup">
     <div class="wrap">
       <h2>Des nouvelles Friendly, quelques fois par an</h2>
-      <p>Nouveaux articles, partenaires et villes directement dans votre bo&icirc;te mail. Sans spam, d&eacute;sinscription &agrave; tout moment.</p>
-      <a class="btn btn-ink" href="/fr/#news">S'inscrire sur la page d'accueil</a>
+      <p>Recevez les nouveaux articles et apprenez en premier les lancements dans de nouvelles villes et les nouveaux lieux partenaires, directement dans votre bo&icirc;te mail. Sans spam, d&eacute;sinscription &agrave; tout moment.</p>
+      <form action="https://app.friendlyspaces.ch/" method="POST" data-netlify-form="website-newsletter" data-success="Vous êtes sur la liste. 🧡" data-sending="Inscription…" data-error="Ça n'a pas fonctionné. Écrivez à hello@friendlyspaces.ch et nous vous ajouterons.">
+        <input type="email" name="email" placeholder="vous@exemple.ch" aria-label="Adresse e-mail" required>
+        <input type="hidden" name="language" value="fr">
+        <p class="hp" style="position:absolute;left:-9999px"><label>Laisser vide <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <button class="btn btn-ink" type="submit">S'inscrire</button>
+        <p class="form-status" role="status" aria-live="polite" style="flex-basis:100%"></p>
+      </form>
     </div>
   </section>
 </main>

@@ -69,7 +69,12 @@
   .hero .ctas { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
   .hero-visual { position: relative; }
   .hero-visual .frame { position: relative; aspect-ratio: 1 / 1; border-radius: 22px; border: 2px solid var(--ink); overflow: hidden; background: #f2f2f2; }
-  .hero-map { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 46% 40%; display: block; }
+  .hero-map-layer { position: absolute; inset: 0; transform-origin: 46% 40%; }
+  .hero-map { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-phone .screen { position: relative; }
+  .hero-screen-map { transform-origin: 52% 50%; }
+  .hero-screen-profile { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: translateY(6%); }
+  .hero-phone .pin { font-size: 9px; border-width: 1.5px; }
   .hero-pin { position: absolute; z-index: 1; width: 14px; height: 14px; background: var(--blue); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 6px 14px rgba(0,0,0,.24); transform: translate(-50%, -50%); }
   .hero-visual .hero-phone { position: absolute; z-index: 2; left: 70%; top: 66%; transform: translate(-50%, -50%) rotate(-4deg); width: min(32%, 180px); margin: 0; }
   .hero-phone .screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -141,7 +146,6 @@
 
   .playbox { background: var(--marigold); padding: 100px 0; }
   .pb-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 48px; align-items: center; }
-  .pb-grid .flower-photo { max-width: 400px; }
   .playbox h2 { font-size: clamp(36px, 5vw, 58px); }
   .playbox .sub { margin: 18px 0 0; max-width: 52ch; }
   .packages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 30px; }
@@ -190,12 +194,8 @@
       </div>
       <div class="hero-visual rv">
         <div class="frame">
-          <img class="hero-map" src="/assets/img/hero-basemap.jpg" alt="" width="1200" height="1200" aria-hidden="true">
-          <span class="hero-pin" style="left:43%;top:42%" aria-hidden="true"></span>
-          <span class="hero-pin" style="left:44%;top:25%" aria-hidden="true"></span>
-          <span class="hero-pin" style="left:59%;top:27%" aria-hidden="true"></span>
-          <div class="phone hero-phone">
-            <div class="screen"><img src="/assets/img/hero-screen.jpg" alt="The Friendly Spaces app showing Markthalle Basel" width="438" height="928"></div>
+          <div class="hero-map-layer"><img class="hero-map" src="/assets/img/hero-basemap.jpg" alt="" width="1200" height="1200" aria-hidden="true"><span class="hero-pin" style="left:43%;top:42%" aria-hidden="true"></span><span class="hero-pin" style="left:44%;top:25%" aria-hidden="true"></span><span class="hero-pin" style="left:59%;top:27%" aria-hidden="true"></span></div><div class="phone hero-phone">
+            <div class="screen"><img class="hero-screen-map" src="/assets/img/app-map-base.jpg" alt="The Friendly Spaces app map with partner pins" width="460" height="996"><span class="pin" style="left:52.9%;top:47.4%">4</span><span class="pin" style="left:46.6%;top:65.7%">3</span><span class="pin" style="left:92%;top:54.5%">1</span><img class="hero-screen-profile" src="/assets/img/hero-screen.jpg" alt="The Friendly Spaces app showing Markthalle Basel" width="438" height="928"></div>
           </div>
         </div>
         <span class="sticker">Early bird '26</span>

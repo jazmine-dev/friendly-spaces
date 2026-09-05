@@ -119,12 +119,16 @@
       gsap.to('.hero-visual', { y: 70, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
       gsap.to('.hero-grid > div:first-child', { y: -30, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     }
-    if (document.querySelector('.hero-map')) {
-      gsap.to('.hero-map', { scale: 1.35, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+    if (document.querySelector('.hero-map-layer')) {
+      // background map starts slightly zoomed and keeps zooming; the pins ride on the same layer
+      gsap.fromTo('.hero-map-layer', { scale: 1.2 }, { scale: 1.5, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     }
-    if (document.querySelector('.hero-phone .screen img')) {
-      // the phone keeps its CSS centring/tilt; the zoom happens inside the screen
-      gsap.to('.hero-phone .screen img', { scale: 1.14, transformOrigin: '50% 35%', ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+    if (document.querySelector('.hero-screen-map')) {
+      // inside the phone: the app map zooms in on its pins, then the venue profile slides up over it
+      var heroScreen = gsap.timeline({ scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+      heroScreen.to('.hero-screen-map', { scale: 1.9, ease: 'none', duration: 0.6 }, 0)
+        .to('.hero-phone .pin', { scale: 1.25, ease: 'none', duration: 0.6 }, 0)
+        .to('.hero-screen-profile', { opacity: 1, y: 0, ease: 'power1.inOut', duration: 0.4 }, 0.5);
     }
     if (document.querySelector('.hero-pin')) {
       gsap.from('.hero-pin', { scale: 0, duration: 0.55, ease: 'back.out(2)', stagger: 0.12, delay: 0.9 });
@@ -164,13 +168,9 @@
       gsap.to(el, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 86%' } });
     });
 
-    if (document.getElementById('phone')) {
-      gsap.to('#phone', { y: -36, ease: 'none', scrollTrigger: { trigger: '#phone', start: 'top bottom', end: 'bottom top', scrub: true } });
-    }
 
     /* phone: the map zooms in as the phone passes, and the pins drop onto it */
     if (document.querySelector('#phone .screen')) {
-      gsap.to('#phone .screen img', { scale: 1.2, ease: 'none', scrollTrigger: { trigger: '#phone', start: 'top bottom', end: 'bottom top', scrub: true } });
       gsap.set('#phone .pin', { xPercent: -50, yPercent: -50, transform: 'none' });
       gsap.from('#phone .pin', { y: -80, scale: 0, opacity: 0, duration: 0.8, ease: 'bounce.out', stagger: 0.16,
         scrollTrigger: { trigger: '#phone', start: 'top 72%' } });
