@@ -100,8 +100,8 @@
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduced || !window.gsap) {
       document.querySelectorAll('.rv').forEach(function (el) { el.style.opacity = 1; el.style.transform = 'none'; });
-      document.querySelectorAll('.hs-country, .hs-cluster').forEach(function (el) { el.style.display = 'none'; });
-      document.querySelectorAll('.hs-city, .hs-venue').forEach(function (el) { el.style.opacity = 1; el.style.transform = el.classList.contains('hs-venue') ? 'translate(-50%, -50%)' : 'none'; });
+      document.querySelectorAll('.hs-venue').forEach(function (el) { el.style.opacity = 1; });
+      document.querySelectorAll('.hs-profile').forEach(function (el) { el.style.opacity = 1; el.style.transform = 'none'; });
       return;
     }
     gsap.registerPlugin(ScrollTrigger);
@@ -121,22 +121,16 @@
       gsap.to('.hero-visual', { y: 70, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
       gsap.to('.hero-grid > div:first-child', { y: -30, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     }
-    /* hero phone: one cluster pin -> zoom into Basel -> venue pins -> profile sheet (scrubbed) */
+    /* hero phone: city map with pins, then the venue profile slides up on load like the app's sheet */
     if (document.querySelector('.hero-phone .hs-city')) {
-      gsap.set('.hs-cluster', { xPercent: -50, yPercent: -50, transform: 'none' });
       gsap.set('.hs-venue', { xPercent: -50, yPercent: -50, transform: 'none', opacity: 0, scale: 0 });
-      gsap.set('.hs-city', { opacity: 0, scale: 0.72 });
-      gsap.set('.hs-profile', { opacity: 0, yPercent: 100, transform: 'none' });
-      var heroTl = gsap.timeline({ scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
-      heroTl.to('.hs-country', { scale: 3.4, ease: 'none', duration: 0.55 }, 0)
-        .to('.hs-cluster', { scale: 1.25, ease: 'none', duration: 0.4 }, 0)
-        .to('.hs-cluster', { opacity: 0, scale: 0.6, ease: 'none', duration: 0.15 }, 0.4)
-        .to('.hs-city', { opacity: 1, scale: 1, ease: 'none', duration: 0.25 }, 0.35)
-        .to('.hs-venue', { opacity: 1, scale: 1, ease: 'back.out(2)', duration: 0.12, stagger: 0.05 }, 0.48)
-        .to('.hs-profile', { opacity: 1, yPercent: 0, ease: 'power2.inOut', duration: 0.28 }, 0.72)
-        .to('.hero-map-layer', { scale: 1.12, ease: 'none', duration: 1 }, 0);
-      gsap.set('.hero-map-layer', { scale: 1.04 });
-      window.__heroTl = heroTl;
+      gsap.set('.hs-profile', { opacity: 1, yPercent: 100, transform: 'none' });
+      var heroIntro = gsap.timeline({ delay: 0.9 });
+      heroIntro.to('.hs-venue', { opacity: 1, scale: 1, ease: 'back.out(2)', duration: 0.45, stagger: 0.12 })
+        .to('.hs-profile', { yPercent: 0, ease: 'power3.out', duration: 0.8 }, '+=0.5');
+      window.__heroIntro = heroIntro;
+      // background skin keeps its slow zoom on scroll
+      gsap.fromTo('.hero-map-layer', { scale: 1.04 }, { scale: 1.12, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     }
     if (document.querySelector('.hero .sticker')) {
       gsap.from('.hero .sticker', { scale: 0, rotate: 30, duration: 0.6, ease: 'back.out(2.5)', delay: 1.1 });
