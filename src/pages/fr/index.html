@@ -96,7 +96,7 @@ nav: home
   .pack b { font-family: var(--kaio); font-size: 17px; line-height: 1.15; }
   .pack span { font-size: 13px; }
   .pack .price { margin-top: auto; padding-top: 12px; font-size: 12.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); }
-  @media (max-width: 860px) { .pb-grid { grid-template-columns: 1fr; } .packages { grid-template-columns: 1fr; } }
+  @media (max-width: 860px) { .pb-grid { grid-template-columns: 1fr; } .pb-grid > .rv:first-child { order: 2; } .packages { grid-template-columns: 1fr; } }
   .partners { padding: 110px 0 90px; text-align: center; }
   .partners h2 { font-size: clamp(32px, 4.5vw, 52px); }
   .marquee { overflow: hidden; margin-top: 44px; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
