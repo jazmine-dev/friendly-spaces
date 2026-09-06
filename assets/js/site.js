@@ -125,7 +125,9 @@
     if (document.querySelector('.hero-phone .hs-city')) {
       gsap.set('.hs-venue', { xPercent: -50, yPercent: -50, transform: 'none', opacity: 0, scale: 0 });
       gsap.set('.hs-profile', { opacity: 1, yPercent: 100, transform: 'none' });
-      var heroIntro = gsap.timeline({ delay: 0.9 });
+      // plays once the phone is actually in view: immediately on desktop, on scroll-in on phones
+      var heroIntro = gsap.timeline({ paused: true, delay: 0.6 });
+      ScrollTrigger.create({ trigger: '.hero-phone', start: 'top 60%', once: true, onEnter: function () { heroIntro.play(); } });
       heroIntro.to('.hs-venue', { opacity: 1, scale: 1, ease: 'back.out(2)', duration: 0.45, stagger: 0.12 })
         .to('.hs-profile', { yPercent: 0, ease: 'power3.out', duration: 0.8 }, '+=0.5');
       window.__heroIntro = heroIntro;
