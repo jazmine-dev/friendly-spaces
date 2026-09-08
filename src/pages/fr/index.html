@@ -290,9 +290,9 @@ nav: home
     <div class="wrap news-inner">
       <h2>Des nouvelles Friendly, quelques fois par an</h2>
       <p>Recevez les nouveaux articles et apprenez en premier les lancements dans de nouvelles villes et les nouveaux lieux partenaires, directement dans votre bo&icirc;te mail. Sans spam, d&eacute;sinscription &agrave; tout moment.</p>
-      <form action="https://app.friendlyspaces.ch/" method="POST" data-netlify-form="website-newsletter" data-success="Vous êtes sur la liste." data-sending="Inscription…" data-error="Ça n'a pas fonctionné. Écrivez à hello@friendlyspaces.ch et nous vous ajouterons.">
+      <form action="https://insights.friendlyspaces.ch/api/newsletter" method="POST" data-newsletter="1" data-invalid="Merci de vérifier l'adresse e-mail." data-success="Vous êtes sur la liste." data-sending="Inscription…" data-error="Ça n'a pas fonctionné. Écrivez à hello@friendlyspaces.ch et nous vous ajouterons.">
         <input type="email" name="email" placeholder="vous@exemple.ch" aria-label="Adresse e-mail" required>
-        <input type="hidden" name="language" value="{{lang}}">
+        <input type="hidden" name="language" value="{{lang}}"><input type="hidden" name="source" value="homepage">
         <p class="hp" style="position:absolute;left:-9999px"><label>Laisser vide <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <button class="btn btn-ink" type="submit">S'inscrire</button>
         <p class="form-status" role="status" aria-live="polite" style="flex-basis:100%"></p>

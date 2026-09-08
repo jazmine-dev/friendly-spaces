@@ -78,6 +78,28 @@
     });
   });
 
+  /* ---- newsletter: our own list on the Insights worker (JSON answer, real success/error) ---- */
+  document.querySelectorAll('form[data-newsletter]').forEach(function (form) {
+    var status = form.querySelector('.form-status');
+    function show(text, cls) { if (status) { status.textContent = text; status.className = 'form-status' + (cls ? ' ' + cls : ''); } }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.querySelector('.hp input') && form.querySelector('.hp input').value) return;
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
+      show(form.getAttribute('data-sending') || 'Sending…');
+      fetch(form.getAttribute('action'), { method: 'POST', mode: 'cors', credentials: 'omit', body: new URLSearchParams(new FormData(form)) })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (res) {
+          if (res && res.ok) { form.reset(); show(form.getAttribute('data-success') || 'Thanks!', 'ok'); }
+          else if (res && res.error === 'invalid_email') { show(form.getAttribute('data-invalid') || 'Please check the email address.', 'err'); }
+          else { show(form.getAttribute('data-error') || 'Something went wrong.', 'err'); }
+        })
+        .catch(function () { show(form.getAttribute('data-error') || 'Something went wrong.', 'err'); })
+        .finally(function () { if (btn) btn.disabled = false; });
+    });
+  });
+
   /* ---- map embeds: opt-in interaction so the map never traps page scrolling ---- */
   document.querySelectorAll('iframe[data-guard]').forEach(function (frame) {
     var box = frame.parentElement;

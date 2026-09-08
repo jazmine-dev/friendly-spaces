@@ -107,9 +107,9 @@
     <div class="wrap">
       <h2>Friendly news, a few times a year</h2>
       <p>Receive new posts, and hear about launches in new cities and new partner locations first, directly in your inbox. No spam, unsubscribe anytime.</p>
-      <form action="https://app.friendlyspaces.ch/" method="POST" data-netlify-form="website-newsletter" data-success="You're on the list. 🧡" data-sending="Signing you up…" data-error="That didn't work. Email hello@friendlyspaces.ch and we'll add you.">
+      <form action="https://insights.friendlyspaces.ch/api/newsletter" method="POST" data-newsletter="1" data-invalid="Please check the email address." data-success="You're on the list. 🧡" data-sending="Signing you up…" data-error="That didn't work. Email hello@friendlyspaces.ch and we'll add you.">
         <input type="email" name="email" placeholder="you@example.ch" aria-label="Email address" required>
-        <input type="hidden" name="language" value="en">
+        <input type="hidden" name="language" value="en"><input type="hidden" name="source" value="news">
         <p class="hp" style="position:absolute;left:-9999px"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <button class="btn btn-ink" type="submit">Sign up</button>
         <p class="form-status" role="status" aria-live="polite" style="flex-basis:100%"></p>
