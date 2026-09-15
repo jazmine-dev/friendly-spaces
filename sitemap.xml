@@ -35,11 +35,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/label.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/label.html"/>
   </url>
-  <url><loc>https://friendlyspaces.ch/de/news/early-bird-2026.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/early-bird-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/early-bird-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/early-bird-2026.html"/>
-  </url>
   <url><loc>https://friendlyspaces.ch/de/news/index.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/index.html"/>
@@ -80,11 +75,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/label.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/label.html"/>
   </url>
-  <url><loc>https://friendlyspaces.ch/fr/news/early-bird-2026.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/early-bird-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/early-bird-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/early-bird-2026.html"/>
-  </url>
   <url><loc>https://friendlyspaces.ch/fr/news/index.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/index.html"/>
@@ -109,11 +99,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/label.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/label.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/label.html"/>
-  </url>
-  <url><loc>https://friendlyspaces.ch/news/early-bird-2026.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/early-bird-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/early-bird-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/early-bird-2026.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/news/index.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/index.html"/>

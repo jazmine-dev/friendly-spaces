@@ -7,3 +7,8 @@
 /app.html /#app 301
 /de/app.html /de/#app 301
 /fr/app.html /fr/#app 301
+
+# First news post taken down on 2026-09-15 (contradicted the site); replaced by new posts.
+/news/early-bird-2026.html /news/ 301
+/de/news/early-bird-2026.html /de/news/ 301
+/fr/news/early-bird-2026.html /fr/news/ 301
