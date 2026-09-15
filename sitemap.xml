@@ -10,11 +10,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/about.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/about.html"/>
   </url>
-  <url><loc>https://friendlyspaces.ch/app.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/app.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/app.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/app.html"/>
-  </url>
   <url><loc>https://friendlyspaces.ch/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/contact.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/contact.html"/>
@@ -29,11 +24,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/about.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/about.html"/>
-  </url>
-  <url><loc>https://friendlyspaces.ch/de/app.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/app.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/app.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/app.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/de/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/contact.html"/>
@@ -79,11 +69,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/about.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/about.html"/>
-  </url>
-  <url><loc>https://friendlyspaces.ch/fr/app.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/app.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/app.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/app.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/fr/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/contact.html"/>

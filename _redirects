@@ -2,3 +2,8 @@
 # Cloudflare applies a matching rule even when a real file exists at the
 # source path (every rule behaves like Netlify's force=true), so keep rules
 # explicit and never add blanket wildcards over real pages.
+
+# The Map & App page was retired on 2026-09-15; the map section on the homepage replaces it.
+/app.html /#app 301
+/de/app.html /de/#app 301
+/fr/app.html /fr/#app 301
