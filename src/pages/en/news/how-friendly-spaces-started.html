@@ -13,6 +13,9 @@ nav: news
   .post-body figure { margin: 30px 0; }
   .post-body figure img { width: 100%; height: auto; border-radius: 22px; border: 2px solid var(--ink); display: block; }
   .post-body figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .post-body .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 30px 0; }
+  .post-body .pair figure { margin: 0; }
+  @media (max-width: 600px) { .post-body .pair { grid-template-columns: 1fr; } }
   .author { display: flex; gap: 18px; align-items: center; margin-top: 44px; padding-top: 28px; border-top: 1px solid rgba(44,53,137,.2); }
   .author img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid var(--ink); }
   .author p { margin: 0; font-size: 15px; }
@@ -44,15 +47,17 @@ nav: news
         <figcaption>The playground near our first hotel.</figcaption>
       </figure>
       <p>I should say that I had been primed. A few weeks earlier we had been in Japan, our first trip there since our daughter was born. We planned the way toddler parents plan: a park near the hotel if possible, apprehension of every long queue. None of it was needed. There was a family fast-track at passport control. The lifts had signs giving priority to buggies. Department stores and station buildings had family rooms, with a nursing room, changing tables that fathers could use as well as mothers, and often a padded corner where a toddler could be let loose. Every one of those rooms had a hot-water dispenser for formula. Somewhere around the fourth day we stopped checking whether a place would work for us and started worrying about how we would readjust to home.</p>
-      <figure>
-        <img src="/assets/img/news/japan-baby-chair.jpg" alt="A fold-down baby seat mounted on the wall of a toilet cubicle" width="1200" height="1600">
-        <figcaption>A baby seat in the toilet cubicle, so a parent can go alone. Standard in Japan, from station toilets to this one at Oshiroland.</figcaption>
-      </figure>
       <p>In Kofu, a small city on our route, we found an indoor playground, <a href="https://www.city.kofu.yamanashi.jp/kodomoooen/asobiba/oshiroland.html" target="_blank" rel="noopener">Ventforet Oshiroland</a>. There was a little play area right at the entrance so our daughter could be occupied while we paid and the woman at the desk explained how it worked. Inside there was a section for babies and a bigger open space for small children, and three staff whose whole job was to play: to suggest a game, or to get a shy kid onto the slide, or to practice new skills. It was subsidised by the city. It was spotless. And it had been built, the woman told us, on the idea that parents should come to engage with their children and meet each other.</p>
-      <figure>
-        <img src="/assets/img/news/kofu-baby-area.jpg" alt="A toddler at a wooden marble run in the baby area of Oshiroland" width="1200" height="1600">
-        <figcaption>The baby area at Oshiroland: wooden toys, a marble run, and a bench for the parents.</figcaption>
-      </figure>
+      <div class="pair">
+        <figure>
+          <img src="/assets/img/news/kofu-baby-area.jpg" alt="A toddler at a wooden marble run in the baby area of Oshiroland" width="1200" height="1600">
+          <figcaption>The baby area at Oshiroland: wooden toys, a marble run, and a bench for the parents.</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/img/news/japan-baby-chair.jpg" alt="A fold-down baby seat mounted on the wall of a toilet cubicle" width="1200" height="1600">
+          <figcaption>A baby seat in the toilet cubicle, so a parent can go alone. Standard in Japan, from station toilets to this one at Oshiroland.</figcaption>
+        </figure>
+      </div>
       <p>That line stayed with me longer than anything else from the trip, because the first year of motherhood had been at times very lonely. The hardest part, for me, was the afternoons. I was lucky: a friend was pregnant at the same time, and we kept each other going with five-minute WhatsApp voice notes. Plenty of mothers do not have that friend, and if you have no family nearby, the days can be very long. A place you can go with a baby, where you are welcome and where there might be another adult to talk to, matters more than I would have believed before I had one.</p>
 
       <h2>A checklist instead of a caf&eacute;</h2>
