@@ -1,6 +1,6 @@
 ---
-title: News — Friendly Spaces
-description: Les nouvelles de Friendly Spaces : nouveaux partenaires, nouvelles villes, histoires de PlayBox et ce qui bouge derrière le label.
+title: News - Friendly Spaces
+description: News de Friendly Spaces : nouveaux partenaires, nouvelles villes, histoires de PlayBox et ce qui change derri&egrave;re le label.
 nav: news
 ---
 <style>
@@ -26,25 +26,33 @@ nav: news
   <header class="news-hero">
     <div class="wrap">
       <span class="eyebrow" style="color:var(--tang-deep)">News</span>
-      <h1 style="margin-top:14px">Quoi de neuf</h1>
-      <p class="lede">Nouveaux partenaires, nouvelles villes, histoires de PlayBox et, de temps en temps, un regard derri&egrave;re le label. Des articles courts, en anglais, quelques fois par an.</p>
+      <h1 style="margin-top:14px">Nouveaut&eacute;s</h1>
+      <p class="lede">Nouveaux partenaires, nouvelles villes, histoires de PlayBox et parfois un regard derri&egrave;re le label. Des posts courts, en anglais, quelques fois par an.</p>
     </div>
   </header>
 
   <section class="band" style="padding-top:20px">
     <div class="wrap">
       <div class="posts">
+        <a class="post rv" href="/news/how-friendly-spaces-started.html">
+          <img src="/assets/img/news/kofu-hall.jpg" alt="" width="1600" height="1200">
+          <div class="body">
+            <time datetime="2026-09-16">Septembre 2026</time>
+            <h2>Comment Friendly Spaces a commenc&eacute;</h2>
+            <p>Un trajet en gondole avec un b&eacute;b&eacute; sur le dos, un coin jeux &agrave; c&ocirc;t&eacute; des toilettes et une aire de jeux int&eacute;rieure &agrave; Kofu, au Japon. Pourquoi j'ai &eacute;crit une checklist au lieu d'ouvrir un caf&eacute;.</p>
+          </div>
+        </a>
       </div>
-      <p class="fine lang-note">Nos articles sont &eacute;crits en anglais. Ce r&eacute;sum&eacute; a &eacute;t&eacute; traduit automatiquement, l'original est toujours &agrave; un clic.</p>
+      <p class="fine lang-note">Les posts sont d'abord &eacute;crits en anglais; les versions allemandes et fran&ccedil;aises suivront.</p>
     </div>
   </section>
 
   <section class="band band-pink cta-band news-signup">
     <div class="wrap">
       <h2>Des nouvelles Friendly, quelques fois par an</h2>
-      <p>Recevez les nouveaux articles et apprenez en premier les lancements dans de nouvelles villes et les nouveaux lieux partenaires, directement dans votre bo&icirc;te mail. Sans spam, d&eacute;sinscription &agrave; tout moment.</p>
-      <form action="https://insights.friendlyspaces.ch/api/newsletter" method="POST" data-newsletter="1" data-invalid="Merci de vérifier l'adresse e-mail." data-success="Vous êtes sur la liste. 🧡" data-sending="Inscription…" data-error="Ça n'a pas fonctionné. Écrivez à hello@friendlyspaces.ch et nous vous ajouterons.">
-        <input type="email" name="email" placeholder="vous@exemple.ch" aria-label="Adresse e-mail" required>
+      <p>Nouveaux partenaires, nouvelles villes et, de temps en temps, une histoire de PlayBox, directement dans votre bo&icirc;te mail. Sans spam, d&eacute;sinscription &agrave; tout moment.</p>
+      <form action="https://insights.friendlyspaces.ch/api/newsletter" method="POST" data-newsletter="1" data-invalid="Merci de v&eacute;rifier l'adresse e-mail." data-success="Vous &ecirc;tes sur la liste. 🧡" data-sending="Inscription..." data-error="&Ccedil;a n'a pas fonctionn&eacute;. &Eacute;crivez &agrave; hello@friendlyspaces.ch et nous vous ajouterons.">
+        <input type="email" name="email" placeholder="you@example.ch" aria-label="Adresse e-mail" required>
         <input type="hidden" name="language" value="{{lang}}"><input type="hidden" name="source" value="news">
         <p class="hp" style="position:absolute;left:-9999px"><label>Laisser vide <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <button class="btn btn-ink" type="submit">S'inscrire</button>
