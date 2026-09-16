@@ -35,6 +35,11 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/label.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/label.html"/>
   </url>
+  <url><loc>https://friendlyspaces.ch/de/news/how-friendly-spaces-started.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/how-friendly-spaces-started.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/how-friendly-spaces-started.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/how-friendly-spaces-started.html"/>
+  </url>
   <url><loc>https://friendlyspaces.ch/de/news/index.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/index.html"/>
@@ -75,6 +80,11 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/label.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/label.html"/>
   </url>
+  <url><loc>https://friendlyspaces.ch/fr/news/how-friendly-spaces-started.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/how-friendly-spaces-started.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/how-friendly-spaces-started.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/how-friendly-spaces-started.html"/>
+  </url>
   <url><loc>https://friendlyspaces.ch/fr/news/index.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/index.html"/>
@@ -102,6 +112,8 @@
   </url>
   <url><loc>https://friendlyspaces.ch/news/how-friendly-spaces-started.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/how-friendly-spaces-started.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/how-friendly-spaces-started.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/how-friendly-spaces-started.html"/>
   </url>
   <url><loc>https://friendlyspaces.ch/news/index.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/index.html"/>
