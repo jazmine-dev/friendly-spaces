@@ -11,7 +11,7 @@
       "nav": {
         "app": "Map & App",
         "label": "The Label",
-        "playbox": "PlayBox",
+        "playbox": "Playbox",
         "partners": "Partners",
         "about": "About",
         "news": "News",
@@ -36,7 +36,7 @@
       "nav": {
         "app": "Karte & App",
         "label": "Das Label",
-        "playbox": "PlayBox",
+        "playbox": "Playbox",
         "partners": "Partner",
         "about": "Über uns",
         "news": "News",
@@ -61,7 +61,7 @@
       "nav": {
         "app": "Carte & App",
         "label": "Le label",
-        "playbox": "PlayBox",
+        "playbox": "Playbox",
         "partners": "Partenaires",
         "about": "À propos",
         "news": "News",
@@ -86,7 +86,7 @@
       "nav": {
         "app": "Mappa & App",
         "label": "Il label",
-        "playbox": "PlayBox",
+        "playbox": "Playbox",
         "partners": "Partner",
         "about": "Chi siamo",
         "news": "News",
