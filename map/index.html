@@ -716,6 +716,7 @@
                     options: {
                         venueType: {
                             cafe: "Café",
+                            shop: "Laden",
                             "craft-atelier": "Kreativ-Atelier",
                             "food-hall": "Food Hall"
                         },
@@ -774,6 +775,7 @@
                     options: {
                         venueType: {
                             cafe: "Café",
+                            shop: "Boutique",
                             "craft-atelier": "Atelier créatif",
                             "food-hall": "Food Hall"
                         },
@@ -832,6 +834,7 @@
                     options: {
                         venueType: {
                             cafe: "Cafe",
+                            shop: "Shop",
                             "craft-atelier": "Creative Atelier",
                             "food-hall": "Food Hall"
                         },
@@ -1210,6 +1213,8 @@
         let venues = [...embeddedVenues];
         const REMOTE_APP_ORIGIN = 'https://app.friendlyspaces.ch/';
         const REMOTE_VENUES_URL = 'https://app.friendlyspaces.ch/data/venues.json';
+        const REMOTE_FILTERS_URL = 'https://app.friendlyspaces.ch/data/filters.json';
+        const FILTERS_FETCH_TIMEOUT_MS = 6000;
 
         function resolveVenueAssetUrl(assetPath) {
             if (typeof assetPath !== 'string' || !assetPath.trim()) return '';
@@ -1236,9 +1241,10 @@
         }
 
         // Filter definitions
-        const filterDefinitions = {
+        const fallbackFilterDefinitions = {
             venueType: [
                 { id: "cafe", label: "Cafe" },
+                { id: "shop", label: "Shop" },
                 { id: "restaurant", label: "Restaurant" },
                 { id: "craft-atelier", label: "Creative Atelier" },
                 { id: "food-hall", label: "Food Hall" }
@@ -1265,6 +1271,88 @@
                 { id: "games-room", label: "Games Room" }
             ]
         };
+        let filterDefinitions = { ...fallbackFilterDefinitions };
+        let loadedFilterVocabulary = null;
+
+        function validateFilterData(data) {
+            if (!data || !Array.isArray(data.categories)) {
+                throw new Error('Invalid filters payload');
+            }
+            data.categories.forEach(category => {
+                if (!category?.id || !Array.isArray(category.options)) {
+                    throw new Error('Invalid filters payload');
+                }
+            });
+            return data;
+        }
+
+        function buildFilterDefinitionsFromPayload(data) {
+            return data.categories.reduce((definitions, category) => {
+                definitions[category.id] = category.options
+                    .filter(option => option?.id)
+                    .map(option => ({
+                        id: option.id,
+                        label: option.label?.en || option.id
+                    }));
+                return definitions;
+            }, {});
+        }
+
+        function ensureActiveFilterCategories() {
+            Object.keys(filterDefinitions).forEach(category => {
+                if (!Array.isArray(activeFilters[category])) {
+                    activeFilters[category] = [];
+                }
+            });
+        }
+
+        async function loadFilters() {
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), FILTERS_FETCH_TIMEOUT_MS);
+            try {
+                const response = await fetch(REMOTE_FILTERS_URL, {
+                    cache: 'no-store',
+                    signal: controller.signal
+                });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                loadedFilterVocabulary = validateFilterData(await response.json());
+                filterDefinitions = buildFilterDefinitionsFromPayload(loadedFilterVocabulary);
+                ensureActiveFilterCategories();
+            } catch (err) {
+                loadedFilterVocabulary = null;
+                filterDefinitions = { ...fallbackFilterDefinitions };
+                ensureActiveFilterCategories();
+            } finally {
+                clearTimeout(timeout);
+            }
+        }
+
+        function getLoadedFilterCategory(category) {
+            return loadedFilterVocabulary?.categories?.find(item => item.id === category);
+        }
+
+        function getLoadedFilterOption(category, id) {
+            return getLoadedFilterCategory(category)?.options?.find(item => item.id === id);
+        }
+
+        function getLocalizedFilterLabel(label, id) {
+            if (!label || typeof label !== 'object') return null;
+            return label[currentLang] || label.de || label.en || id;
+        }
+
+        function filterOptionLabel(category, id) {
+            const loadedLabel = getLocalizedFilterLabel(getLoadedFilterOption(category, id)?.label, id);
+            if (loadedLabel) return loadedLabel;
+            const translated = translate(`filters.options.${category}.${id}`, id);
+            return typeof translated === 'function' ? translated() : translated;
+        }
+
+        function filterCategoryLabel(category) {
+            const loadedLabel = getLocalizedFilterLabel(getLoadedFilterCategory(category)?.label, category);
+            if (loadedLabel) return loadedLabel;
+            const translated = translate(`filters.categories.${category}`, category);
+            return typeof translated === 'function' ? translated() : translated;
+        }
 
         // Initialize map with zoom controls in bottom right
         const map = L.map('map', {
@@ -1446,7 +1534,7 @@
 
             document.querySelectorAll('[data-category-heading]').forEach(heading => {
                 const cat = heading.getAttribute('data-category-heading');
-                heading.textContent = translate(`filters.categories.${cat}`, heading.textContent);
+                heading.textContent = filterCategoryLabel(cat);
             });
 
             renderCountWrappers();
@@ -1525,11 +1613,12 @@
 
         // Helper: Count venues with specific filter
         function countVenuesWithFilter(category, filterId) {
-            return venues.filter(v => v.filters[category].includes(filterId)).length;
+            return venues.filter(v => Array.isArray(v.filters?.[category]) && v.filters[category].includes(filterId)).length;
         }
 
         // Create filter buttons
         function createFilterButtons() {
+            ensureActiveFilterCategories();
             Object.keys(filterDefinitions).forEach(category => {
                 const container = document.getElementById(`${category}-filters`);
                 if (!container) return;
@@ -1537,7 +1626,7 @@
 
                 const heading = document.querySelector(`[data-category-heading="${category}"]`);
                 if (heading) {
-                    heading.textContent = translate(`filters.categories.${category}`, heading.textContent);
+                    heading.textContent = filterCategoryLabel(category);
                 }
 
                 filterDefinitions[category].forEach(filter => {
@@ -1552,8 +1641,7 @@
                     button.dataset.value = filter.id;
 
                     const labelSpan = document.createElement('span');
-                    const labelText = translate(`filters.options.${category}.${filter.id}`, filter.label || filter.id);
-                    labelSpan.textContent = typeof labelText === 'function' ? labelText() : labelText;
+                    labelSpan.textContent = filterOptionLabel(category, filter.id);
 
                     const countSpan = document.createElement('span');
                     countSpan.className = 'count';
@@ -1571,6 +1659,7 @@
 
         // Handle filter button clicks
         function handleFilterClick(button, category, value) {
+            ensureActiveFilterCategories();
             button.classList.toggle('active');
             const filterState = button.classList.contains('active') ? 'selected' : 'deselected';
 
@@ -1805,7 +1894,7 @@
                 if (selectedFilters.length > 0) {
                     // Check if venue has ALL selected filters in this category
                     const hasAllFilters = selectedFilters.every(filter =>
-                        venue.filters[category].includes(filter)
+                        Array.isArray(venue.filters?.[category]) && venue.filters[category].includes(filter)
                     );
                     if (!hasAllFilters) return false;
                 }
@@ -1838,11 +1927,9 @@
 
             const tagsByCategory = Object.entries(venue.filters)
                 .map(([category, values]) => {
-                    const color = categoryColors[category];
+                    const color = categoryColors[category] || '#1E52BA';
                     const tags = values.map(v => {
-                        const def = filterDefinitions[category].find(f => f.id === v);
-                        const translated = translate(`filters.options.${category}.${v}`, def?.label || v);
-                        const label = typeof translated === 'function' ? translated() : translated;
+                        const label = filterOptionLabel(category, v);
                         return `<span class="venue-tag" style="background: ${color}; color: white;">${label}</span>`;
                     }).join('');
                     return tags;
@@ -2102,9 +2189,7 @@
 
             const tags = Object.entries(venue.filters || {}).flatMap(([category, values]) =>
                 values.map(v => {
-                    const def = filterDefinitions[category]?.find(f => f.id === v);
-                    const translated = translate(`filters.options.${category}.${v}`, def?.label || v);
-                    const label = typeof translated === 'function' ? translated() : translated;
+                    const label = filterOptionLabel(category, v);
                     return `<span class="profile-tag">${escapeHtmlText(label)}</span>`;
                 })
             ).join('');
@@ -2197,7 +2282,7 @@
 
         // Initialize
         async function startApp() {
-            await loadVenues();
+            await Promise.all([loadVenues(), loadFilters()]);
             setLanguage(currentLang, { skipUrlUpdate: true });
             setupAccordions();
             handleResize();
