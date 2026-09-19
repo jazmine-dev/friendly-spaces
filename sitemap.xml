@@ -120,6 +120,9 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/news/index.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://friendlyspaces.ch/fr/news/index.html"/>
   </url>
+  <url><loc>https://friendlyspaces.ch/news/knocking-on-doors.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/news/knocking-on-doors.html"/>
+  </url>
   <url><loc>https://friendlyspaces.ch/partners.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://friendlyspaces.ch/partners.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://friendlyspaces.ch/de/partners.html"/>
