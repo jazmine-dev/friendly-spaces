@@ -1337,21 +1337,32 @@
 
         function getLocalizedFilterLabel(label, id) {
             if (!label || typeof label !== 'object') return null;
-            return label[currentLang] || label.de || label.en || id;
+            return label[currentLang] || label.de || label.en || humanizeFilterId(id);
+        }
+
+        function humanizeFilterId(id) {
+            if (!id) return '';
+            return String(id)
+                .split(/[-_]+/)
+                .filter(Boolean)
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
         }
 
         function filterOptionLabel(category, id) {
             const loadedLabel = getLocalizedFilterLabel(getLoadedFilterOption(category, id)?.label, id);
             if (loadedLabel) return loadedLabel;
-            const translated = translate(`filters.options.${category}.${id}`, id);
-            return typeof translated === 'function' ? translated() : translated;
+            const translated = translate(`filters.options.${category}.${id}`, null);
+            const label = typeof translated === 'function' ? translated() : translated;
+            return label || humanizeFilterId(id);
         }
 
         function filterCategoryLabel(category) {
             const loadedLabel = getLocalizedFilterLabel(getLoadedFilterCategory(category)?.label, category);
             if (loadedLabel) return loadedLabel;
-            const translated = translate(`filters.categories.${category}`, category);
-            return typeof translated === 'function' ? translated() : translated;
+            const translated = translate(`filters.categories.${category}`, null);
+            const label = typeof translated === 'function' ? translated() : translated;
+            return label || humanizeFilterId(category);
         }
 
         // Initialize map with zoom controls in bottom right
