@@ -99,6 +99,7 @@
   .statement p { font-family: var(--kaio); font-size: clamp(30px, 4.6vw, 54px); line-height: 1.14; margin: 0; max-width: 27ch; }
   .statement .w { opacity: .18; display: inline-block; }
   .statement .u { position: relative; white-space: nowrap; }
+  @media (min-width: 861px) { .statement .keep { white-space: nowrap; } }
   .statement .u svg { position: absolute; left: 0; bottom: -8px; width: 100%; height: 13px; }
 
   .aud { padding: 96px 0 30px; }
@@ -212,7 +213,7 @@
 
   <section class="statement" data-bg="lilac">
     <div class="wrap">
-      <p id="scrub">Places where the buggy fits through the door, a changing table is at your disposal, and a three-year-old has&nbsp;<span style="white-space:nowrap"><span class="u">something to do<svg viewBox="0 0 200 12" preserveAspectRatio="none" class="sq-draw" aria-hidden="true"><path d="M3 8 Q 25 3, 50 7 T 100 6 T 150 7 T 197 5" fill="none" stroke="#E8622C" stroke-width="4" stroke-linecap="round"/></svg></span>.</span></p>
+      <p id="scrub">Places where the buggy fits through the door, a changing table is at your disposal, <span class="keep">and a three-year-old</span> has&nbsp;<span style="white-space:nowrap"><span class="u">something to do<svg viewBox="0 0 200 12" preserveAspectRatio="none" class="sq-draw" aria-hidden="true"><path d="M3 8 Q 25 3, 50 7 T 100 6 T 150 7 T 197 5" fill="none" stroke="#E8622C" stroke-width="4" stroke-linecap="round"/></svg></span>.</span></p>
     </div>
   </section>
 
