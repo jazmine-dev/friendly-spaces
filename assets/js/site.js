@@ -41,13 +41,13 @@
     if (target === lang) a.setAttribute('aria-current', 'true');
     a.addEventListener('click', function () { safeSet(target); });
   });
-  // First visit only (nothing chosen yet): if the browser prefers DE/FR/IT and this
+  // First visit only (nothing chosen yet): if the browser prefers DE/FR and this
   // English page exists in that language, go there. An explicit click on the language
   // switcher is remembered and stops the auto-detect for good; direct links to any
   // language are always respected.
   if (!safeGet() && lang === 'en') {
     var pref = (navigator.language || '').slice(0, 2).toLowerCase();
-    if (['de', 'fr', 'it'].indexOf(pref) >= 0 && alternates[pref]) {
+    if (['de', 'fr'].indexOf(pref) >= 0 && alternates[pref]) {
       location.replace(pathFor(pref));
       return;
     }
