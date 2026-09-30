@@ -102,6 +102,13 @@
   .statement .u { position: relative; white-space: nowrap; }
   @media (min-width: 861px) { .statement .keep { white-space: nowrap; } }
   .statement .u svg { position: absolute; left: 0; bottom: -8px; width: 100%; height: 13px; }
+  .statement .nb { white-space: nowrap; }
+  /* phones: let the underlined phrase wrap; each wrapped piece gets its own squiggle */
+  @media (max-width: 860px) {
+    .statement .nb, .statement .u { white-space: normal; }
+    .statement .u svg { display: none; }
+    .statement .u { -webkit-box-decoration-break: clone; box-decoration-break: clone; padding-bottom: 4px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M3 8 Q 25 3, 50 7 T 100 6 T 150 7 T 197 5' fill='none' stroke='%23E8622C' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left bottom / 200px 12px; }
+  }
 
   .aud { padding: 96px 0 30px; }
   .aud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 34px; }
@@ -214,7 +221,7 @@
 
   <section class="statement" data-bg="lilac">
     <div class="wrap">
-      <p id="scrub">Orte, durch deren T&uuml;r der Kinderwagen passt, wo ein Wickeltisch bereitsteht <span class="keep">und ein dreij&auml;hriges Kind</span> <span style="white-space:nowrap"><span class="u">etwas zu tun<svg viewBox="0 0 200 12" preserveAspectRatio="none" class="sq-draw" aria-hidden="true"><path d="M3 8 Q 25 3, 50 7 T 100 6 T 150 7 T 197 5" fill="none" stroke="#E8622C" stroke-width="4" stroke-linecap="round"/></svg></span> hat.</span></p>
+      <p id="scrub">Orte, durch deren T&uuml;r der Kinderwagen passt, wo ein Wickeltisch bereitsteht <span class="keep">und ein dreij&auml;hriges Kind</span> <span class="nb"><span class="u">etwas zu tun<svg viewBox="0 0 200 12" preserveAspectRatio="none" class="sq-draw" aria-hidden="true"><path d="M3 8 Q 25 3, 50 7 T 100 6 T 150 7 T 197 5" fill="none" stroke="#E8622C" stroke-width="4" stroke-linecap="round"/></svg></span> hat.</span></p>
     </div>
   </section>
 
