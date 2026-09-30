@@ -2,13 +2,31 @@
 # Cloudflare applies a matching rule even when a real file exists at the
 # source path (every rule behaves like Netlify's force=true), so keep rules
 # explicit and never add blanket wildcards over real pages.
+# Pages also serves /about.html as /about, so retired pages get both forms.
 
 # The Map & App page was retired on 2026-09-15; the map section on the homepage replaces it.
 /app.html /#app 301
+/app /#app 301
 /de/app.html /de/#app 301
+/de/app /de/#app 301
 /fr/app.html /fr/#app 301
+/fr/app /fr/#app 301
 
 # First news post taken down on 2026-09-15 (contradicted the site); replaced by new posts.
 /news/early-bird-2026.html /news/ 301
+/news/early-bird-2026 /news/ 301
 /de/news/early-bird-2026.html /de/news/ 301
+/de/news/early-bird-2026 /de/news/ 301
 /fr/news/early-bird-2026.html /fr/news/ 301
+/fr/news/early-bird-2026 /fr/news/ 301
+
+# Old Wix site URLs (launch 2026-09-30). Wix had /en, /fr and only map + partner pages;
+# /de and /it on Wix fell back to /en.
+/en /  301
+/en/map /#app 301
+/en/partner /partners 301
+/en/* / 301
+/fr/map /fr/#app 301
+/fr/partner /fr/partners 301
+/it / 301
+/it/* / 301

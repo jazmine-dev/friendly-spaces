@@ -61,6 +61,20 @@ def render(template, ctx):
     return re.sub(r"\{\{\s*([a-zA-Z0-9_.]+)\s*\}\}", sub, template)
 
 
+def clean_path(rel):
+    """Cloudflare Pages serves /about.html at /about (and 308-redirects the .html form),
+    so canonical, hreflang, sitemap and internal links all use the clean form."""
+    if rel == "index.html":
+        return ""
+    if rel.endswith("/index.html"):
+        return rel[: -len("index.html")]
+    return rel[:-5] if rel.endswith(".html") else rel
+
+
+def clean_links(html):
+    return re.sub(r'((?:href|action)=")(/(?:de/|fr/)?[^"#?]*?)\.html(?=["#?])', r'\1\2', html)
+
+
 def main():
     pages = {}   # (lang, relpath) -> (meta, body)
     for lang in LANGS:
@@ -77,14 +91,14 @@ def main():
         alternates_html, alternates = [], []
         for l in LANGS:
             if (l, rel) in pages:
-                url = f"{BASE_URL}{lang_root(l)}{'' if rel == 'index.html' else rel}"
+                url = f"{BASE_URL}{lang_root(l)}{clean_path(rel)}"
                 alternates.append((l, url))
                 alternates_html.append(f'<link rel="alternate" hreflang="{l}" href="{url}">')
         default_url = next((u for l, u in alternates if l == DEFAULT), None)
         if default_url:
             alternates_html.append(f'<link rel="alternate" hreflang="x-default" href="{default_url}">')
 
-        canonical = f"{BASE_URL}{lang_root(lang)}{'' if rel == 'index.html' else rel}"
+        canonical = f"{BASE_URL}{lang_root(lang)}{clean_path(rel)}"
         ctx = {
             "root": lang_root(lang), "lang": lang, "path": rel, "canonical": canonical,
             "title": meta.get("title", "Friendly Spaces"),
@@ -104,6 +118,7 @@ def main():
             + render(PARTIALS["footer"], ctx) + "\n"
             + render(PARTIALS["scripts"], ctx) + "\n</body>\n</html>\n"
         )
+        html = clean_links(html)
         # mark the active nav link
         html = html.replace(f'data-nav="{ctx["navActive"]}"', f'data-nav="{ctx["navActive"]}" aria-current="page"') if ctx["navActive"] else html
 
