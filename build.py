@@ -18,7 +18,7 @@ Variables usable inside pages and partials:  {{root}} {{lang}} {{title}}
 {{footer.<key>}} {{year}}.  Body text is written directly in each language
 file — no string tables for page copy, so translations read like prose.
 """
-import json, re, sys, datetime
+import json, re, sys, datetime, hashlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -71,6 +71,17 @@ def clean_path(rel):
     return rel[:-5] if rel.endswith(".html") else rel
 
 
+def asset_stamp(rel):
+    """Short content hash so the year-long immutable cache on /assets/* never serves stale CSS/JS."""
+    return hashlib.sha1((ROOT / rel).read_bytes()).hexdigest()[:8]
+
+
+def stamp_assets(html):
+    for rel in ("assets/css/site.css", "assets/js/site.js"):
+        html = html.replace(f'"/{rel}"', f'"/{rel}?v={asset_stamp(rel)}"')
+    return html
+
+
 def clean_links(html):
     return re.sub(r'((?:href|action)=")(/(?:de/|fr/)?[^"#?]*?)\.html(?=["#?])', r'\1\2', html)
 
@@ -118,7 +129,7 @@ def main():
             + render(PARTIALS["footer"], ctx) + "\n"
             + render(PARTIALS["scripts"], ctx) + "\n</body>\n</html>\n"
         )
-        html = clean_links(html)
+        html = stamp_assets(clean_links(html))
         # mark the active nav link
         html = html.replace(f'data-nav="{ctx["navActive"]}"', f'data-nav="{ctx["navActive"]}" aria-current="page"') if ctx["navActive"] else html
 
