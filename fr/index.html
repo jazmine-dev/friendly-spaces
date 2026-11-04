@@ -164,6 +164,8 @@
   .playbox { background: var(--lilac); padding: 100px 0; }
   .pb-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 48px; align-items: center; }
   .playbox h2 { font-size: clamp(36px, 5vw, 58px); }
+  /* French title is longer: a touch smaller on desktop so it stays on two lines */
+  @media (min-width: 861px) { html[lang="fr"] .playbox h2 { font-size: clamp(36px, 4.4vw, 54px); } }
   .playbox .sub { margin: 18px 0 0; max-width: 52ch; }
   .packages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 30px; }
   .pack { background: var(--cream); border: 2px solid var(--ink); border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 6px; }
@@ -314,7 +316,7 @@
       <div class="rv"><img class="flower-photo" src="/assets/img/playbox-orangerie.jpg" alt="La Playbox Friendly Spaces et ses jouets, &agrave; l'Orangerie Elfenau &agrave; Berne" width="1200" height="1200"></div>
       <div>
         <span class="eyebrow">La Playbox</span>
-        <h2 style="margin-top:12px">Une bo&icirc;te de jouets<br>dont nous nous occupons</h2>
+        <h2 style="margin-top:12px">Les enfants jouent,<br>les parents restent.</h2>
         <p class="sub">Des jouets s&eacute;lectionn&eacute;s pour les 0 &agrave; 5 ans, livr&eacute;s chez vous. Tous les quatre mois, nous repassons, v&eacute;rifions chaque pi&egrave;ce et rempla&ccedil;ons ce qui est cass&eacute; ou manquant&nbsp;: votre &eacute;quipe n'a jamais &agrave; y penser.</p>
         <div class="packages">
           <div class="pack rv"><b>Bo&icirc;te unique</b><span>Une Playbox en abonnement, renouvel&eacute;e tous les quatre mois.</span></div>

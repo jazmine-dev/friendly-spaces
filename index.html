@@ -164,6 +164,8 @@
   .playbox { background: var(--lilac); padding: 100px 0; }
   .pb-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 48px; align-items: center; }
   .playbox h2 { font-size: clamp(36px, 5vw, 58px); }
+  /* French title is longer: a touch smaller on desktop so it stays on two lines */
+  @media (min-width: 861px) { html[lang="fr"] .playbox h2 { font-size: clamp(36px, 4.4vw, 54px); } }
   .playbox .sub { margin: 18px 0 0; max-width: 52ch; }
   .packages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 30px; }
   .pack { background: var(--cream); border: 2px solid var(--ink); border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 6px; }
@@ -314,7 +316,7 @@
       <div class="rv"><img class="flower-photo" src="/assets/img/playbox-orangerie.jpg" alt="The Friendly Spaces Playbox with its toys, at Orangerie Elfenau in Bern" width="1200" height="1200"></div>
       <div>
         <span class="eyebrow">The Playbox</span>
-        <h2 style="margin-top:12px">A toy box<br>we look after</h2>
+        <h2 style="margin-top:12px">Kids play,<br>parents stay.</h2>
         <p class="sub">Hand-picked toys for ages 0 to 5, delivered to your space. Every four months we come back, check each piece and replace anything broken or missing, so your team never has to think about it.</p>
         <div class="packages">
           <div class="pack rv"><b>Single Box</b><span>One Playbox by subscription, refreshed every four months.</span></div>
