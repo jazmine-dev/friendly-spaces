@@ -133,11 +133,11 @@
   .phone .screen { position: relative; overflow: hidden; border-radius: 28px; }
   .phone img { width: 100%; display: block; transform-origin: 50% 55%; }
   .pin { position: absolute; width: 9.4%; aspect-ratio: 1; background: var(--blue); color: #fff; border: 2px solid #fff; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: clamp(10px, 1.6vw, 14px); box-shadow: 0 6px 14px rgba(0,0,0,.28); transform: translate(-50%, -50%); }
-  .map-note { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 64px 0 0; font-size: 14px; color: var(--lilac); }
-  .map-note strong { font-size: 17px; font-weight: 700; color: var(--cream); }
+  .map-note { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 64px 0 0; font-size: 14px; color: var(--lilac); }
+  .map-note strong { font-weight: 600; color: var(--cream); }
   .map-embed { position: relative; margin-top: 14px; height: 720px; border: 2px solid var(--lilac); border-radius: 22px; overflow: hidden; background: #232a63; }
   .map-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .map-chip { position: absolute; top: 16px; right: 16px; z-index: 2; background: var(--marigold); color: var(--ink); border: 2px solid var(--ink); border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 7px 14px; pointer-events: none; }
+  .map-chip { background: var(--marigold); color: var(--ink); border-radius: 999px; font-size: 11px; font-weight: 700; line-height: 1; letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; }
   @media (max-width: 860px) { .map-grid { grid-template-columns: 1fr; } .map-embed { height: 640px; } }
 
   .label-sec { background: var(--pink); padding: 100px 0; }
@@ -271,10 +271,9 @@
       </div>
     </div>
     <div class="wrap">
-      <p class="map-note rv"><strong>La carte Friendly Spaces</strong> <span>Touchez une &eacute;pingle pour ouvrir la fiche.</span></p>
+      <p class="map-note rv"><strong>La carte Friendly Spaces</strong> <span class="map-chip">Live</span> <span>Touchez une &eacute;pingle pour ouvrir la fiche.</span></p>
       <div class="map-embed rv">
         <iframe src="/map/?lang=fr" data-guard="Toucher pour explorer la carte" title="Carte en direct Friendly Spaces" loading="lazy" allow="geolocation"></iframe>
-        <span class="map-chip">Live</span>
       </div>
     </div>
   </section>
