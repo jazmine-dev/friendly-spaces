@@ -176,9 +176,12 @@
       while (walker.nextNode()) nodes.push(walker.currentNode);
       nodes.forEach(function (node) {
         var frag = document.createDocumentFragment();
-        node.textContent.split(/(\s+)/).forEach(function (part) {
+        // split on ordinary spaces only: a non-breaking space (French ' :') keeps its neighbours on one line
+        node.textContent.split(/([ 	
+]+)/).forEach(function (part) {
           if (!part) return;
-          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+          if (/^[ 	
+]+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
           var s = document.createElement('span'); s.className = 'w'; s.textContent = part; frag.appendChild(s);
         });
         node.parentNode.replaceChild(frag, node);
