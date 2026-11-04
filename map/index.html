@@ -718,7 +718,7 @@
                             cafe: "Café",
                             shop: "Laden",
                             "craft-atelier": "Kreativ-Atelier",
-                            "food-hall": "Food Hall"
+                            "food-hall": "Markthalle"
                         },
                         cuisineType: {
                             vegan: "Vegan",
@@ -1350,7 +1350,14 @@
                 .join(' ');
         }
 
+        // Website wording that should win over the app's shared filters.json
+        const FILTER_LABEL_OVERRIDES = {
+            de: { 'venueType.food-hall': 'Markthalle' }
+        };
+
         function filterOptionLabel(category, id) {
+            const override = FILTER_LABEL_OVERRIDES[currentLang]?.[`${category}.${id}`];
+            if (override) return override;
             const loadedLabel = getLocalizedFilterLabel(getLoadedFilterOption(category, id)?.label, id);
             if (loadedLabel) return loadedLabel;
             const translated = translate(`filters.options.${category}.${id}`, null);
