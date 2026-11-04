@@ -170,8 +170,7 @@
       gsap.to(p, { strokeDashoffset: 0, duration: 1.1, ease: 'power2.out', scrollTrigger: { trigger: p.closest('svg'), start: 'top 85%' } });
     });
 
-    var scrub = document.getElementById('scrub');
-    if (scrub) {
+    document.querySelectorAll('.scrub').forEach(function (scrub) {
       var walker = document.createTreeWalker(scrub, NodeFilter.SHOW_TEXT), nodes = [];
       while (walker.nextNode()) nodes.push(walker.currentNode);
       nodes.forEach(function (node) {
@@ -185,7 +184,7 @@
         node.parentNode.replaceChild(frag, node);
       });
       gsap.to(scrub.querySelectorAll('.w'), { opacity: 1, stagger: 0.06, scrollTrigger: { trigger: scrub.closest('section'), start: 'top 70%', end: 'bottom 75%', scrub: true } });
-    }
+    });
 
     gsap.utils.toArray('.rv').forEach(function (el) {
       gsap.to(el, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 86%' } });
