@@ -133,8 +133,9 @@
   .phone .screen { position: relative; overflow: hidden; border-radius: 28px; }
   .phone img { width: 100%; display: block; transform-origin: 50% 55%; }
   .pin { position: absolute; width: 9.4%; aspect-ratio: 1; background: var(--blue); color: #fff; border: 2px solid #fff; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: clamp(10px, 1.6vw, 14px); box-shadow: 0 6px 14px rgba(0,0,0,.28); transform: translate(-50%, -50%); }
-  .map-note { font-size: 13px; color: var(--lilac); margin-top: 22px; }
-  .map-embed { position: relative; margin-top: 64px; height: 720px; border: 2px solid var(--lilac); border-radius: 22px; overflow: hidden; background: #232a63; }
+  .map-note { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 64px 0 0; font-size: 14px; color: var(--lilac); }
+  .map-note strong { font-size: 17px; font-weight: 700; color: var(--cream); }
+  .map-embed { position: relative; margin-top: 14px; height: 720px; border: 2px solid var(--lilac); border-radius: 22px; overflow: hidden; background: #232a63; }
   .map-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .map-chip { position: absolute; top: 16px; right: 16px; z-index: 2; background: var(--marigold); color: var(--ink); border: 2px solid var(--ink); border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 7px 14px; pointer-events: none; }
   @media (max-width: 860px) { .map-grid { grid-template-columns: 1fr; } .map-embed { height: 640px; } }
@@ -264,13 +265,13 @@
           <a class="store" href="https://apps.apple.com/ch/app/friendly-spaces/id6760175904" target="_blank" rel="noopener">Download on the<br><b>App Store</b></a>
           <a class="store" href="https://play.google.com/store/apps/details?id=ch.friendlyspaces.app" target="_blank" rel="noopener">Get it on<br><b>Google Play</b></a>
         </div>
-        <p class="map-note">The Friendly Spaces map. Tap a pin to open the profile.</p>
       </div>
       <div class="phone rv" id="phone">
         <div class="screen"><img src="/assets/img/app-map-base.jpg" alt="Friendly Spaces app map view with partner pins across Switzerland" width="460" height="996"><span class="pin" style="left:52.9%;top:47.4%">4</span><span class="pin" style="left:46.6%;top:65.7%">3</span><span class="pin" style="left:92%;top:54.5%">1</span></div>
       </div>
     </div>
     <div class="wrap">
+      <p class="map-note rv"><strong>The Friendly Spaces map</strong> <span>Tap a pin to open the profile.</span></p>
       <div class="map-embed rv">
         <iframe src="/map/?lang=en" data-guard="Tap to explore the map" title="Friendly Spaces live map" loading="lazy" allow="geolocation"></iframe>
         <span class="map-chip">Live</span>
