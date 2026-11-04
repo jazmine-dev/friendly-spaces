@@ -22,6 +22,10 @@ nav: playbox
   .inside { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
   .inside ul { margin-top: 18px; }
   @media (max-width: 860px) { .inside { grid-template-columns: 1fr; } }
+  @media (min-width: 861px) {
+    html[lang="de"] .inside .section-title { font-size: clamp(30px, 3.2vw, 42px); }
+    html[lang="fr"] .inside .section-title { font-size: clamp(30px, 3.7vw, 48px); }
+  }
 </style>
 
 <main id="main">
@@ -80,9 +84,9 @@ nav: playbox
     <div class="wrap inside">
       <div class="rv"><img class="flower-photo" src="/assets/img/magical-play-area.jpg" alt="Die Spielecke im Magical Cafe Basel mit ihrer Holzrutsche" width="1200" height="1200"></div>
       <div>
-        <span class="eyebrow" style="color:var(--tang-deep)">In der Box</span>
-        <h2 class="section-title" style="margin-top:12px">Was hineinkommt</h2>
-        <p style="margin-top:14px; max-width:52ch;">Aus Holz, waschbar und vielseitig, inspiriert von der Montessori-P&auml;dagogik und so ausgew&auml;hlt, dass zum Beispiel ein zweij&auml;hriges und ein vierj&auml;hriges Kind dieselbe Ecke teilen k&ouml;nnen.</p>
+        <span class="eyebrow" style="color:var(--tang-deep)">Was drinsteckt</span>
+        <h2 class="section-title" style="margin-top:12px">Einfache Spielsachen,<br>endloser Spielspass</h2>
+        <p style="margin-top:14px; max-width:52ch;">Spielsachen aus Holz, waschbar und inspiriert von der Montessori-P&auml;dagogik. Weil sie vielseitig sind, k&ouml;nnen ein zweij&auml;hriges und ein vierj&auml;hriges Kind nebeneinander in derselben Ecke spielen.</p>
         <p style="margin-top:22px;"><a class="btn btn-tang" href="{{root}}contact.html?reason=playbox">Playbox anfragen</a></p>
       </div>
     </div>
