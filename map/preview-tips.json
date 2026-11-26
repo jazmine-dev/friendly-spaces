@@ -1,0 +1,45 @@
+[
+    {
+        "slug": "tip-olympia-bern",
+        "listing": "community",
+        "name": "Olympia",
+        "address": "Militärstrasse 64, 3014 Bern",
+        "city": "Bern",
+        "tip": "Friendly team, good food and a toy box the children enjoy.",
+        "website": "https://olympiabern.ch/",
+        "fallbackCoords": [46.9589795, 7.4554698],
+        "filters": { "venueType": ["cafe", "restaurant"] }
+    },
+    {
+        "slug": "tip-khaus-basel",
+        "listing": "community",
+        "name": "kHaus",
+        "address": "Kasernenhof 8, 4058 Basel",
+        "city": "Basel",
+        "website": "https://www.khaus.ch/",
+        "fallbackCoords": [47.5627546, 7.5893164],
+        "filters": {}
+    },
+    {
+        "slug": "tip-zum-bunten-hund-thun",
+        "listing": "community",
+        "name": "zum bunten Hund",
+        "address": "Obere Hauptgasse 60, 3600 Thun",
+        "city": "Thun",
+        "tip": "Play area.",
+        "website": "https://www.zumbuntenhund.ch/",
+        "fallbackCoords": [46.7581211, 7.6305302],
+        "filters": { "venueType": ["restaurant"], "amenities": ["play-area"] }
+    },
+    {
+        "slug": "tip-montelino-jona",
+        "listing": "community",
+        "name": "Montelino KidsClub & Bistro",
+        "address": "St. Gallerstrasse 118, 8645 Rapperswil-Jona",
+        "city": "Rapperswil-Jona",
+        "tip": "It's a kids friendly cafe, with lots of play areas, healthy food for children and their families. We love this place.",
+        "website": "https://montelino.ch/",
+        "fallbackCoords": [47.2298698, 8.8481377],
+        "filters": { "venueType": ["cafe"], "amenities": ["play-area"] }
+    }
+]
