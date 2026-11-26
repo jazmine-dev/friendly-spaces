@@ -1322,11 +1322,10 @@
             }
         }
 
-        // Community tips live in the website's own /map/community-tips.json for now, not in
-        // the shared venues.json: the released apps read that file and would show every tip
-        // as a partner. Once the apps understand "listing": "community", the tips can move
-        // into venues.json; anything already there by slug is not added twice.
-        const COMMUNITY_TIPS_URL = '/map/community-tips.json';
+        // Two shared files on the app host: venues.json holds the Friendly Spaces partners,
+        // community-tips.json the community tips (grey pins). The app reads the same two
+        // files. A tip whose slug is already a partner is not added twice.
+        const COMMUNITY_TIPS_URL = new URL('data/community-tips.json', REMOTE_APP_ORIGIN).toString();
 
         async function loadCommunityTips() {
             try {
