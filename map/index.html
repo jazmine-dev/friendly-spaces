@@ -619,41 +619,48 @@
             #profile-panel, .profile-action .icon-circle, .profile-hero .slider-arrow { transition: none; }
         }
 
-        /* ===== Listing types: certified venues (blue pin, check) and community tips (grey pin) ===== */
-        .marker-cluster.cluster-tips, .marker-cluster.cluster-tips div { background: #5B6475; }
-        .leaflet-marker-icon.marker-tip.marker-active { filter: drop-shadow(0 6px 8px rgba(60,68,84,.5)); }
+        /* ===== Listing types: Friendly Spaces partners (blue pin, check) and community tips (grey pin) ===== */
         .fs-tooltip.is-tip { background: #5B6475; }
         .fs-tooltip.is-tip::before { border-top-color: #5B6475; }
-        #map-legend {
-            display: flex; flex-direction: column; gap: 2px; padding: 6px;
-            background: rgba(255,255,255,.96); border-radius: 14px; box-shadow: 0 2px 10px rgba(0,0,0,.16);
+        .leaflet-marker-icon.marker-tip.marker-active { filter: drop-shadow(0 6px 8px rgba(60,68,84,.5)); }
+        /* "Friendly Spaces partner" / "Community tip" pill */
+        .profile-badge {
+            display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; padding: 6px 12px 6px 9px;
+            border-radius: 999px; background: #eef2fb; color: #1E52BA; font-size: 12.5px; font-weight: 600;
         }
-        /* Sits in Leaflet's bottom-left corner, clear of the attribution line */
-        .leaflet-bottom.leaflet-left #map-legend { margin: 0 0 26px 12px; }
-        #map-legend[hidden] { display: none; }
-        .legend-item {
-            display: flex; align-items: center; gap: 8px; min-height: 36px; padding: 4px 10px 4px 6px;
-            border: 0; border-radius: 10px; background: transparent; cursor: pointer;
-            font: inherit; font-size: 13px; color: #1f2a44; text-align: left; -webkit-tap-highlight-color: transparent;
+        .profile-badge svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+        .profile-badge.is-tip { background: #f1f2f5; color: #3c4454; }
+        /* Community tip profile: no photo, limited information */
+        #profile-panel.is-tip { border-top: 4px solid #5B6475; }
+        .tip-profile { padding: 18px 18px 26px; }
+        .tip-profile .profile-badge { margin-top: 0; }
+        .tip-name { margin: 12px 56px 4px 0; font-size: 22px; font-weight: 700; line-height: 1.2; color: #15171A; }
+        .tip-address { margin: 0; font-size: 13px; color: #666; }
+        .tip-profile .profile-action .icon-circle { background: #f1f2f5; }
+        .tip-profile .profile-action:hover .icon-circle { background: #e6e8ed; }
+        .tip-profile .profile-action .icon-circle svg { stroke: #4B5260; }
+        .tip-profile .profile-action:focus-visible .icon-circle { outline-color: #4B5260; }
+        .tip-note { margin-top: 16px; padding: 12px 14px; border-radius: 12px; background: #f1f2f5; font-size: 13.5px; line-height: 1.5; color: #3c4454; }
+        .tip-note p { margin: 0; }
+        .tip-note p + p { margin-top: 4px; }
+        .tip-owner {
+            display: flex; align-items: center; justify-content: space-between; gap: 12px;
+            margin-top: 16px; padding-top: 14px; border-top: 1px solid #e6e8ed; text-decoration: none;
         }
-        .legend-item:hover { background: #f1f4fa; }
-        .legend-item:focus-visible { outline: 2px solid #1E52BA; outline-offset: 1px; }
-        .legend-item[aria-pressed="false"] { opacity: .45; }
-        .legend-item[aria-pressed="false"] .legend-label { text-decoration: line-through; }
-        .legend-pin { width: 18px; height: 27px; flex: 0 0 auto; display: block; }
-        .legend-count { margin-left: auto; padding-left: 10px; font-size: 12px; color: #6b7280; font-variant-numeric: tabular-nums; }
-        .profile-hero.is-tip { background: #e8eaef; }
-        .profile-hero.is-tip .profile-hero-empty { color: #5B6475; }
-        .profile-listing { display: flex; gap: 12px; align-items: flex-start; margin-top: 16px; padding: 12px 14px; border-radius: 14px; background: #eef2fb; }
-        .profile-listing.is-tip { background: #f1f2f5; }
-        .profile-listing-icon { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #1E52BA; color: #fff; }
-        .profile-listing.is-tip .profile-listing-icon { background: #5B6475; }
-        .profile-listing-icon svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
-        .profile-listing-title { margin: 0; font-size: 14px; font-weight: 700; color: #1E52BA; }
-        .profile-listing.is-tip .profile-listing-title { color: #3c4454; }
-        .profile-listing-note { margin: 2px 0 0; font-size: 13px; line-height: 1.45; color: #555; }
-        .profile-tip-quote { margin: 0; padding: 2px 0 2px 14px; border-left: 3px solid #c9ced8; font-size: 14.5px; line-height: 1.6; color: #333; font-style: italic; }
-        .profile-tag.is-tip { color: #3c4454; background: #f1f2f5; }
+        .tip-owner-question { display: block; font-size: 12.5px; color: #666; }
+        .tip-owner-link { display: block; margin-top: 4px; font-size: 13.5px; font-weight: 600; color: #1E52BA; }
+        .tip-owner svg { width: 18px; height: 18px; stroke: #1E52BA; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+        .tip-owner:hover .tip-owner-link { text-decoration: underline; }
+        .tip-owner:focus-visible { outline: 2px solid #1E52BA; outline-offset: 4px; border-radius: 4px; }
+        #profile-panel.is-tip .profile-close { background: rgba(0,0,0,.08); }
+        #profile-panel.is-tip .profile-close:hover { background: rgba(0,0,0,.14); }
+        #profile-panel.is-tip .profile-close svg { stroke: #3c4454; }
+        @media (max-width: 768px) {
+            /* The tip sheet is only as tall as its content */
+            #profile-panel.is-tip, #profile-panel.is-tip.full { height: auto; }
+            #profile-panel.is-tip .profile-grabber span { background: #c9ced8; box-shadow: none; }
+            .tip-profile { padding-top: 26px; padding-bottom: calc(26px + env(safe-area-inset-bottom, 0px)); }
+        }
         #preview-banner {
             position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 900;
             max-width: calc(100% - 24px); padding: 6px 12px; border-radius: 999px;
@@ -725,7 +732,6 @@
         <div style="position: relative; flex: 1;">
             <button id="toggle-sidebar">☰</button>
             <div id="map"></div>
-            <div id="map-legend" class="map-legend" role="group" hidden></div>
         </div>
     </div>
 
@@ -794,12 +800,12 @@
                     directions: "Route planen"
                 },
                 listing: {
-                    legend: "Kartenlegende",
-                    certified: "Zertifiziert",
+                    partner: "Friendly Spaces Partner",
                     community: "Community-Tipp",
-                    certifiedNote: "Von Friendly Spaces vor Ort geprüft.",
-                    communityNote: "Von unserer Community empfohlen. Nicht von Friendly Spaces geprüft.",
-                    tipHeading: "Das sagen Eltern"
+                    suggested: "Von der Friendly Spaces Community vorgeschlagen.",
+                    notPartner: "Dieser Ort ist derzeit kein Friendly Spaces Partner.",
+                    ownerQuestion: "Ist das dein Lokal?",
+                    ownerLink: "Melde dich bei Friendly Spaces"
                 }
             },
             fr: {
@@ -861,12 +867,12 @@
                     directions: "Itinéraire"
                 },
                 listing: {
-                    legend: "Légende de la carte",
-                    certified: "Certifié",
-                    community: "Bon plan des parents",
-                    certifiedNote: "Audité sur place par Friendly Spaces.",
-                    communityNote: "Recommandé par notre communauté. Pas audité par Friendly Spaces.",
-                    tipHeading: "Ce qu'en disent les parents"
+                    partner: "Partenaire Friendly Spaces",
+                    community: "Conseil de la communauté",
+                    suggested: "Suggéré par la communauté Friendly Spaces.",
+                    notPartner: "Ce lieu n'est pas encore partenaire Friendly Spaces.",
+                    ownerQuestion: "C'est votre établissement ?",
+                    ownerLink: "Contactez Friendly Spaces"
                 }
             },
             en: {
@@ -928,12 +934,12 @@
                     directions: "Directions"
                 },
                 listing: {
-                    legend: "Map key",
-                    certified: "Certified",
+                    partner: "Friendly Spaces partner",
                     community: "Community tip",
-                    certifiedNote: "Audited on site by Friendly Spaces.",
-                    communityNote: "Recommended by our community. Not audited by Friendly Spaces.",
-                    tipHeading: "What parents say"
+                    suggested: "Suggested by the Friendly Spaces community.",
+                    notPartner: "This venue is not currently a Friendly Spaces partner.",
+                    ownerQuestion: "Is this your venue?",
+                    ownerLink: "Get in touch with Friendly Spaces"
                 }
             }
         };
@@ -1500,33 +1506,22 @@
             maxNativeZoom: 16
         }).addTo(map);
 
-        // Initialize marker cluster group. A cluster made only of community tips is grey;
-        // any cluster holding a certified venue stays brand blue.
+        // Initialize marker cluster group (one number per cluster: partners and tips together)
         let markerClusterGroup = L.markerClusterGroup({
             maxClusterRadius: 150,
             spiderfyOnMaxZoom: true,
             showCoverageOnHover: false,
             disableClusteringAtZoom: 13,
-            spiderfyDistanceMultiplier: 1.5,
-            iconCreateFunction(cluster) {
-                const children = cluster.getAllChildMarkers();
-                const count = children.length;
-                const onlyTips = children.every(child => child.options.listingType === 'community');
-                const size = count < 10 ? 'small' : count < 100 ? 'medium' : 'large';
-                return L.divIcon({
-                    html: `<div><span>${count}</span></div>`,
-                    className: `marker-cluster marker-cluster-${size}${onlyTips ? ' cluster-tips' : ''}`,
-                    iconSize: L.point(40, 40)
-                });
-            }
+            spiderfyDistanceMultiplier: 1.5
         });
 
-        // Pin artwork. Certified venues: brand blue with a white check.
-        // Community tips: slate grey with a white dot and outline, drawn slightly smaller.
+        // Pin artwork: the same pin shape for both listing types, with a white circle inside.
+        // Friendly Spaces partners: brand blue with a blue check. Community tips: slate grey
+        // with a grey speech bubble.
         const PIN_PATH = 'M16 0c-7.18 0-13 5.82-13 13 0 9.75 8.9 18.9 12.1 21.83.5.46 1.3.46 1.8 0C20.1 31.9 29 22.75 29 13 29 5.82 23.18 0 16 0Z';
-        function buildPinSvg({ id, top, bottom, mark, outline }) {
+        function buildPinSvg({ id, top, bottom, mark }) {
             return `
-            <svg width="32" height="48" viewBox="${outline ? '-1 -1 34 50' : '0 0 32 48'}" xmlns="http://www.w3.org/2000/svg">
+            <svg width="32" height="48" viewBox="0 0 32 48" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="${id}Grad" x1="50%" y1="0%" x2="50%" y2="100%">
                         <stop offset="0%" stop-color="${top}"/>
@@ -1537,19 +1532,20 @@
                     </filter>
                 </defs>
                 <g filter="url(#${id}Shadow)">
-                    <path fill="url(#${id}Grad)" ${outline ? 'stroke="#fff" stroke-width="1.6"' : ''} d="${PIN_PATH}"/>
+                    <path fill="url(#${id}Grad)" d="${PIN_PATH}"/>
+                    <circle cx="16" cy="13" r="8" fill="#fff"/>
                     ${mark}
                 </g>
             </svg>`;
         }
 
         const pinSvg = buildPinSvg({
-            id: 'pinCertified', top: '#2F6BE0', bottom: '#1E52BA',
-            mark: '<path d="M10.4 13.4l3.7 3.7 7.5-7.7" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+            id: 'pinPartner', top: '#2F6BE0', bottom: '#1E52BA',
+            mark: '<g transform="translate(10 7) scale(0.5)" fill="none" stroke="#1E52BA" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></g>'
         });
         const tipPinSvg = buildPinSvg({
-            id: 'pinTip', top: '#7A8396', bottom: '#5B6475', outline: true,
-            mark: '<circle cx="16" cy="13" r="4.5" fill="rgba(255,255,255,0.95)"/>'
+            id: 'pinTip', top: '#7A8396', bottom: '#5B6475',
+            mark: '<path transform="translate(10.5 7.5) scale(0.46)" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" fill="none" stroke="#5B6475" stroke-width="3.6" stroke-linejoin="round"/>'
         });
         const svgUrl = svg => 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
 
@@ -1558,13 +1554,13 @@
             iconSize: [32, 48],
             iconAnchor: [16, 46],
             popupAnchor: [0, -42],
-            className: 'marker-certified'
+            className: 'marker-partner'
         });
         const tipMarkerIcon = L.icon({
             iconUrl: svgUrl(tipPinSvg),
-            iconSize: [26, 39],
-            iconAnchor: [13, 37],
-            popupAnchor: [0, -34],
+            iconSize: [32, 48],
+            iconAnchor: [16, 46],
+            popupAnchor: [0, -42],
             className: 'marker-tip'
         });
 
@@ -1603,8 +1599,6 @@
             ageRange: [],
             amenities: []
         };
-        // Which pin types are shown; toggled from the map key.
-        const visibleListings = { certified: true, community: true };
         let searchQuery = '';
         let isInitialLoad = true;
         let lastVisibleVenueCount = 0;
@@ -1993,8 +1987,6 @@
             Object.keys(activeFilters).forEach(key => {
                 activeFilters[key] = [];
             });
-            visibleListings.certified = true;
-            visibleListings.community = true;
 
             // Clear search
             document.getElementById('search-input').value = '';
@@ -2021,7 +2013,7 @@
             countEl.textContent = typeof filterActiveText === 'function'
                 ? filterActiveText(total)
                 : `${total} filter${total !== 1 ? 's' : ''} active`;
-            clearBtn.disabled = total === 0 && !searchQuery && visibleListings.certified && visibleListings.community;
+            clearBtn.disabled = total === 0 && !searchQuery;
 
             const mobileToggleEl = document.getElementById('mobile-filter-toggle');
             if (mobileToggleEl) {
@@ -2035,9 +2027,7 @@
         }
 
         // Check if venue matches filters
-        function venueMatchesFilters(venue, { ignoreListing = false } = {}) {
-            if (!ignoreListing && !visibleListings[getListingType(venue)]) return false;
-
+        function venueMatchesFilters(venue) {
             // Search filter
             if (searchQuery) {
                 const searchMatch =
@@ -2167,59 +2157,6 @@
             });
         });
 
-        // Map key: one row per pin type, each a toggle. Hidden while the data has no
-        // community tips, so the map looks as before until the first tip is added.
-        const mapLegend = document.getElementById('map-legend');
-
-        function renderLegend() {
-            if (!mapLegend) return;
-            const counts = { certified: 0, community: 0 };
-            venues.forEach(venue => {
-                if (venueMatchesFilters(venue, { ignoreListing: true })) counts[getListingType(venue)]++;
-            });
-            const hasTips = venues.some(isCommunityTip);
-            mapLegend.hidden = !hasTips;
-            if (!hasTips) return;
-
-            mapLegend.setAttribute('aria-label', translate('listing.legend', 'Map key'));
-            mapLegend.innerHTML = [
-                { type: 'certified', svg: pinSvg },
-                { type: 'community', svg: tipPinSvg }
-            ].map(({ type, svg }) => `
-                <button type="button" class="legend-item" data-listing="${type}" aria-pressed="${visibleListings[type]}">
-                    <img class="legend-pin" src="${svgUrl(svg)}" alt="">
-                    <span class="legend-label">${escapeHtmlText(translate(`listing.${type}`, type))}</span>
-                    <span class="legend-count">${counts[type]}</span>
-                </button>`).join('');
-        }
-
-        if (mapLegend) {
-            mapLegend.addEventListener('click', (event) => {
-                const button = event.target.closest('.legend-item');
-                if (!button) return;
-                const type = button.dataset.listing;
-                visibleListings[type] = !visibleListings[type];
-                updateMap();
-                updateFilterCount();
-                trackEvent('filter_use', {
-                    filter_type: 'listing',
-                    filter_value: type,
-                    filter_source: 'map_legend',
-                    filter_state: visibleListings[type] ? 'selected' : 'deselected',
-                    active_filter_count: Object.values(activeFilters).flat().length,
-                    visible_venues: lastVisibleVenueCount
-                });
-            });
-            // Keep taps on the key from reaching the map underneath.
-            L.DomEvent.disableClickPropagation(mapLegend);
-            L.DomEvent.disableScrollPropagation(mapLegend);
-            const LegendControl = L.Control.extend({
-                options: { position: 'bottomleft' },
-                onAdd: () => mapLegend
-            });
-            new LegendControl().addTo(map);
-        }
-
         if (PREVIEW_TIPS) {
             const banner = document.createElement('div');
             banner.id = 'preview-banner';
@@ -2243,7 +2180,6 @@
                     const isTip = isCommunityTip(venue);
                     const marker = L.marker(coords, {
                         icon: isTip ? tipMarkerIcon : markerIcon,
-                        listingType: getListingType(venue),
                         zIndexOffset: isTip ? 0 : 500,
                         alt: venue.name
                     });
@@ -2251,7 +2187,7 @@
                     if (!isMobile()) {
                         marker.bindTooltip(venue.name, {
                             direction: 'top',
-                            offset: isTip ? [0, -32] : [0, -40],
+                            offset: [0, -40],
                             className: isTip ? 'fs-tooltip is-tip' : 'fs-tooltip',
                             opacity: 1
                         });
@@ -2267,7 +2203,6 @@
             });
 
             refreshActiveMarker();
-            renderLegend();
             if (activeVenue && !venueMatchesFilters(activeVenue)) closeProfile();
 
             // Update count
@@ -2374,9 +2309,9 @@
             website: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>',
             instagram: '<svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>',
             photo: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 15l-5-5-8 8"/></svg>',
-            tip: '<svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1121 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg>',
-            tipSmall: '<svg viewBox="0 0 24 24"><path d="M20 12a7 7 0 01-10.2 6.2L5 19.5l1.3-4.3A7 7 0 1120 12z"/></svg>',
-            check: '<svg viewBox="0 0 24 24"><path d="M5.5 12.5l4.2 4.2L18.5 7.8"/></svg>'
+            checkCircle: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg>',
+            tipBubble: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9a2 2 0 01-2 2H6l-4 4V4a2 2 0 012-2h8a2 2 0 012 2z"/><path d="M18 9h2a2 2 0 012 2v11l-4-4h-6a2 2 0 01-2-2v-1"/></svg>',
+            arrow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
         };
 
         function escapeHtmlText(value) {
@@ -2388,6 +2323,8 @@
         }
 
         function createProfileContent(venue) {
+            if (isCommunityTip(venue)) return createTipProfileContent(venue);
+
             const partnerId = escapeHtmlAttribute(getPartnerId(venue));
             const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(venue.address)}`;
             const phoneHref = formatPhoneHref(venue.phone);
@@ -2411,7 +2348,7 @@
                             <div class="slider-dots">${dotsHtml}</div>` : ''}
                     </div>`;
             } else {
-                heroInner = `<div class="profile-hero-empty">${isCommunityTip(venue) ? profileIcons.tip : profileIcons.photo}</div>`;
+                heroInner = `<div class="profile-hero-empty">${profileIcons.photo}</div>`;
             }
 
             const actions = [
@@ -2421,37 +2358,15 @@
             if (venue.website) actions.push(`<a class="profile-action" href="${escapeHtmlAttribute(venue.website)}" target="_blank" rel="noopener noreferrer" data-analytics-action="website_click" data-partner-id="${partnerId}"><span class="icon-circle">${profileIcons.website}</span><span class="icon-label">${ps('website')}</span></a>`);
             if (venue.instagram) actions.push(`<a class="profile-action" href="${escapeHtmlAttribute(venue.instagram)}" target="_blank" rel="noopener noreferrer" data-analytics-action="instagram_click" data-partner-id="${partnerId}"><span class="icon-circle">${profileIcons.instagram}</span><span class="icon-label">${ps('instagram')}</span></a>`);
 
-            const isTip = isCommunityTip(venue);
-            const tipClass = isTip ? ' is-tip' : '';
-
             const tags = Object.entries(venue.filters || {}).flatMap(([category, values]) =>
-                (Array.isArray(values) ? values : []).map(v => {
+                values.map(v => {
                     const label = filterOptionLabel(category, v);
-                    return `<span class="profile-tag${tipClass}">${escapeHtmlText(label)}</span>`;
+                    return `<span class="profile-tag">${escapeHtmlText(label)}</span>`;
                 })
             ).join('');
 
-            const listingHtml = `
-                <div class="profile-listing${tipClass}">
-                    <span class="profile-listing-icon" aria-hidden="true">${isTip ? profileIcons.tipSmall : profileIcons.check}</span>
-                    <div>
-                        <p class="profile-listing-title">${escapeHtmlText(translate(isTip ? 'listing.community' : 'listing.certified', ''))}</p>
-                        <p class="profile-listing-note">${escapeHtmlText(translate(isTip ? 'listing.communityNote' : 'listing.certifiedNote', ''))}</p>
-                    </div>
-                </div>`;
-
-            const description = getVenueText(venue, 'description');
-            const tipText = isTip ? getVenueText(venue, 'tip') : '';
-            const hours = getVenueText(venue, 'hours');
-            const specialty = getVenueText(venue, 'specialty');
-            const infoRows = [
-                hours ? `<div class="profile-info-row"><span class="profile-info-label">${translate('popup.hours', 'Hours')}</span><span class="profile-info-value">${formatHoursLines(hours)}</span></div>` : '',
-                seasonalNote ? `<div class="profile-info-row"><span class="profile-info-label">${ps('note')}</span><span class="profile-info-value seasonal">${escapeHtmlText(seasonalNote)}</span></div>` : '',
-                specialty ? `<div class="profile-info-row"><span class="profile-info-label">${translate('popup.specialty', 'Specialty')}</span><span class="profile-info-value">${escapeHtmlText(specialty)}</span></div>` : ''
-            ].join('');
-
             return `
-                <div class="profile-hero${tipClass}">
+                <div class="profile-hero">
                     ${heroInner}
                     <div class="profile-hero-overlay">
                         <h2 class="profile-name">${escapeHtmlText(venue.name)}</h2>
@@ -2459,12 +2374,47 @@
                     </div>
                 </div>
                 <div class="profile-content">
+                    <span class="profile-badge">${profileIcons.checkCircle}${escapeHtmlText(translate('listing.partner', 'Friendly Spaces partner'))}</span>
                     <div class="profile-actions">${actions.join('')}</div>
-                    ${listingHtml}
-                    ${description ? `<div class="profile-section"><p class="profile-description">${escapeHtmlText(description)}</p></div>` : ''}
-                    ${tipText ? `<div class="profile-section"><h3 class="profile-section-title">${escapeHtmlText(translate('listing.tipHeading', 'What parents say'))}</h3><blockquote class="profile-tip-quote">${escapeHtmlText(tipText)}</blockquote></div>` : ''}
-                    ${infoRows ? `<div class="profile-section">${infoRows}</div>` : ''}
+                    <div class="profile-section"><p class="profile-description">${escapeHtmlText(getVenueText(venue, 'description'))}</p></div>
+                    <div class="profile-section">
+                        <div class="profile-info-row"><span class="profile-info-label">${translate('popup.hours', 'Hours')}</span><span class="profile-info-value">${formatHoursLines(getVenueText(venue, 'hours'))}</span></div>
+                        ${seasonalNote ? `<div class="profile-info-row"><span class="profile-info-label">${ps('note')}</span><span class="profile-info-value seasonal">${escapeHtmlText(seasonalNote)}</span></div>` : ''}
+                        <div class="profile-info-row"><span class="profile-info-label">${translate('popup.specialty', 'Specialty')}</span><span class="profile-info-value">${escapeHtmlText(getVenueText(venue, 'specialty'))}</span></div>
+                    </div>
                     ${tags ? `<div class="profile-section"><h3 class="profile-section-title">${ps('features')}</h3><div class="profile-tags">${tags}</div></div>` : ''}
+                </div>`;
+        }
+
+        // Community tip profile: limited information, no photos, hours or features.
+        function createTipProfileContent(venue) {
+            const partnerId = escapeHtmlAttribute(getPartnerId(venue));
+            const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(venue.address || venue.name)}`;
+            const phoneHref = formatPhoneHref(venue.phone);
+            const actions = [
+                `<a class="profile-action" href="${mapsUrl}" target="_blank" rel="noopener noreferrer" data-analytics-action="directions_click" data-partner-id="${partnerId}"><span class="icon-circle">${profileIcons.navigate}</span><span class="icon-label">${ps('navigate')}</span></a>`
+            ];
+            if (venue.website) actions.push(`<a class="profile-action" href="${escapeHtmlAttribute(venue.website)}" target="_blank" rel="noopener noreferrer" data-analytics-action="website_click" data-partner-id="${partnerId}"><span class="icon-circle">${profileIcons.website}</span><span class="icon-label">${ps('website')}</span></a>`);
+            if (phoneHref) actions.push(`<a class="profile-action" href="${escapeHtmlAttribute(phoneHref)}" data-analytics-action="call_click" data-partner-id="${partnerId}"><span class="icon-circle">${profileIcons.call}</span><span class="icon-label">${ps('call')}</span></a>`);
+            const contactPath = currentLang === 'en' ? '/contact' : `/${currentLang}/contact`;
+
+            return `
+                <div class="tip-profile">
+                    <span class="profile-badge is-tip">${profileIcons.tipBubble}${escapeHtmlText(translate('listing.community', 'Community tip'))}</span>
+                    <h2 class="tip-name">${escapeHtmlText(venue.name)}</h2>
+                    ${venue.address ? `<p class="tip-address">${escapeHtmlText(venue.address)}</p>` : ''}
+                    <div class="profile-actions">${actions.join('')}</div>
+                    <div class="tip-note">
+                        <p>${escapeHtmlText(translate('listing.suggested', ''))}</p>
+                        <p>${escapeHtmlText(translate('listing.notPartner', ''))}</p>
+                    </div>
+                    <a class="tip-owner" href="${contactPath}" target="_top" data-analytics-action="tip_owner_contact_click" data-partner-id="${partnerId}">
+                        <span>
+                            <span class="tip-owner-question">${escapeHtmlText(translate('listing.ownerQuestion', ''))}</span>
+                            <span class="tip-owner-link">${escapeHtmlText(translate('listing.ownerLink', ''))}</span>
+                        </span>
+                        ${profileIcons.arrow}
+                    </a>
                 </div>`;
         }
 
@@ -2492,6 +2442,7 @@
             sliderIndices['profile-slider'] = 0;
             profileScroll.innerHTML = createProfileContent(venue);
             profileScroll.scrollTop = 0;
+            profilePanel.classList.toggle('is-tip', isCommunityTip(venue));
             profilePanel.classList.add('open');
             profilePanel.classList.remove('full');
             profilePanel.setAttribute('aria-hidden', 'false');

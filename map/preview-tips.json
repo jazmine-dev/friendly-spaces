@@ -1,45 +1,797 @@
 [
-    {
-        "slug": "tip-olympia-bern",
-        "listing": "community",
-        "name": "Olympia",
-        "address": "Militärstrasse 64, 3014 Bern",
-        "city": "Bern",
-        "tip": "Friendly team, good food and a toy box the children enjoy.",
-        "website": "https://olympiabern.ch/",
-        "fallbackCoords": [46.9589795, 7.4554698],
-        "filters": { "venueType": ["cafe", "restaurant"] }
+  {
+    "slug": "tip-hostel77",
+    "listing": "community",
+    "name": "Hostel77",
+    "address": "Morillonstrasse 77, 3007 Bern",
+    "city": "Bern",
+    "fallbackCoords": [
+      46.9315699,
+      7.4335032
+    ],
+    "filters": {},
+    "website": "https://hostel77.ch/"
+  },
+  {
+    "slug": "tip-lumis-kaffeebar",
+    "listing": "community",
+    "name": "Lumis Kaffeebar",
+    "address": "Effingerstrasse 10, 3011 Bern",
+    "city": "Bern",
+    "fallbackCoords": [
+      46.9459972,
+      7.4358117
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
     },
-    {
-        "slug": "tip-khaus-basel",
-        "listing": "community",
-        "name": "kHaus",
-        "address": "Kasernenhof 8, 4058 Basel",
-        "city": "Basel",
-        "website": "https://www.khaus.ch/",
-        "fallbackCoords": [47.5627546, 7.5893164],
-        "filters": {}
+    "website": "https://www.lumis.ch/"
+  },
+  {
+    "slug": "tip-le-petit-couteau",
+    "listing": "community",
+    "name": "Le Petit Couteau",
+    "address": "Monbijoustrasse 6, 3011 Bern",
+    "city": "Bern",
+    "fallbackCoords": [
+      46.9453808,
+      7.4367727
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
     },
-    {
-        "slug": "tip-zum-bunten-hund-thun",
-        "listing": "community",
-        "name": "zum bunten Hund",
-        "address": "Obere Hauptgasse 60, 3600 Thun",
-        "city": "Thun",
-        "tip": "Play area.",
-        "website": "https://www.zumbuntenhund.ch/",
-        "fallbackCoords": [46.7581211, 7.6305302],
-        "filters": { "venueType": ["restaurant"], "amenities": ["play-area"] }
-    },
-    {
-        "slug": "tip-montelino-jona",
-        "listing": "community",
-        "name": "Montelino KidsClub & Bistro",
-        "address": "St. Gallerstrasse 118, 8645 Rapperswil-Jona",
-        "city": "Rapperswil-Jona",
-        "tip": "It's a kids friendly cafe, with lots of play areas, healthy food for children and their families. We love this place.",
-        "website": "https://montelino.ch/",
-        "fallbackCoords": [47.2298698, 8.8481377],
-        "filters": { "venueType": ["cafe"], "amenities": ["play-area"] }
+    "website": "https://petitcouteau.ch/"
+  },
+  {
+    "slug": "tip-just-bloom",
+    "listing": "community",
+    "name": "Just Bloom",
+    "address": "Confédération Centre, 1204 Genève",
+    "city": "Genève",
+    "fallbackCoords": [
+      46.2033547,
+      6.1452021
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
     }
+  },
+  {
+    "slug": "tip-restaurant-loscher",
+    "listing": "community",
+    "name": "Restaurant Löscher",
+    "address": "Viktoriastrasse 70, 3013 Bern",
+    "city": "Bern",
+    "fallbackCoords": [
+      46.9545832,
+      7.4521397
+    ],
+    "filters": {
+      "venueType": [
+        "restaurant"
+      ]
+    },
+    "website": "https://loescher.be/"
+  },
+  {
+    "slug": "tip-turnhalle",
+    "listing": "community",
+    "name": "Turnhalle",
+    "address": "Speichergasse 4, 3011 Bern",
+    "city": "Bern",
+    "fallbackCoords": [
+      46.9502586,
+      7.4430128
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "website": "https://www.progr.ch/"
+  },
+  {
+    "slug": "tip-caffe-bar-riva",
+    "listing": "community",
+    "name": "Caffè Bar Riva",
+    "address": "Muristrasse 21e, 3006 Bern",
+    "city": "Bern",
+    "fallbackCoords": [
+      46.9437203,
+      7.4640696
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "website": "https://caffebarriva.ch/"
+  },
+  {
+    "slug": "tip-farel-bistro",
+    "listing": "community",
+    "name": "Farel Bistro",
+    "address": "Oberer Quai 12, 2501 Biel/Bienne",
+    "city": "Biel/Bienne",
+    "fallbackCoords": [
+      47.1372584,
+      7.2478445
+    ],
+    "filters": {
+      "venueType": [
+        "restaurant"
+      ]
+    },
+    "website": "https://farelbistro.ch/"
+  },
+  {
+    "slug": "tip-adrianos-cafe-esplanade",
+    "listing": "community",
+    "name": "Adrianos Café Esplanade",
+    "address": "Zentralstrasse, 2501 Biel/Bienne",
+    "city": "Biel/Bienne",
+    "fallbackCoords": [
+      47.1355632,
+      7.2482413
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "website": "https://adrianos.ch/"
+  },
+  {
+    "slug": "tip-satriale-s",
+    "listing": "community",
+    "name": "Satriale's",
+    "address": "Oberer Quai 10, 2502 Biel/Bienne",
+    "city": "Biel/Bienne",
+    "fallbackCoords": [
+      47.137794,
+      7.2478522
+    ],
+    "filters": {
+      "venueType": [
+        "restaurant"
+      ]
+    }
+  },
+  {
+    "slug": "tip-lago-lodge",
+    "listing": "community",
+    "name": "Lago Lodge",
+    "address": "Uferweg 5, 2560 Nidau",
+    "city": "Nidau",
+    "fallbackCoords": [
+      47.1291038,
+      7.2378303
+    ],
+    "filters": {
+      "venueType": [
+        "restaurant"
+      ]
+    },
+    "website": "https://lagolodge.ch/"
+  },
+  {
+    "slug": "tip-bluma-bar-restaurant",
+    "listing": "community",
+    "name": "Bluma Bar & Restaurant",
+    "address": "Esplanade Kongresshaus 15, 2502 Biel/Bienne",
+    "city": "Biel/Bienne",
+    "fallbackCoords": [
+      47.1361862,
+      7.2496424
+    ],
+    "filters": {
+      "venueType": [
+        "restaurant"
+      ]
+    }
+  },
+  {
+    "slug": "tip-baramomes",
+    "listing": "community",
+    "name": "BARAMÔMES",
+    "address": "Rue du Coq 11, 2300 La Chaux-de-Fonds",
+    "city": "La Chaux-de-Fonds",
+    "fallbackCoords": [
+      47.1055602,
+      6.8296726
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "website": "https://baramomes.ch/"
+  },
+  {
+    "slug": "tip-cafe-culturel-de-l-ancienne-gare",
+    "listing": "community",
+    "name": "Café culturel de l'Ancienne Gare",
+    "address": "Esplanade de l'Ancienne-Gare, 1700 Fribourg",
+    "city": "Fribourg",
+    "fallbackCoords": [
+      46.802203,
+      7.1503768
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "website": "https://www.nouveaumonde.ch/cafe/"
+  },
+  {
+    "slug": "tip-le-port-de-fribourg",
+    "listing": "community",
+    "name": "Le Port de Fribourg",
+    "address": "Planche-Inférieure 5, 1700 Fribourg",
+    "city": "Fribourg",
+    "fallbackCoords": [
+      46.8035449,
+      7.1647814
+    ],
+    "filters": {
+      "venueType": [
+        "restaurant"
+      ]
+    },
+    "website": "https://leport.ch/"
+  },
+  {
+    "slug": "tip-cafe-du-belvedere",
+    "listing": "community",
+    "name": "Café du Belvédère",
+    "address": "Grand-Rue 36, 1700 Fribourg",
+    "city": "Fribourg",
+    "fallbackCoords": [
+      46.8050068,
+      7.1650995
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "phone": "+41 26 323 44 07"
+  },
+  {
+    "slug": "tip-creperie-sucresale",
+    "listing": "community",
+    "name": "Crêperie SucréSalé",
+    "address": "Rue de Lausanne 50, 1700 Fribourg",
+    "city": "Fribourg",
+    "fallbackCoords": [
+      46.8055326,
+      7.1584596
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "phone": "+41 26 321 32 50"
+  },
+  {
+    "slug": "tip-la-cigogne-bar-a-jeux",
+    "listing": "community",
+    "name": "La Cigogne – Bar à jeux",
+    "address": "Rue d'Or 24, 1700 Fribourg",
+    "city": "Fribourg",
+    "fallbackCoords": [
+      46.8039634,
+      7.1683936
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "phone": "+41 26 303 22 19",
+    "website": "https://www.cigogne-jeux.ch/"
+  },
+  {
+    "slug": "tip-luigia-lausanne",
+    "listing": "community",
+    "name": "Luigia Lausanne",
+    "address": "Rue Saint-Pierre 3, 1003 Lausanne",
+    "city": "Lausanne",
+    "fallbackCoords": [
+      46.5196505,
+      6.637083
+    ],
+    "filters": {
+      "venueType": [
+        "restaurant"
+      ]
+    },
+    "phone": "+41 21 552 03 03",
+    "website": "https://www.luigia.ch/"
+  },
+  {
+    "slug": "tip-zoo-de-servion",
+    "listing": "community",
+    "name": "Zoo de Servion",
+    "address": "Chemin du Zoo, 1077 Servion",
+    "city": "Servion",
+    "fallbackCoords": [
+      46.5645358,
+      6.7733443
+    ],
+    "filters": {},
+    "phone": "+41 21 903 16 71",
+    "website": "https://www.zoo-servion.ch/"
+  },
+  {
+    "slug": "tip-ozarts",
+    "listing": "community",
+    "name": "OZarts",
+    "address": "Rue du Voisinand 15, 1095 Lutry",
+    "city": "Lutry",
+    "fallbackCoords": [
+      46.5040852,
+      6.686897
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "website": "https://ozarts.ch/"
+  },
+  {
+    "slug": "tip-la-jessicotte",
+    "listing": "community",
+    "name": "La Jessicotte",
+    "address": "ZI La Palaz A5, 1530 Payerne",
+    "city": "Payerne",
+    "fallbackCoords": [
+      46.8255647,
+      6.9259892
+    ],
+    "filters": {
+      "venueType": [
+        "cafe",
+        "restaurant"
+      ]
+    },
+    "phone": "+41 26 660 30 30",
+    "website": "https://lajessicotte.ch/"
+  },
+  {
+    "slug": "tip-la-rotisserie-de-la-ferme",
+    "listing": "community",
+    "name": "La Rôtisserie de la Ferme",
+    "address": "Route de l'Etraz 3, 1239 Collex-Bossy",
+    "city": "Collex-Bossy",
+    "fallbackCoords": [
+      46.2719857,
+      6.1263178
+    ],
+    "filters": {
+      "venueType": [
+        "restaurant"
+      ]
+    },
+    "phone": "+41 22 959 89 89",
+    "website": "https://www.rotisseriedelaferme.ch/"
+  },
+  {
+    "slug": "tip-papiliorama",
+    "listing": "community",
+    "name": "Papiliorama",
+    "address": "Moosmatte 1, 3210 Kerzers",
+    "city": "Kerzers",
+    "fallbackCoords": [
+      46.9893905,
+      7.2002504
+    ],
+    "filters": {},
+    "phone": "+41 31 756 04 60",
+    "website": "https://www.papiliorama.ch/"
+  },
+  {
+    "slug": "tip-l-esquif-cafe-bar",
+    "listing": "community",
+    "name": "L'Esquif Café Bar",
+    "address": "Rue du Valentin 12, 1400 Yverdon-les-Bains",
+    "city": "Yverdon-les-Bains",
+    "fallbackCoords": [
+      46.7773946,
+      6.6418276
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "phone": "+41 24 425 84 38",
+    "website": "https://esquif.ch/"
+  },
+  {
+    "slug": "tip-olympia",
+    "listing": "community",
+    "name": "Olympia",
+    "address": "Militärstrasse 64, 3014 Bern",
+    "city": "Bern",
+    "fallbackCoords": [
+      46.9589795,
+      7.4554698
+    ],
+    "filters": {
+      "venueType": [
+        "cafe",
+        "restaurant"
+      ]
+    },
+    "phone": "+41 31 529 29 10",
+    "website": "https://olympiabern.ch/"
+  },
+  {
+    "slug": "tip-me",
+    "listing": "community",
+    "name": "æmē",
+    "address": "Rue des Odyssées, 1950 Sion",
+    "city": "Sion",
+    "fallbackCoords": [
+      46.2282188,
+      7.361205
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "website": "https://www.aeme.cafe/"
+  },
+  {
+    "slug": "tip-cafe-l-annexe",
+    "listing": "community",
+    "name": "Café L'Annexe",
+    "address": "Vieille-Route 3, 2612 Cormoret",
+    "city": "Cormoret",
+    "fallbackCoords": [
+      47.174833,
+      7.0545907
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "website": "https://annexe-cafe.ch/"
+  },
+  {
+    "slug": "tip-edu-s-coffee-clothes",
+    "listing": "community",
+    "name": "Edu's Coffee & Clothes",
+    "address": "Schmiedengasse, 2502 Biel/Bienne",
+    "city": "Biel/Bienne",
+    "fallbackCoords": [
+      47.1407119,
+      7.2459648
+    ],
+    "filters": {
+      "venueType": [
+        "cafe",
+        "shop"
+      ]
+    }
+  },
+  {
+    "slug": "tip-wff-world-f-fresh-food",
+    "listing": "community",
+    "name": "WØFF World Øf Fresh Food",
+    "address": "Rue du Léman, 1800 Vevey",
+    "city": "Vevey",
+    "fallbackCoords": [
+      46.4583326,
+      6.8466475
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "website": "https://www.woffood.ch/"
+  },
+  {
+    "slug": "tip-bach-et-buck",
+    "listing": "community",
+    "name": "Bach et Buck",
+    "address": "Avenue du Premier-Mars 22, 2000 Neuchâtel",
+    "city": "Neuchâtel",
+    "fallbackCoords": [
+      46.9935146,
+      6.9373815
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "phone": "+41 32 725 63 53",
+    "website": "https://www.bachetbuck.ch/"
+  },
+  {
+    "slug": "tip-delim-cafe",
+    "listing": "community",
+    "name": "Delim Café",
+    "address": "Rue Auguste-Quiquerez 37, 2800 Delémont",
+    "city": "Delémont",
+    "fallbackCoords": [
+      47.36823,
+      7.3576425
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "website": "https://delim-cafe.ch/"
+  },
+  {
+    "slug": "tip-the-barista-lab",
+    "listing": "community",
+    "name": "The Barista Lab",
+    "address": "Boulevard de Saint-Georges 8, 1205 Genève",
+    "city": "Genève",
+    "fallbackCoords": [
+      46.2011743,
+      6.131435
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "website": "https://thebaristalab.com/"
+  },
+  {
+    "slug": "tip-wellness-hotel-stoos",
+    "listing": "community",
+    "name": "Wellness Hotel Stoos",
+    "address": "Ringstrasse 10, 6433 Stoos",
+    "city": "Stoos",
+    "fallbackCoords": [
+      46.9822056,
+      8.6658415
+    ],
+    "filters": {},
+    "phone": "+41 41 817 44 44",
+    "website": "https://stoos-hotels.ch/"
+  },
+  {
+    "slug": "tip-healthy-cafe",
+    "listing": "community",
+    "name": "Healthy Café",
+    "address": "Rue de la Combe 11a, 1196 Gland",
+    "city": "Gland",
+    "fallbackCoords": [
+      46.4184797,
+      6.2655516
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "phone": "+41 22 314 02 78",
+    "website": "https://healthy-cube.ch/"
+  },
+  {
+    "slug": "tip-montelino-kidsclub-bistro",
+    "listing": "community",
+    "name": "Montelino KidsClub & Bistro",
+    "address": "St. Gallerstrasse 118, 8645 Rapperswil-Jona",
+    "city": "Rapperswil-Jona",
+    "fallbackCoords": [
+      47.2298698,
+      8.8481377
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "website": "https://montelino.ch/"
+  },
+  {
+    "slug": "tip-perron-3",
+    "listing": "community",
+    "name": "Perron 3",
+    "address": "Bahnhofplatz, 3067 Boll",
+    "city": "Boll",
+    "fallbackCoords": [
+      46.9532807,
+      7.5470967
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    }
+  },
+  {
+    "slug": "tip-cafe-madeleine",
+    "listing": "community",
+    "name": "Café Madeleine",
+    "address": "Rue Madeleine, 1003 Lausanne",
+    "city": "Lausanne",
+    "fallbackCoords": [
+      46.5223186,
+      6.632938
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    }
+  },
+  {
+    "slug": "tip-cafe-des-avenues",
+    "listing": "community",
+    "name": "Café des Avenues",
+    "address": "Avenue de Jurigoz 20B, 1006 Lausanne",
+    "city": "Lausanne",
+    "fallbackCoords": [
+      46.5112215,
+      6.6368592
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    }
+  },
+  {
+    "slug": "tip-khaus",
+    "listing": "community",
+    "name": "kHaus",
+    "address": "Kasernenhof 8, 4058 Basel",
+    "city": "Basel",
+    "fallbackCoords": [
+      47.5627546,
+      7.5893164
+    ],
+    "filters": {},
+    "website": "https://www.khaus.ch/"
+  },
+  {
+    "slug": "tip-english-speaking-playgroup-esp",
+    "listing": "community",
+    "name": "English Speaking Playgroup (ESP)",
+    "address": "Weissenbühlweg 26, 3007 Bern",
+    "city": "Bern",
+    "fallbackCoords": [
+      46.9373256,
+      7.4352462
+    ],
+    "filters": {},
+    "website": "https://esp-bern.ch/"
+  },
+  {
+    "slug": "tip-acai-attendant",
+    "listing": "community",
+    "name": "Acai Attendant",
+    "address": "Aarbergergasse, 3011 Bern",
+    "city": "Bern",
+    "fallbackCoords": [
+      46.9498828,
+      7.4407976
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    }
+  },
+  {
+    "slug": "tip-tibits",
+    "listing": "community",
+    "name": "tibits",
+    "address": "Bahnhofplatz 10, 3011 Bern",
+    "city": "Bern",
+    "fallbackCoords": [
+      46.9486696,
+      7.4403364
+    ],
+    "filters": {
+      "venueType": [
+        "restaurant"
+      ]
+    },
+    "website": "https://www.tibits.ch/"
+  },
+  {
+    "slug": "tip-zum-bunten-hund",
+    "listing": "community",
+    "name": "zum bunten Hund",
+    "address": "Obere Hauptgasse 60, 3600 Thun",
+    "city": "Thun",
+    "fallbackCoords": [
+      46.7581211,
+      7.6305302
+    ],
+    "filters": {
+      "venueType": [
+        "restaurant"
+      ]
+    },
+    "website": "https://www.zumbuntenhund.ch/"
+  },
+  {
+    "slug": "tip-histoire-sans-faim",
+    "listing": "community",
+    "name": "Histoire Sans Faim",
+    "address": "Parc du Loup 5A, 1018 Lausanne",
+    "city": "Lausanne",
+    "fallbackCoords": [
+      46.5379721,
+      6.6217845
+    ],
+    "filters": {
+      "venueType": [
+        "restaurant"
+      ]
+    },
+    "phone": "+41 21 648 22 22",
+    "website": "https://histoiresansfaim.ch/"
+  },
+  {
+    "slug": "tip-yoga-cafe-boutique",
+    "listing": "community",
+    "name": "Yoga Café Boutique",
+    "address": "Couvaloup 22, 1110 Morges",
+    "city": "Morges",
+    "fallbackCoords": [
+      46.5103391,
+      6.4988286
+    ],
+    "filters": {
+      "venueType": [
+        "cafe"
+      ]
+    },
+    "phone": "+41 21 801 20 25"
+  },
+  {
+    "slug": "tip-les-arsenaux",
+    "listing": "community",
+    "name": "Les Arsenaux",
+    "address": "Route des Arsenaux 8, 1700 Fribourg",
+    "city": "Fribourg",
+    "fallbackCoords": [
+      46.7978824,
+      7.1493365
+    ],
+    "filters": {
+      "venueType": [
+        "restaurant"
+      ]
+    }
+  },
+  {
+    "slug": "tip-tierpark-jeuss",
+    "listing": "community",
+    "name": "Tierpark Jeuss",
+    "address": "Galmguetweg 1, 1793 Jeuss",
+    "city": "Jeuss",
+    "fallbackCoords": [
+      46.9107795,
+      7.1665988
+    ],
+    "filters": {},
+    "phone": "+41 26 674 96 00",
+    "website": "https://tierpark-jeuss.ch/"
+  }
 ]
