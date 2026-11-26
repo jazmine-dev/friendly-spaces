@@ -1322,36 +1322,44 @@
             }
         }
 
-        // ?tips=preview adds the community tips from /map/preview-tips.json on top of
-        // the live venue data, to try the grey pins before any tip is in the shared JSON.
-        const PREVIEW_TIPS = new URLSearchParams(window.location.search).get('tips') === 'preview';
-        const PREVIEW_TIPS_URL = '/map/preview-tips.json';
+        // Community tips live in the website's own /map/community-tips.json for now, not in
+        // the shared venues.json: the released apps read that file and would show every tip
+        // as a partner. Once the apps understand "listing": "community", the tips can move
+        // into venues.json; anything already there by slug is not added twice.
+        const COMMUNITY_TIPS_URL = '/map/community-tips.json';
 
-        async function loadPreviewTips() {
+        async function loadCommunityTips() {
             try {
-                const response = await fetch(PREVIEW_TIPS_URL, { cache: 'no-store' });
+                const response = await fetch(COMMUNITY_TIPS_URL, { cache: 'no-store' });
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
-                return Array.isArray(data) ? data.filter(item => Array.isArray(item?.fallbackCoords)) : [];
+                return Array.isArray(data)
+                    ? data.filter(item => Array.isArray(item?.fallbackCoords)).map(item => ({ ...item, listing: 'community' }))
+                    : [];
             } catch (err) {
                 return [];
             }
         }
 
+        function withCommunityTips(base, tips) {
+            const known = new Set(base.map(getPartnerId));
+            return base.concat(tips.filter(tip => !known.has(getPartnerId(tip))));
+        }
+
         async function loadVenues() {
-            const previewTips = PREVIEW_TIPS ? loadPreviewTips() : Promise.resolve([]);
+            const communityTips = loadCommunityTips();
             try {
                 const response = await fetch(REMOTE_VENUES_URL, { cache: 'no-store' });
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
                 if (Array.isArray(data) && data.length > 0) {
-                    venues = data.concat(await previewTips);
+                    venues = withCommunityTips(data, await communityTips);
                     return;
                 }
             } catch (err) {
                 // Keep embedded fallback data when remote fetch fails.
             }
-            venues = embeddedVenues.concat(await previewTips);
+            venues = withCommunityTips(embeddedVenues, await communityTips);
         }
 
         // Filter definitions
