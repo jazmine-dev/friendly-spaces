@@ -626,5 +626,44 @@
     "filters": {},
     "phone": "+41 26 674 96 00",
     "website": "https://tierpark-jeuss.ch/"
+  },
+  {
+    "slug": "tip-porto-bello",
+    "listing": "community",
+    "name": "Porto Bello!",
+    "address": "Via Foce 11, 6900 Lugano",
+    "city": "Lugano",
+    "fallbackCoords": [
+      46.0027601,
+      8.9621682
+    ],
+    "filters": {},
+    "phone": "+41 91 972 88 88"
+  },
+  {
+    "slug": "tip-ristorante-piccolo-vigneto",
+    "listing": "community",
+    "name": "Ristorante Piccolo Vigneto",
+    "address": "Sentiero Cavan, 6974 Aldesago (Lugano)",
+    "city": "Lugano",
+    "fallbackCoords": [
+      46.0083184,
+      8.9754524
+    ],
+    "filters": {}
+  },
+  {
+    "slug": "tip-museo-in-erba",
+    "listing": "community",
+    "name": "Museo in erba",
+    "address": "Riva Antonio Caccia 1, 6900 Lugano",
+    "city": "Lugano",
+    "fallbackCoords": [
+      45.998655,
+      8.9480516
+    ],
+    "filters": {},
+    "phone": "+41 91 835 52 54",
+    "website": "https://museoinerba.com/"
   }
 ]
