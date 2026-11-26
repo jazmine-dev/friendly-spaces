@@ -661,12 +661,15 @@
             #profile-panel.is-tip .profile-grabber span { background: #c9ced8; box-shadow: none; }
             .tip-profile { padding-top: 26px; padding-bottom: calc(26px + env(safe-area-inset-bottom, 0px)); }
         }
-        #preview-banner {
-            position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 900;
-            max-width: calc(100% - 24px); padding: 6px 12px; border-radius: 999px;
-            background: #15171A; color: #fff; font-size: 12px; line-height: 1.3; text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,.2); pointer-events: none;
+        /* Small map key, top right */
+        .map-key {
+            display: flex; flex-direction: column; gap: 6px; padding: 8px 10px; border-radius: 12px;
+            background: rgba(255,255,255,.95); box-shadow: 0 2px 8px rgba(0,0,0,.15);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; line-height: 1.2; color: #2b2f3a;
         }
+        .map-key[hidden] { display: none; }
+        .map-key-row { display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+        .map-key-row img { display: block; flex: 0 0 auto; }
     </style>
 </head>
 <body>
@@ -800,6 +803,7 @@
                     directions: "Route planen"
                 },
                 listing: {
+                    key: "Kartenlegende",
                     partner: "Friendly Spaces Partner",
                     community: "Community-Tipp",
                     suggested: "Von der Friendly Spaces Community vorgeschlagen.",
@@ -867,6 +871,7 @@
                     directions: "Itinéraire"
                 },
                 listing: {
+                    key: "Légende de la carte",
                     partner: "Partenaire Friendly Spaces",
                     community: "Conseil de la communauté",
                     suggested: "Suggéré par la communauté Friendly Spaces.",
@@ -934,6 +939,7 @@
                     directions: "Directions"
                 },
                 listing: {
+                    key: "Map key",
                     partner: "Friendly Spaces partner",
                     community: "Community tip",
                     suggested: "Suggested by the Friendly Spaces community.",
@@ -1316,7 +1322,7 @@
             }
         }
 
-        // ?tips=preview adds sample community tips from /map/preview-tips.json on top of
+        // ?tips=preview adds the community tips from /map/preview-tips.json on top of
         // the live venue data, to try the grey pins before any tip is in the shared JSON.
         const PREVIEW_TIPS = new URLSearchParams(window.location.search).get('tips') === 'preview';
         const PREVIEW_TIPS_URL = '/map/preview-tips.json';
@@ -1516,8 +1522,8 @@
         });
 
         // Pin artwork: the same pin shape for both listing types, with a white circle inside.
-        // Friendly Spaces partners: brand blue with a blue check. Community tips: slate grey
-        // with a grey speech bubble.
+        // Friendly Spaces partners: brand blue with a check. Community tips: slate grey
+        // with a speech bubble.
         const PIN_PATH = 'M16 0c-7.18 0-13 5.82-13 13 0 9.75 8.9 18.9 12.1 21.83.5.46 1.3.46 1.8 0C20.1 31.9 29 22.75 29 13 29 5.82 23.18 0 16 0Z';
         function buildPinSvg({ id, top, bottom, mark }) {
             return `
@@ -1541,7 +1547,7 @@
 
         const pinSvg = buildPinSvg({
             id: 'pinPartner', top: '#2F6BE0', bottom: '#1E52BA',
-            mark: '<g transform="translate(10 7) scale(0.5)" fill="none" stroke="#1E52BA" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></g>'
+            mark: '<path d="M12 13.3l2.8 2.8 5.3-5.5" fill="none" stroke="#1E52BA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>'
         });
         const tipPinSvg = buildPinSvg({
             id: 'pinTip', top: '#7A8396', bottom: '#5B6475',
@@ -2157,11 +2163,23 @@
             });
         });
 
-        if (PREVIEW_TIPS) {
-            const banner = document.createElement('div');
-            banner.id = 'preview-banner';
-            banner.textContent = 'Preview · grey pins are sample tips';
-            document.getElementById('map').parentElement.appendChild(banner);
+        // Small map key, top right. Shown only once the data holds community tips,
+        // so the live map is unchanged until the first tip is added.
+        const mapKeyPin = fill => svgUrl(`<svg width="32" height="48" viewBox="0 0 32 48" xmlns="http://www.w3.org/2000/svg"><path fill="${fill}" d="${PIN_PATH}"/><circle cx="16" cy="13" r="7" fill="#fff"/></svg>`);
+        const mapKey = L.DomUtil.create('aside', 'map-key');
+        mapKey.hidden = true;
+        L.DomEvent.disableClickPropagation(mapKey);
+        L.DomEvent.disableScrollPropagation(mapKey);
+        const MapKeyControl = L.Control.extend({ options: { position: 'topright' }, onAdd: () => mapKey });
+        new MapKeyControl().addTo(map);
+
+        function renderMapKey() {
+            mapKey.hidden = !venues.some(isCommunityTip);
+            if (mapKey.hidden) return;
+            mapKey.setAttribute('aria-label', translate('listing.key', 'Map key'));
+            mapKey.innerHTML = [['#1E52BA', 'listing.partner'], ['#5B6475', 'listing.community']]
+                .map(([fill, key]) => `<span class="map-key-row"><img src="${mapKeyPin(fill)}" alt="" width="12" height="18">${escapeHtmlText(translate(key, ''))}</span>`)
+                .join('');
         }
 
         // Update map markers
@@ -2203,6 +2221,7 @@
             });
 
             refreshActiveMarker();
+            renderMapKey();
             if (activeVenue && !venueMatchesFilters(activeVenue)) closeProfile();
 
             // Update count

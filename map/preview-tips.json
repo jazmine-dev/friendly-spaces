@@ -22,11 +22,7 @@
       46.9459972,
       7.4358117
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://www.lumis.ch/"
   },
   {
@@ -39,11 +35,7 @@
       46.9453808,
       7.4367727
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://petitcouteau.ch/"
   },
   {
@@ -56,11 +48,7 @@
       46.2033547,
       6.1452021
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    }
+    "filters": {}
   },
   {
     "slug": "tip-restaurant-loscher",
@@ -72,11 +60,7 @@
       46.9545832,
       7.4521397
     ],
-    "filters": {
-      "venueType": [
-        "restaurant"
-      ]
-    },
+    "filters": {},
     "website": "https://loescher.be/"
   },
   {
@@ -89,11 +73,7 @@
       46.9502586,
       7.4430128
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://www.progr.ch/"
   },
   {
@@ -106,11 +86,7 @@
       46.9437203,
       7.4640696
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://caffebarriva.ch/"
   },
   {
@@ -123,11 +99,7 @@
       47.1372584,
       7.2478445
     ],
-    "filters": {
-      "venueType": [
-        "restaurant"
-      ]
-    },
+    "filters": {},
     "website": "https://farelbistro.ch/"
   },
   {
@@ -140,11 +112,7 @@
       47.1355632,
       7.2482413
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://adrianos.ch/"
   },
   {
@@ -157,11 +125,7 @@
       47.137794,
       7.2478522
     ],
-    "filters": {
-      "venueType": [
-        "restaurant"
-      ]
-    }
+    "filters": {}
   },
   {
     "slug": "tip-lago-lodge",
@@ -173,11 +137,7 @@
       47.1291038,
       7.2378303
     ],
-    "filters": {
-      "venueType": [
-        "restaurant"
-      ]
-    },
+    "filters": {},
     "website": "https://lagolodge.ch/"
   },
   {
@@ -190,11 +150,7 @@
       47.1361862,
       7.2496424
     ],
-    "filters": {
-      "venueType": [
-        "restaurant"
-      ]
-    }
+    "filters": {}
   },
   {
     "slug": "tip-baramomes",
@@ -206,11 +162,7 @@
       47.1055602,
       6.8296726
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://baramomes.ch/"
   },
   {
@@ -223,11 +175,7 @@
       46.802203,
       7.1503768
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://www.nouveaumonde.ch/cafe/"
   },
   {
@@ -240,11 +188,7 @@
       46.8035449,
       7.1647814
     ],
-    "filters": {
-      "venueType": [
-        "restaurant"
-      ]
-    },
+    "filters": {},
     "website": "https://leport.ch/"
   },
   {
@@ -257,11 +201,7 @@
       46.8050068,
       7.1650995
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "phone": "+41 26 323 44 07"
   },
   {
@@ -274,11 +214,7 @@
       46.8055326,
       7.1584596
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "phone": "+41 26 321 32 50"
   },
   {
@@ -291,11 +227,7 @@
       46.8039634,
       7.1683936
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "phone": "+41 26 303 22 19",
     "website": "https://www.cigogne-jeux.ch/"
   },
@@ -309,11 +241,7 @@
       46.5196505,
       6.637083
     ],
-    "filters": {
-      "venueType": [
-        "restaurant"
-      ]
-    },
+    "filters": {},
     "phone": "+41 21 552 03 03",
     "website": "https://www.luigia.ch/"
   },
@@ -341,11 +269,7 @@
       46.5040852,
       6.686897
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://ozarts.ch/"
   },
   {
@@ -358,12 +282,7 @@
       46.8255647,
       6.9259892
     ],
-    "filters": {
-      "venueType": [
-        "cafe",
-        "restaurant"
-      ]
-    },
+    "filters": {},
     "phone": "+41 26 660 30 30",
     "website": "https://lajessicotte.ch/"
   },
@@ -377,11 +296,7 @@
       46.2719857,
       6.1263178
     ],
-    "filters": {
-      "venueType": [
-        "restaurant"
-      ]
-    },
+    "filters": {},
     "phone": "+41 22 959 89 89",
     "website": "https://www.rotisseriedelaferme.ch/"
   },
@@ -409,11 +324,7 @@
       46.7773946,
       6.6418276
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "phone": "+41 24 425 84 38",
     "website": "https://esquif.ch/"
   },
@@ -427,12 +338,7 @@
       46.9589795,
       7.4554698
     ],
-    "filters": {
-      "venueType": [
-        "cafe",
-        "restaurant"
-      ]
-    },
+    "filters": {},
     "phone": "+41 31 529 29 10",
     "website": "https://olympiabern.ch/"
   },
@@ -446,11 +352,7 @@
       46.2282188,
       7.361205
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://www.aeme.cafe/"
   },
   {
@@ -463,11 +365,7 @@
       47.174833,
       7.0545907
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://annexe-cafe.ch/"
   },
   {
@@ -480,12 +378,7 @@
       47.1407119,
       7.2459648
     ],
-    "filters": {
-      "venueType": [
-        "cafe",
-        "shop"
-      ]
-    }
+    "filters": {}
   },
   {
     "slug": "tip-wff-world-f-fresh-food",
@@ -497,11 +390,7 @@
       46.4583326,
       6.8466475
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://www.woffood.ch/"
   },
   {
@@ -514,11 +403,7 @@
       46.9935146,
       6.9373815
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "phone": "+41 32 725 63 53",
     "website": "https://www.bachetbuck.ch/"
   },
@@ -532,11 +417,7 @@
       47.36823,
       7.3576425
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://delim-cafe.ch/"
   },
   {
@@ -549,11 +430,7 @@
       46.2011743,
       6.131435
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://thebaristalab.com/"
   },
   {
@@ -580,11 +457,7 @@
       46.4184797,
       6.2655516
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "phone": "+41 22 314 02 78",
     "website": "https://healthy-cube.ch/"
   },
@@ -598,11 +471,7 @@
       47.2298698,
       8.8481377
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "website": "https://montelino.ch/"
   },
   {
@@ -615,11 +484,7 @@
       46.9532807,
       7.5470967
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    }
+    "filters": {}
   },
   {
     "slug": "tip-cafe-madeleine",
@@ -631,11 +496,7 @@
       46.5223186,
       6.632938
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    }
+    "filters": {}
   },
   {
     "slug": "tip-cafe-des-avenues",
@@ -647,11 +508,7 @@
       46.5112215,
       6.6368592
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    }
+    "filters": {}
   },
   {
     "slug": "tip-khaus",
@@ -689,11 +546,7 @@
       46.9498828,
       7.4407976
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    }
+    "filters": {}
   },
   {
     "slug": "tip-tibits",
@@ -705,11 +558,7 @@
       46.9486696,
       7.4403364
     ],
-    "filters": {
-      "venueType": [
-        "restaurant"
-      ]
-    },
+    "filters": {},
     "website": "https://www.tibits.ch/"
   },
   {
@@ -722,11 +571,7 @@
       46.7581211,
       7.6305302
     ],
-    "filters": {
-      "venueType": [
-        "restaurant"
-      ]
-    },
+    "filters": {},
     "website": "https://www.zumbuntenhund.ch/"
   },
   {
@@ -739,11 +584,7 @@
       46.5379721,
       6.6217845
     ],
-    "filters": {
-      "venueType": [
-        "restaurant"
-      ]
-    },
+    "filters": {},
     "phone": "+41 21 648 22 22",
     "website": "https://histoiresansfaim.ch/"
   },
@@ -757,11 +598,7 @@
       46.5103391,
       6.4988286
     ],
-    "filters": {
-      "venueType": [
-        "cafe"
-      ]
-    },
+    "filters": {},
     "phone": "+41 21 801 20 25"
   },
   {
@@ -774,11 +611,7 @@
       46.7978824,
       7.1493365
     ],
-    "filters": {
-      "venueType": [
-        "restaurant"
-      ]
-    }
+    "filters": {}
   },
   {
     "slug": "tip-tierpark-jeuss",
