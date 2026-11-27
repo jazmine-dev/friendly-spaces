@@ -2196,7 +2196,11 @@
             markerClusterGroup.clearLayers();
             markers = [];
 
+            // The first view frames the Friendly Spaces partners, as it did before community
+            // tips existed; tips only set the frame when no partner is visible (e.g. a search
+            // that only matches tips).
             const bounds = L.latLngBounds([]);
+            const tipBounds = L.latLngBounds([]);
             let visibleCount = 0;
 
             // Add markers for matching venues
@@ -2223,7 +2227,7 @@
                     markerClusterGroup.addLayer(marker);
 
                     markers.push({ venue, marker, coords });
-                    bounds.extend(coords);
+                    if (isTip) tipBounds.extend(coords); else bounds.extend(coords);
                     visibleCount++;
                 }
             });
@@ -2244,6 +2248,8 @@
             if (isInitialLoad) {
                 if (bounds.isValid()) {
                     map.fitBounds(bounds.pad(0.2));
+                } else if (tipBounds.isValid()) {
+                    map.fitBounds(tipBounds.pad(0.2));
                 } else {
                     map.setView([46.9480, 7.4474], 13);
                 }
