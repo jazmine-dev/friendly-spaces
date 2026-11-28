@@ -640,6 +640,9 @@
         .tip-profile .profile-action:hover .icon-circle { background: #e6e8ed; }
         .tip-profile .profile-action .icon-circle svg { stroke: #4B5260; }
         .tip-profile .profile-action:focus-visible .icon-circle { outline-color: #4B5260; }
+        .tip-said { margin-top: 16px; }
+        .tip-said-title { margin: 0 0 6px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .6px; color: #6b7280; }
+        .tip-said p { margin: 0; font-size: 14.5px; line-height: 1.55; color: #333; }
         .tip-note { margin-top: 16px; padding: 12px 14px; border-radius: 12px; background: #f1f2f5; font-size: 13.5px; line-height: 1.5; color: #3c4454; }
         .tip-note p { margin: 0; }
         .tip-note p + p { margin-top: 4px; }
@@ -810,7 +813,8 @@
                     suggested: "Von der Friendly Spaces Community vorgeschlagen.",
                     notPartner: "Dieser Ort ist derzeit kein Friendly Spaces Partner.",
                     ownerQuestion: "Ist das dein Lokal?",
-                    ownerLink: "Melde dich bei Friendly Spaces"
+                    ownerLink: "Melde dich bei Friendly Spaces",
+                    parentsSay: "Das sagen Eltern"
                 }
             },
             fr: {
@@ -878,7 +882,8 @@
                     suggested: "Suggéré par la communauté Friendly Spaces.",
                     notPartner: "Ce lieu n'est pas encore partenaire Friendly Spaces.",
                     ownerQuestion: "C'est votre établissement ?",
-                    ownerLink: "Contactez Friendly Spaces"
+                    ownerLink: "Contactez Friendly Spaces",
+                    parentsSay: "Ce qu’en disent les parents"
                 }
             },
             en: {
@@ -946,7 +951,8 @@
                     suggested: "Suggested by the Friendly Spaces community.",
                     notPartner: "This venue is not currently a Friendly Spaces partner.",
                     ownerQuestion: "Is this your venue?",
-                    ownerLink: "Get in touch with Friendly Spaces"
+                    ownerLink: "Get in touch with Friendly Spaces",
+                    parentsSay: "What parents say"
                 }
             }
         };
@@ -2431,12 +2437,17 @@
             if (phoneHref) actions.push(`<a class="profile-action" href="${escapeHtmlAttribute(phoneHref)}" data-analytics-action="call_click" data-partner-id="${partnerId}"><span class="icon-circle">${profileIcons.call}</span><span class="icon-label">${ps('call')}</span></a>`);
             const contactPath = currentLang === 'en' ? '/contact' : `/${currentLang}/contact`;
 
+            // Optional "tip" field: what the recommending parents said (with i18n.tip
+            // translations if present). Tips without one show no block.
+            const tipText = getVenueText(venue, 'tip');
+
             return `
                 <div class="tip-profile">
                     <span class="profile-badge is-tip">${profileIcons.tipBubble}${escapeHtmlText(translate('listing.community', 'Community tip'))}</span>
                     <h2 class="tip-name">${escapeHtmlText(venue.name)}</h2>
                     ${venue.address ? `<p class="tip-address">${escapeHtmlText(venue.address)}</p>` : ''}
                     <div class="profile-actions">${actions.join('')}</div>
+                    ${tipText ? `<div class="tip-said"><h3 class="tip-said-title">${escapeHtmlText(translate('listing.parentsSay', 'What parents say'))}</h3><p>${escapeHtmlText(tipText)}</p></div>` : ''}
                     <div class="tip-note">
                         <p>${escapeHtmlText(translate('listing.suggested', ''))}</p>
                         <p>${escapeHtmlText(translate('listing.notPartner', ''))}</p>
