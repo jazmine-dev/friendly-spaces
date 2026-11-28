@@ -20,6 +20,13 @@
 /fr/news/early-bird-2026.html /fr/news/ 301
 /fr/news/early-bird-2026 /fr/news/ 301
 
+# Privacy policy: the App Store and Google Play listings link to /en/privacy-policy and the
+# apps' content.json links to /privacy-policy. Keep these above the /en/* catch-all.
+/en/privacy-policy /privacy 301
+/privacy-policy /privacy 301
+/de/privacy-policy /de/privacy 301
+/fr/privacy-policy /fr/privacy 301
+
 # Old Wix site URLs (launch 2026-09-30). Wix had /en, /fr and only map + partner pages;
 # /de and /it on Wix fell back to /en.
 /en /  301
